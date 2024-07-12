@@ -54,4 +54,25 @@
   .btn-white-outline {
     @apply btn-base border border-white text-white hover:bg-white hover:text-primary-500;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .donation-banner {
+    background:
+      /* url('/images/bg/woman-in-deep-thought.png') no-repeat right, */ linear-gradient(
+        to left,
+        theme('colors.white'),
+        theme('colors.black.500')
+      ),
+      red;
+
+    background-size: cover;
+  }
 }

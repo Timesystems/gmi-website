@@ -1,6 +1,6 @@
 export function DonationBanner() {
   return (
-    <div className='flex min-h-[250px] items-center justify-start rounded-[20px] bg-gradient-to-l from-white to-black-500 px-16 py-16 lg:min-h-[450px] lg:px-24 lg:py-24'>
+    <div className='donation-banner flex min-h-[250px] items-center justify-start rounded-[20px] px-16 py-16 lg:min-h-[450px] lg:px-24 lg:py-24'>
       <div className='w-1/2 text-white'>
         <h2 className='mb-4 text-[2.5em] font-semibold leading-[120%]'>
           Your donation will go a long <br /> way

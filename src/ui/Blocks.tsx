@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/ui//Layouts';
 import { HeadingTitle } from '@/ui/Elements';
+import clsx from 'clsx';
 
 export function AboutUs({
   buttonText,
@@ -47,14 +48,24 @@ export function PageIntro({
   subtitle,
 }: {
   title: string;
-  subtitle: string;
+  subtitle?: string;
 }) {
   return (
     <Container className='rounded-primary bg-primary-700 px-[20px] py-[20px] text-white md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[60px]'>
-      <h1 className='mb-4 text-2xl font-semibold md:mb-8 md:text-[2.8rem]'>
+      <h1
+        className={clsx(
+          `text-2xl font-semibold md:text-[2.8rem] md:leading-[3rem]`,
+          {
+            'mb-4 md:mb-8': !!subtitle,
+            'md:w-[70%] lg:w-[55%]': !subtitle,
+          }
+        )}
+      >
         {title}
       </h1>
-      <p className='w-[90%] text-[1.15em] md:w-2/3 lg:w-[60%]'>{subtitle}</p>
+      {subtitle ? (
+        <p className='w-[90%] text-[1.15em] md:w-2/3 lg:w-[60%]'>{subtitle}</p>
+      ) : null}
     </Container>
   );
 }

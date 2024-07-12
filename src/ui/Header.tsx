@@ -43,23 +43,23 @@ const aboutUs = [
 const programsList = [
   {
     name: `Campus Safety Initiative`,
-    href: `#`,
+    href: `/programs/csi`,
   },
   {
     name: `Ending Violence against Women and Girls`,
-    href: `#`,
+    href: `/programs/girl-women-violence`,
   },
   {
     name: `Adolescent Wellness Hub`,
-    href: `#`,
+    href: `/programs/adolescent-wellness`,
   },
   {
     name: `Skill Up Women and Girls`,
-    href: `#`,
+    href: `/programs/skillup`,
   },
   {
     name: `Food Hub`,
-    href: `#`,
+    href: `/programs/foodhub`,
   },
   {
     name: `WOWANi`,
@@ -211,7 +211,7 @@ export default function Header({ background }: { background?: boolean }) {
               className={clsx(
                 `flex items-center gap-x-1 text-sm text-gray-900`,
                 {
-                  'font-semibold text-primary-500': pathname == '/programs',
+                  'font-semibold text-primary-500': pathname.match('/programs'),
                 }
               )}
             >
@@ -238,9 +238,9 @@ export default function Header({ background }: { background?: boolean }) {
                       className='relative rounded-lg px-4 py-2 text-sm transition-colors duration-200 hover:bg-gray-50 hover:text-primary-500'
                     >
                       <div className='flex-auto'>
-                        <a href={item.href} className='block'>
+                        <Link href={item.href} className='block'>
                           {item.name}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   ))}
@@ -315,7 +315,7 @@ export default function Header({ background }: { background?: boolean }) {
             </a>
             <a
               href='#'
-              className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-4 py-2 font-heading text-[0.9em] text-white hover:text-white'
+              className='btn-primary inline-block px-4 py-2 font-heading text-[0.9em]'
             >
               Donate Now
             </a>
