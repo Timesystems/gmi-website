@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import { PiEnvelopeSimpleFill, PiLinkedinLogoFill } from 'react-icons/pi';
-import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
+import {
+  HiOutlineArrowLeft,
+  HiOutlineArrowRight,
+  HiOutlinePlay,
+} from 'react-icons/hi';
+import { FaPlay } from 'react-icons/fa';
 
 export function HeadingTitle({
   children,
@@ -50,8 +55,8 @@ export function TeamMemberBio({
   biography: string[];
   email: string;
   linkedin?: string;
-  prevClick?: () => void;
-  nextClick?: () => void;
+  prevClick?: any;
+  nextClick?: any;
 }) {
   'use client';
 
@@ -103,6 +108,60 @@ export function TeamMemberBio({
               <HiOutlineArrowRight />
             </button>
           ) : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ResourceClip({
+  title,
+  linkText,
+  link,
+  image,
+  youtube = false,
+}: {
+  title: string;
+  link: string;
+  linkText: string;
+  image?: string;
+  youtube?: boolean;
+}) {
+  return (
+    <div className='group relative size-full rounded-primary'>
+      {image ? (
+        <Image
+          src={image}
+          alt='Cleaning'
+          fill
+          className='rounded-primary grayscale group-hover:grayscale-0'
+          style={{ objectFit: `cover`, objectPosition: `center` }}
+        />
+      ) : null}
+      {youtube ? (
+        <a
+          href={link}
+          style={{
+            top: `50%`,
+            left: `50%`,
+            transform: `translate(-50%, -50%)`,
+          }}
+          className='absolute flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white text-center font-heading font-semibold group-hover:text-primary-500 md:h-[70px] md:w-[70px]'
+          target='_blank'
+        >
+          <FaPlay />
+        </a>
+      ) : null}
+      <div className='absolute bottom-[20px] left-[2.5%] z-10 mx-auto w-[95%] flex-col justify-end transition-all duration-300'>
+        <div className='relative bottom-0 z-10 h-[auto] rounded-primary bg-white px-5 py-3 text-sm text-black-500 md:px-6 md:py-5'>
+          <h3 className='mb-3 text-lg font-semibold'>{title}</h3>
+          <a
+            href={link}
+            className='font-heading font-semibold text-primary-500'
+            target='_blank'
+          >
+            {linkText}
+          </a>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@ import GenderMobileStatisticCounterUp from '@/ui/GMStatisticCounter';
 import TestimonialSlider, { TestimonialHeading } from '@/ui/Testimonial';
 import { AboutUs } from '@/ui/Blocks';
 import { DonationBanner, HelpBanner } from '@/ui/Banners';
+import { BlogClip } from '@/ui/Blog';
 
 export default function Home() {
   const volunteerMembers = [
@@ -157,60 +158,27 @@ export default function Home() {
           {/** Blog List */}
           <div className='mb-10 flex justify-center md:mb-16'>
             <div className='grid grid-cols-2 grid-rows-1 gap-6 lg:w-[80%]'>
-              <div
-                className='relative h-[380px] rounded-[20px]'
-                style={{
-                  background: 'url("/images/bg/get-involved.jpg") no-repeat',
-                }}
-              >
-                <div className='absolute bottom-[20px] left-[3%] mx-auto w-[94%] rounded-[20px] bg-white px-6 py-6 text-black-600'>
-                  <div className='mb-2 flex justify-between text-[0.75em]'>
-                    <span className='text-black-300'>Mar 16, 2024</span>
-                    <span className='text-primary-500'>Category</span>
-                  </div>
-                  <h2 className='mb-3 text-[1.3em] font-semibold'>
-                    Blog Title Here
-                  </h2>
-                  <p className='text-sm text-black-400'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              <BlogClip
+                title='Effect of CO2 in our Environment'
+                description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Sed vulputate mi sit ame.
-                  </p>
-                  <a
-                    href='#'
-                    className='mt-3 block font-heading text-sm font-semibold text-primary-500'
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-              <div
-                className='relative h-[380px] rounded-[20px]'
-                style={{
-                  background: 'url("/images/bg/get-involved.jpg") no-repeat',
-                }}
-              >
-                <div className='absolute bottom-[20px] left-[3%] mx-auto w-[94%] rounded-[20px] bg-white px-6 py-6 text-black-600'>
-                  <div className='mb-2 flex justify-between text-[0.75em]'>
-                    <span className='text-black-300'>Mar 16, 2024</span>
-                    <span className='text-primary-500'>Category</span>
-                  </div>
-                  <h2 className='mb-3 text-[1.3em] font-semibold'>
-                    Blog Title Here
-                  </h2>
-                  <p className='text-sm text-black-400'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    aliqua. Sed vulputate mi sit ame.'
+                category='AutoMobile'
+                coverImage='/images/bg/get-involved.jpg'
+                link='#'
+                date='Mar 16, 2024'
+              />
+
+              <BlogClip
+                title='Why Taxation?'
+                description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Sed vulputate mi sit ame.
-                  </p>
-                  <a
-                    href='#'
-                    className='mt-3 block font-heading text-sm font-semibold text-primary-500'
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
+                    aliqua. Sed vulputate mi sit ame.'
+                category='Government'
+                coverImage='/images/bg/get-involved.jpg'
+                link='#'
+                date='Mar 16, 2024'
+              />
             </div>
           </div>
 

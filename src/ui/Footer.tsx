@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Logo from '@/assets/images/logo_light.svg';
+import Link from 'next/link';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { BsTwitterX, BsFacebook, BsYoutube, BsInstagram } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
@@ -22,10 +23,10 @@ function Footer() {
             </h5>
             <ul>
               <li>
-                <a href='#'>Home</a>
+                <Link href='/'>Home</Link>
               </li>
               <li>
-                <a href='#'>About Us</a>
+                <Link href='/about'>About Us</Link>
               </li>
               <li>
                 <a href='#'>Contact Us</a>
@@ -41,16 +42,16 @@ function Footer() {
             </h5>
             <ul>
               <li>
-                <a href='#'>Annual Reports</a>
+                <Link href='/impact-reports'>Annual Reports</Link>
               </li>
               <li>
-                <a href='#'>Blog</a>
+                <Link href='/blog'>Blog</Link>
               </li>
               <li>
-                <a href='#'>Press Release</a>
+                <Link href='/blog'>Press Release</Link>
               </li>
               <li>
-                <a href='#'>Publications/Research</a>
+                <Link href='/blog'>Publications/Research</Link>
               </li>
             </ul>
           </div>
@@ -98,7 +99,7 @@ function Footer() {
             <div className=''>
               <p>
                 <a href='tel:0700 000 0002'>0700 000 0002</a> <br />
-                <a href='mailtoinfo@gendermobile.org'>info@gendermobile.org</a>
+                <a href='mailto:info@gendermobile.org'>info@gendermobile.org</a>
               </p>
             </div>
           </div>
@@ -107,7 +108,8 @@ function Footer() {
               <ul>
                 <li className='mr-3 inline-block'>
                   <a
-                    href='#endregion'
+                    href='https://facebook.com/gendermobile'
+                    target='_blank'
                     className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <ImFacebook />
@@ -115,7 +117,8 @@ function Footer() {
                 </li>
                 <li className='mr-3 inline-block'>
                   <a
-                    href='#endregion'
+                    href='https://instagram.com/gendermobile'
+                    target='_blank'
                     className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <BsInstagram />
@@ -123,7 +126,8 @@ function Footer() {
                 </li>
                 <li className='mr-3 inline-block'>
                   <a
-                    href='#endregion'
+                    href='https://x.com/gendermobile_ng'
+                    target='_blank'
                     className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <BsTwitterX />
@@ -131,7 +135,8 @@ function Footer() {
                 </li>
                 <li className='mr-3 inline-block'>
                   <a
-                    href='#endregion'
+                    href='https://www.youtube.com/@gendermobile/'
+                    target='_blank'
                     className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <BsYoutube />

@@ -67,18 +67,18 @@ const programsList = [
   },
   {
     name: `CampusPal`,
-    href: `#`,
+    href: `https://campuspal.ng`,
   },
 ];
 
 const resourcesList = [
   {
     name: `Impact Reports`,
-    href: `#`,
+    href: `impact-reports`,
   },
   {
     name: `Blog`,
-    href: `#`,
+    href: `/blog`,
   },
   {
     name: `Press Releases`,
@@ -98,7 +98,7 @@ const resourcesList = [
   },
   {
     name: `Gallery`,
-    href: `#`,
+    href: `/gallery`,
   },
 ];
 
@@ -280,9 +280,9 @@ export default function Header({ background }: { background?: boolean }) {
                       className='relative rounded-lg px-4 py-2 text-sm transition-colors duration-200 hover:bg-gray-50 hover:text-primary-500'
                     >
                       <div className='flex-auto'>
-                        <a href={item.href} className='block'>
+                        <Link href={item.href} className='block'>
                           {item.name}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   ))}

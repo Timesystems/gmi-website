@@ -64,15 +64,42 @@
     scrollbar-width: none;
   }
 
-  .donation-banner {
-    background:
-      /* url('/images/bg/woman-in-deep-thought.png') no-repeat right, */ linear-gradient(
-        to left,
-        theme('colors.white'),
-        theme('colors.black.500')
-      ),
-      red;
-
+  .banner {
+    background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.blog-body > h1,
+.blog-body > h2,
+.blog-body > h3,
+.blog-body > h4,
+.blog-body > h5,
+.blog-body > h6 {
+  @apply mb-3 font-semibold text-black-500 md:mb-5;
+}
+
+.blog-body > h1 {
+  font-size: 2rem;
+}
+
+.blog-body > h2 {
+  font-size: 1.6rem;
+}
+
+.blog-body > h3 {
+  font-size: 1.4rem;
+}
+.blog-body > h4 {
+  font-size: 1.2rem;
+  @apply mb-2 md:mb-3;
+}
+.blog-body > h5 {
+  font-size: 1.1rem;
+  @apply mb-2;
+}
+
+.blog-body > p {
+  line-height: 160%;
+  @apply mb-5;
 }

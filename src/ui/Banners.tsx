@@ -1,6 +1,6 @@
 export function DonationBanner() {
   return (
-    <div className='donation-banner flex min-h-[250px] items-center justify-start rounded-[20px] px-16 py-16 lg:min-h-[450px] lg:px-24 lg:py-24'>
+    <div className='banner flex min-h-[250px] items-center justify-start rounded-[20px] bg-[url("/images/bg/banner-2-mobile.png")] px-16 py-16 md:bg-[url("/images/bg/banner-2.png")] lg:min-h-[450px] lg:px-24 lg:py-24'>
       <div className='w-1/2 text-white'>
         <h2 className='mb-4 text-[2.5em] font-semibold leading-[120%]'>
           Your donation will go a long <br /> way
@@ -23,7 +23,7 @@ export function DonationBanner() {
 
 export function HelpBanner() {
   return (
-    <div className='flex min-h-[250px] items-center justify-end rounded-[20px] bg-gradient-to-r from-white to-black-500 px-16 py-16 lg:min-h-[450px] lg:px-24 lg:py-24'>
+    <div className='banner flex min-h-[250px] items-center justify-end rounded-[20px] bg-[url("/images/bg/banner-1-mobile.png")] px-16 py-16 md:bg-[url("/images/bg/banner-1.png")] lg:min-h-[450px] lg:px-24 lg:py-24'>
       <div className='w-1/2 text-white'>
         <h2 className='mb-4 text-[2.5em] font-semibold leading-[120%]'>
           Do you Need help? <br /> Gender Mobile is just a call away.

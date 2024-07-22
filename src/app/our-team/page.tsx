@@ -32,7 +32,7 @@ export default function OurTeamPage() {
               />
             </div>
             <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='size-full rounded-primary bg-[url("/images/team/feyishola.png")] bg-cover bg-center bg-no-repeat' />
+              <div className='size-full rounded-primary bg-[url("/images/team/omowunmi.png")] bg-cover bg-center bg-no-repeat' />
             </div>
           </div>
         </Container>
