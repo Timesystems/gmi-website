@@ -115,3 +115,15 @@
   line-height: 160%;
   @apply mb-5;
 }
+
+/* .slick-track {
+  display: flex;
+}
+.slick-track .slick-slide {
+  height: auto;
+  display: flex;
+}
+
+.slick-track .slick-slide div {
+  display: flex;
+} */

@@ -5,6 +5,7 @@ import { HeadingTitle, TeamMemberBio, TeamMemberImage } from '@/ui/Elements';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import PartnerSlider from '@/ui/PartnerSlider';
+import TeamMembers from './TeamMembers';
 
 export default function OurTeamPage() {
   return (
@@ -49,25 +50,7 @@ export default function OurTeamPage() {
             <HeadingTitle>Team Members</HeadingTitle>
           </div>
 
-          <div className='justify-between md:flex'>
-            <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='size-full rounded-primary bg-[url("/images/team/feyishola.png")] bg-cover bg-center bg-no-repeat' />
-            </div>
-            <div className='md:w-[50%] lg:w-[58%]'>
-              <TeamMemberBio
-                name='Dr. Feyishola Kadiri'
-                role='Research and Policy Lead'
-                email='feyishola.kadiri@gendermobile.org'
-                linkedin='https://linkedin.com/in/ionware'
-                biography={[
-                  `Dr. Feyishola Kadiri is currently the Research and Policy Lead at Gender Mobile Initiative. Dr. Kadiri is a result-oriented development professional expert with an interest in sustainability at the intersection of economy, society and culture. Presently, Dr. Kadiri has demonstrated experience in gender equality and gender-based violence and extensive experience in policy research and project management.`,
-                  `Dr. Kadiri is a Fellow of the Higher Education Academy in the UK, holds a PhD in Management Studies from the University of Essex, an MSc degree in Development Economics and Policy from the University of Manchester, UK, an MBA in General Management from the University of Lagos and a BSc (Hons) in Economics from Ajayi Crowther University.`,
-                ]}
-                prevClick={{}}
-                nextClick={{}}
-              />
-            </div>
-          </div>
+          <TeamMembers />
         </Container>
       </SpacedSection>
 

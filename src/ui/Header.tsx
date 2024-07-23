@@ -63,7 +63,7 @@ const programsList = [
   },
   {
     name: `WOWANi`,
-    href: `#`,
+    href: `https://womani.org`,
     external: true,
   },
   {

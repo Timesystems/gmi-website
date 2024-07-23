@@ -1,7 +1,7 @@
 import React from 'react';
+import './slick-slider.css';
 import './globals.css';
 // import 'slick-carousel/slick/slick.css';
-import './slick-slider.css';
 
 export default function RootLayout({
   children,

@@ -35,8 +35,15 @@ export function TeamMemberImage({
   alt: string;
 }) {
   return (
-    <div className={`rounded-primary ${className}`}>
-      <Image src={src} alt={alt} fill objectFit='cover' />
+    <div className={`relative size-full rounded-primary ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        quality={100}
+        style={{ objectFit: `cover`, objectPosition: `center` }}
+        className='rounded-primary'
+      />
     </div>
   );
 }
@@ -61,17 +68,20 @@ export function TeamMemberBio({
   'use client';
 
   return (
-    <div className='rounded-primary bg-primary-50 px-6 py-6 md:px-8 md:py-8'>
-      <h3 className='text-2xl font-semibold text-black-500'>{name}</h3>
-      <span className='text-[0.9em] text-black-400'>{role}</span>
-      <div className='mt-4 text-black-500'>
-        {biography.map((desc, index) => (
-          <p className='mb-6' key={`${name}-para-${index}`}>
-            {desc}
-          </p>
-        ))}
+    <div className='flex min-h-[510px] flex-col justify-between rounded-primary bg-primary-50 px-6 py-6 md:px-8 md:py-8'>
+      <div>
+        <h3 className='text-2xl font-semibold text-black-500'>{name}</h3>
+        <span className='text-[0.9em] text-black-400'>{role}</span>
+        <div className='mt-4 text-black-500'>
+          {biography.map((desc, index) => (
+            <p className='mb-6' key={`${name}-para-${index}`}>
+              {desc}
+            </p>
+          ))}
+        </div>
       </div>
-      <div className='mt-6 flex items-center justify-between md:mt-8'>
+
+      <div className='mt-6 inline-flex items-center justify-between md:mt-8'>
         {/** Connect Icons */}
         <div>
           <a
