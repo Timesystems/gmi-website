@@ -64,10 +64,12 @@ const programsList = [
   {
     name: `WOWANi`,
     href: `#`,
+    external: true,
   },
   {
     name: `CampusPal`,
     href: `https://campuspal.ng`,
+    external: true,
   },
 ];
 
@@ -238,9 +240,15 @@ export default function Header({ background }: { background?: boolean }) {
                       className='relative rounded-lg px-4 py-2 text-sm transition-colors duration-200 hover:bg-gray-50 hover:text-primary-500'
                     >
                       <div className='flex-auto'>
-                        <Link href={item.href} className='block'>
-                          {item.name}
-                        </Link>
+                        {item.external ? (
+                          <a href={item.href} className='block' target='_blank'>
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link href={item.href} className='block'>
+                            {item.name}
+                          </Link>
+                        )}
                       </div>
                     </div>
                   ))}

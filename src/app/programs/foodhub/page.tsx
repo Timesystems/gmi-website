@@ -12,78 +12,57 @@ export default function SkillUpWomenGirlsPage() {
         Executive Summary
       </h3>
       <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
+        Public health emergencies, such as the recent coronavirus outbreak, have
+        had profound socioeconomic impacts on individuals, families, and entire
+        nations. Evidence shows that women, girls, and children bear a
+        disproportionate burden of these crises, facing challenges in areas such
+        as food security, nutrition, healthcare, education, livelihoods, and
+        protection. Even after the crisis subsides, the effects on women and
+        girls can persist for years.
       </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
-      </h4>
       <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
-      </p>
-    </>,
-    <>
-      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        The Strategies we implored
-      </h3>
-      <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
-      </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
-      </h4>
-      <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
+        In response to these challenges, Gendermobile has launched a Food Hub
+        model in Ekiti State to support vulnerable women and children during the
+        lockdown period prompted by the spread of the coronavirus, also known as
+        &quote;Covid-19&quote;.
       </p>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Our Approach
       </h3>
-      <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
+      <p className='mb-4'>
+        The Gender Mobile Initiative Food Hub leverages technology, including a
+        dedicated helpline (07000000002) and other communication channels, to
+        connect donors of cash and food items with those in need. Our model
+        operates on a need basis, ensuring that resources are distributed to
+        those who require assistance the most.
       </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
-      </h4>
-      <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
-      </p>
+    </>,
+    <>
+      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
+        How It Works
+      </h3>
+
+      <ul className='tab-content-list'>
+        <li>
+          <h6>Donor Engagement</h6>
+          We encourage individuals and organizations to contribute cash or food
+          items to support vulnerable women and children in our community.
+        </li>
+        <li>
+          <h6>Recipient Support</h6>
+          Those in need can reach out to us through our helpline or other
+          channels to request assistance. Our team assesses each request and
+          provides support based on the level of need.
+        </li>
+        <li>
+          <h6>Community Volunteer System</h6>
+          We rely on a network of dedicated volunteers who assist with the
+          coordination and distribution of resources to ensure efficient and
+          effective support for our beneficiaries.
+        </li>
+      </ul>
     </>,
   ];
 
@@ -97,7 +76,7 @@ export default function SkillUpWomenGirlsPage() {
             <div className='md:w-[55%] lg:w-[60%]'>
               <TabElement
                 name='foodhub'
-                tabs={['Summary', 'Problem', 'Approach']}
+                tabs={['Summary', 'Approach', 'Process']}
                 tabContent={tabContents}
               />
             </div>

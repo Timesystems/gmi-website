@@ -70,6 +70,18 @@
   }
 }
 
+.tab-content-list {
+  @apply my-2 list-inside list-image-[url(/images/tiny/bullseye.svg)] text-black-400;
+}
+
+.tab-content-list > li {
+  @apply mb-3;
+}
+.tab-content-list > li > h6 {
+  display: inline;
+  @apply font-body font-semibold after:block;
+}
+
 .blog-body > h1,
 .blog-body > h2,
 .blog-body > h3,

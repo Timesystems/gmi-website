@@ -35,55 +35,61 @@ export default function GirlWomenViolencePage() {
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        The Strategies we implored
+        Our strategies include
       </h3>
-      <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
-      </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
-      </h4>
-      <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
+      <ul className='tab-content-list'>
+        <li>Engaging culture and faith leaders as norm entrepreneurs.</li>
+        <li>
+          Establishing survivor networks to provide comprehensive support.
+        </li>
+        <li>Sharing personal stories of those affected by FGM.</li>
+        <li>
+          Conducting house-to-house mobilization to pledge support for ending
+          FGM.
+        </li>
+      </ul>
+
+      <p className=''>
+        Additionally, with support from AU-UNICEF, we&apos;ve prioritized
+        bolstering the mental health and wellbeing of FGM survivors. Through
+        impactful radio jingles and live sessions, we&apos;ve sensitized over
+        50,000 listeners, extending awareness and support to those in need.
       </p>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        The Impacts we&apos;ve made
+        Impact and Achievements
       </h3>
-      <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
-      </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
-      </h4>
-      <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
-      </p>
+      <ul className='tab-content-list'>
+        <li>
+          Community Engagement: We&apos;ve reached ten communities and impacted
+          over 347,000 individuals through reflective dialogues and community
+          facilitator trainings.
+        </li>
+        <li>
+          Pledges to End FGM: Our efforts have mobilized 347,000 pledges to end
+          FGM, demonstrating a growing commitment to eradicating this harmful
+          practice.
+        </li>
+        <li>
+          Leadership Engagement: Five traditional rulers have assumed the role
+          of norm entrepreneurs, denouncing FGM and mobilizing their communities
+          for change.
+        </li>
+        <li>
+          Youth Empowerment: Over 1,000 adolescents have been equipped with
+          life-building and advocacy skills, empowering them to become agents of
+          change in their communities.
+        </li>
+        <li>
+          Survivor Support: We&apos;ve reached sixty FGM survivors, providing
+          them with resources and support to advocate against the practice.
+        </li>
+        <li>
+          Radio Sensitization: Fifty thousand radio listeners have been
+          sensitized, leading to increased awareness and support for survivors.
+        </li>
+      </ul>
     </>,
   ];
 
