@@ -24,7 +24,7 @@ export function TestimonialHeading({
 }
 
 export default function TestimonialSlider() {
-  let sliderRef = useRef(null);
+  let sliderRef = useRef<any>(null);
 
   const settings = {
     dots: false,
