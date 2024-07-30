@@ -11,8 +11,8 @@ export function TestimonialHeading({
   subtitle?: string;
 }) {
   return (
-    <div className='mb-12 text-center lg:mb-16'>
-      <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Testimonials"]'>
+    <div className='mb-8 text-center md:mb-12 lg:mb-16'>
+      <h2 className='mb-2 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Testimonials"] md:mb-4 md:text-[2.25em]'>
         {title || `What People Say About Us`}
       </h2>
       <span className='text-black-400'>
@@ -51,7 +51,7 @@ export default function TestimonialSlider() {
         {/** slide 1 */}
         <div>
           <div className='flex justify-center'>
-            <div className='rounded-[20px] bg-primary-500 px-8 py-8 text-center text-white lg:w-[70%] lg:px-16 lg:py-16'>
+            <div className='bg-primary-500 px-8 py-8 text-center text-white md:rounded-primary lg:w-[70%] lg:px-16 lg:py-16'>
               <p className='text-green-50 before:mx-auto before:mb-4 before:flex before:h-[25px] before:w-[35px] before:bg-[url("/images/tiny/quote.svg")] before:text-center'>
                 Gender Mobile has been an incredible partner in the work of
                 gender justice, especially for students in tertiary
@@ -73,7 +73,7 @@ export default function TestimonialSlider() {
         {/** slide 2 */}
         <div>
           <div className='flex justify-center'>
-            <div className='rounded-[20px] bg-primary-500 px-8 py-8 text-center text-white lg:w-[70%] lg:px-16 lg:py-16'>
+            <div className='bg-primary-500 px-8 py-8 text-center text-white md:rounded-primary lg:w-[70%] lg:px-16 lg:py-16'>
               <p className='text-green-50 before:mx-auto before:mb-4 before:flex before:h-[25px] before:w-[35px] before:bg-[url("/images/tiny/quote.svg")] before:text-center'>
                 Gender Mobile has been an incredible partner in the work of
                 gender justice, especially for students in tertiary
@@ -95,7 +95,7 @@ export default function TestimonialSlider() {
         {/** slide 3 */}
         <div>
           <div className='flex justify-center'>
-            <div className='rounded-[20px] bg-primary-500 px-8 py-8 text-center text-white lg:w-[70%] lg:px-16 lg:py-16'>
+            <div className='bg-primary-500 px-8 py-8 text-center text-white md:rounded-primary lg:w-[70%] lg:px-16 lg:py-16'>
               <p className='text-green-50 before:mx-auto before:mb-4 before:flex before:h-[25px] before:w-[35px] before:bg-[url("/images/tiny/quote.svg")] before:text-center'>
                 Gender Mobile has been an incredible partner in the work of
                 gender justice, especially for students in tertiary
@@ -117,7 +117,7 @@ export default function TestimonialSlider() {
         {/** slide 4 */}
         <div>
           <div className='flex justify-center'>
-            <div className='rounded-[20px] bg-primary-500 px-8 py-8 text-center text-white lg:w-[70%] lg:px-16 lg:py-16'>
+            <div className='bg-primary-500 px-8 py-8 text-center text-white md:rounded-primary lg:w-[70%] lg:px-16 lg:py-16'>
               <p className='text-green-50 before:mx-auto before:mb-4 before:flex before:h-[25px] before:w-[35px] before:bg-[url("/images/tiny/quote.svg")] before:text-center'>
                 Gender Mobile has been an incredible partner in the work of
                 gender justice, especially for students in tertiary

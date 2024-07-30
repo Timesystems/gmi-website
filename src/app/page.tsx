@@ -26,12 +26,12 @@ export default function Home() {
   return (
     <>
       <Header background />
-      <main className='overflow-hidden bg-white px-4'>
+      <main className='overflow-hidden bg-white lg:px-4'>
         <div
-          className='mx-auto flex rounded-bl-[40px] rounded-br-[40px] bg-primary-700 pt-[40px] text-white lg:container lg:px-10 lg:pt-[200px]'
+          className='mx-auto flex flex-wrap rounded-bl-[40px] rounded-br-[40px] bg-primary-700 px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[200px]'
           role='hero-overlay'
         >
-          <div className='h-[0%] lg:w-1/2'>
+          <div className='order-2 lg:order-1 lg:h-[0%] lg:w-1/2'>
             <div className=''>
               <h1 className='line-clamp-4 pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
                 We respond urgently to any form of Sexual and Gender-Based
@@ -55,12 +55,12 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='static lg:relative lg:right-[50px] lg:top-[-20px] lg:h-[550px] lg:w-1/2'>
+          <div className='lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2'>
             <Image
               src={HomePageImage}
               alt='Perplexed Lady'
-              fill
-              style={{ objectFit: 'cover', scale: '1.12' }}
+              className='lg:scale-110'
+              style={{ objectFit: 'cover' }}
             />
           </div>
         </div>
@@ -79,17 +79,19 @@ export default function Home() {
       <GenderMobileStatisticCounterUp />
       <section className='pb-20'>
         <div className='container mx-auto'>
-          <div className='flex items-center'>
-            <div className='relative inline-flex justify-end lg:w-1/2'>
-              <div className='before-bg-addon relative h-[75%] min-h-[400px] w-[75%] rounded-3xl bg-[url("/images/bg/get-involved.jpg")] before:left-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/dotted-style.png")]'>
-                <div className='absolute bottom-[-40px] right-[-40px] rounded-2xl bg-white py-4 pl-4 pr-0 text-sm text-black-500 shadow-md'>
-                  <span>Join 200+ Other Volunteers</span>
+          <div className='block md:flex md:items-center'>
+            <div className='relative justify-end md:inline-flex lg:w-1/2'>
+              <div className='before-bg-addon relative mx-auto h-[75%] min-h-[400px] w-[90%] rounded-3xl bg-[url("/images/bg/get-involved.jpg")] before:left-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/dotted-style.png")] md:w-[75%]'>
+                <div className='absolute bottom-[-40px] right-[-40px] rounded-2xl bg-white py-2 pl-4 pr-0 text-sm text-black-500 shadow-md md:py-4'>
+                  <span className='text-sm md:text-base'>
+                    Join 200+ Other Volunteers
+                  </span>
                   <div className='mt-2'>
                     {volunteerMembers.map(({ name, image }, index) => (
                       <span
                         key={`volunteer ${name}`}
                         className={clsx(
-                          `relative inline-block h-[48px] w-[48px] rounded-full border-[2px] border-white bg-[url("/images/volunteers/kelly.jpg")] bg-cover bg-center bg-no-repeat`,
+                          `relative inline-block h-[36px] w-[36px] rounded-full border-[2px] border-white bg-[url("/images/volunteers/kelly.jpg")] bg-cover bg-center bg-no-repeat md:h-[48px] md:w-[48px]`,
                           {
                             'left-[-10px]': index == 1,
                             'left-[-20px]': index == 2,
@@ -143,21 +145,26 @@ export default function Home() {
 
       {/** Blog Purview Section */}
       <section className='mb-20'>
-        <div className='container mx-auto bg-primary-50 px-16 py-16'>
-          <div className='mb-10 text-center md:mb-16'>
-            <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Blog"]'>
+        <div className='container mx-auto bg-primary-50 px-6 py-10 md:px-16 md:py-16'>
+          <div className='mb-4 text-center md:mb-16'>
+            <h2 className='mb-2 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Blog"] md:mb-4 md:text-[2.25em]'>
               Explore Our Latest Insights
             </h2>
-            <span className='text-black-400'>
+            <span className='hidden text-black-400 md:block'>
               Dive into the GMI blog to discover thought-provoking articles,
               inspiring stories, <br />
               and actionable tips on gender and sexual based violence.
             </span>
+            <span className='text-sm text-black-400 md:hidden'>
+              Dive into the GMI blog to discover thought-provoking articles,
+              inspiring stories, and actionable tips on gender and sexual based
+              violence.
+            </span>
           </div>
 
           {/** Blog List */}
-          <div className='mb-10 flex justify-center md:mb-16'>
-            <div className='grid grid-cols-2 grid-rows-1 gap-6 lg:w-[80%]'>
+          <div className='mb-5 md:mb-16 md:flex md:justify-center'>
+            <div className='grid grid-cols-1 grid-rows-2 gap-2 md:grid-cols-2 md:grid-rows-1 md:gap-6 lg:w-[80%]'>
               <BlogClip
                 title='Effect of CO2 in our Environment'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -196,8 +203,8 @@ export default function Home() {
       {/** Tweets and Gallery section */}
       <section className='mb-24'>
         <div className='container mx-auto'>
-          <div className='grid grid-cols-2 grid-rows-1 items-center md:gap-[150px]'>
-            <div className=''>
+          <div className='items-center md:grid md:grid-cols-2 md:grid-rows-1 md:gap-[150px]'>
+            <div className='mb-16 px-6 md:mb-0 md:px-0'>
               <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Insights"]'>
                 Our Latest Tweets
               </h2>
@@ -223,7 +230,7 @@ export default function Home() {
                 <Script src='https://platform.twitter.com/widgets.js' />
               </div>
             </div>
-            <div className=''>
+            <div className='px-6 md:px-0'>
               <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Gallery"]'>
                 Experience Our Impact
               </h2>
@@ -275,7 +282,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className='grid gap-4'>
+                  <div className='hidden gap-4 md:grid'>
                     <div>
                       <img
                         className='h-auto max-w-full rounded-lg'

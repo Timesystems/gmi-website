@@ -11,7 +11,7 @@ export function AboutUs({
   buttonLink: string;
 }) {
   return (
-    <div className='grid grid-cols-2 grid-rows-1 text-black-400 md:gap-x-10 lg:gap-x-20 lg:px-10'>
+    <div className='grid-cols-1 grid-rows-2 text-black-400 md:grid lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-20 lg:px-10'>
       <div className='px-4 py-4 lg:py-8'>
         <HeadingTitle className='before:content-["About_Us"]'>
           Our Story of Empowerment and Innovation
@@ -36,8 +36,8 @@ export function AboutUs({
         </div>
       </div>
 
-      <div className='inline-flex items-center'>
-        <div className='before-bg-addon after-bg-addon relative h-[75%] w-[75%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")]' />
+      <div className='text-center lg:inline-flex lg:items-center'>
+        <div className='before-bg-addon after-bg-addon relative mx-auto h-[340px] w-[90%] rounded-primary bg-[url("/images/bg/ocean-side-cleaning.jpg")] before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")] lg:h-[75%] lg:w-[75%]' />
       </div>
     </div>
   );

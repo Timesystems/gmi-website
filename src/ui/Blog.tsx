@@ -17,13 +17,20 @@ export function BlogClip({
 }) {
   return (
     <div
-      className='relative h-[380px] rounded-primary transition-all duration-300 group-hover:grayscale'
+      className='relative h-[380px] rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
       style={{
         background: `url("${coverImage}") no-repeat center`,
         backgroundSize: `contain`,
       }}
     >
-      <div className='absolute bottom-[20px] left-[5%] mx-auto w-[90%] rounded-[20px] bg-white px-6 py-6 text-black-600'>
+      <div
+        className='absolute mx-auto w-[90%] rounded-[20px] bg-white px-6 py-6 text-black-600'
+        style={{
+          top: `60%`,
+          left: `50%`,
+          transform: `translate(-50%, -50%)`,
+        }}
+      >
         <div className='mb-2 flex justify-between text-[0.75em]'>
           <span className='text-black-300'>{date}</span>
           <span className='text-primary-500'>{category}</span>
