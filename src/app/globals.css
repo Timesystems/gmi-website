@@ -23,6 +23,9 @@
 }
 
 @layer utilities {
+  .rounded-primary {
+    @apply rounded-[8px] md:rounded-[20px];
+  }
   .before-bg-addon {
     @apply before:absolute before:-z-[1] before:block before:h-[116px] before:w-[116px] before:rounded-[10px];
   }
@@ -33,7 +36,7 @@
 
   .btn-base {
     transition: all 0.3s;
-    @apply inline-block rounded-full px-6 py-2 font-heading transition-colors duration-500;
+    @apply rounded-full px-6 py-2 font-heading transition-colors duration-500;
   }
 
   .btn-primary {

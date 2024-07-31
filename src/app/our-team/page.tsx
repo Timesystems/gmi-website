@@ -19,8 +19,8 @@ export default function OurTeamPage() {
       {/** Executive Director section */}
       <SpacedSection top bottom>
         <Container>
-          <div className='justify-between md:flex'>
-            <div className='md:w-[50%] lg:w-[58%]'>
+          <div className='flex flex-wrap justify-between md:flex-nowrap'>
+            <div className='order-2 w-full md:w-[50%] lg:w-[58%]'>
               <TeamMemberBio
                 name='Omowumi Ogunrotimi Esq'
                 role='Executive Lead'
@@ -32,8 +32,8 @@ export default function OurTeamPage() {
                 ]}
               />
             </div>
-            <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='size-full rounded-primary bg-[url("/images/team/omowunmi.png")] bg-cover bg-center bg-no-repeat' />
+            <div className='order-1 h-[350px] w-full md:h-auto md:w-[45%] lg:w-[40%]'>
+              <div className='size-full bg-[url("/images/team/omowunmi.png")] bg-cover bg-center bg-no-repeat md:rounded-primary' />
             </div>
           </div>
         </Container>

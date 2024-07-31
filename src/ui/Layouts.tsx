@@ -15,7 +15,12 @@ export function SpacedSection({
   className?: string;
 }) {
   return (
-    <section className={clsx(className, { 'mt-20': top, 'mb-20': bottom })}>
+    <section
+      className={clsx(className, {
+        'mt-10 md:mt-20': top,
+        'mb-10 md:mb-20': bottom,
+      })}
+    >
       {children}
     </section>
   );

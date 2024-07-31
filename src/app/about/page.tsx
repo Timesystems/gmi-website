@@ -10,8 +10,36 @@ import { PiTargetFill } from 'react-icons/pi';
 import Faq from '@/ui/Faq';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
+import clsx from 'clsx';
 
 export default function AboutUsPage() {
+  const coreValues = [
+    'Integrity',
+    'Diversity',
+    'Equity',
+    'Inclusion',
+    'Collaboration',
+    'Equality',
+    'Accountability',
+    'Respect',
+    'Fairness ',
+    'Teamwork',
+    'Shared Power/Leadership',
+  ];
+
+  const strategiesList = [
+    {
+      label: `Legal Reform and Policy Advocacy`,
+      icon: <BsBullseye />,
+    },
+    { label: `Research`, icon: <BsBullseye /> },
+    { label: `Technology Adoption`, icon: <BsBullseye /> },
+    { label: `Service Delivery and Support`, icon: <BsBullseye /> },
+    { label: `Capacity Building and Strengthening`, icon: <BsBullseye /> },
+    { label: `Preventative Education`, icon: <BsBullseye /> },
+    { label: `Legal Empowerment`, icon: <BsBullseye /> },
+    { label: `Economic Empowerment`, icon: <BsBullseye /> },
+  ];
   return (
     <>
       <Header />
@@ -68,7 +96,7 @@ export default function AboutUsPage() {
               </div>
               {/** Row 3 */}
               <div className='px-5 py-5 ring-gray-100 md:rounded-primary md:px-12 md:py-14 md:shadow-md md:ring-1'>
-                <div className='grid-cols-5 grid-rows-1 md:grid'>
+                <div className='gap-x-20 md:flex'>
                   <div>
                     <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                       <BsBullseye />
@@ -77,75 +105,19 @@ export default function AboutUsPage() {
                       Our Core Values
                     </h4>
                   </div>
-
-                  <ul className='inline-block md:ml-0 md:block'>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Integrity</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Collaboration</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Fairness</span>
-                    </li>
-                    <li className='flex items-center pb-2 md:hidden'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>New focus point</span>
-                    </li>
-                  </ul>
-                  <ul className='ml-4 inline-block md:ml-0 md:block'>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Integrity</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Collaboration</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Fairness</span>
-                    </li>
-                    <li className='flex items-center pb-2 md:hidden'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>New focus point</span>
-                    </li>
-                  </ul>
-                  <ul className='ml-4 inline-block md:ml-0 md:block'>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Integrity</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Collaboration</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Fairness</span>
-                    </li>
-                    <li className='flex items-center pb-2 md:hidden'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>New focus</span>
-                    </li>
-                  </ul>
-                  <ul className='hidden md:block'>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Integrity</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Collaboration</span>
-                    </li>
-                    <li className='flex items-center pb-2'>
-                      <BsBullseye className='text-primary-500' />
-                      <span className='ml-2'>Respect</span>
-                    </li>
-                  </ul>
+                  <div className='grid grid-cols-3 grid-rows-4 gap-x-3 gap-y-3 md:w-[70%] md:grid-cols-4 md:grid-rows-3'>
+                    {coreValues.map((value) => (
+                      <div
+                        key={value}
+                        className={clsx(`flex items-center`, {
+                          'col-span-2': value.length > 15,
+                        })}
+                      >
+                        <BsBullseye className='text-primary-500' />
+                        <span className='ml-2'>{value}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -173,7 +145,7 @@ export default function AboutUsPage() {
                 className='hidden md:inline-block'
                 alt='SDG Goals'
               />
-              <div className='px-6 md:px-0'>
+              <div className='mt-12 px-6 md:mt-0 md:px-0'>
                 <HeadingTitle className='before:content-["FOCUS_AREA"]'>
                   SDG Under Focus
                 </HeadingTitle>
@@ -209,70 +181,19 @@ export default function AboutUsPage() {
           {/** Strategies List */}
           <div className='mb-4 mt-6 px-6 md:mb-8 md:mt-12 md:px-0'>
             <div className='grid grid-cols-2 grid-rows-4 gap-x-8 gap-y-8 md:grid-cols-4 md:grid-rows-2'>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
-              <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
-                <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
-                  <BsBullseye />
-                </span>
-                <h6 className='mt-6 text-lg transition-colors duration-300 group-hover:text-white'>
-                  Legal Reform and Policy Advocacy
-                </h6>
-              </div>
+              {strategiesList.map(({ label, icon }) => (
+                <div
+                  key={label}
+                  className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'
+                >
+                  <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
+                    {icon}
+                  </span>
+                  <h6 className='mt-6 text-base transition-colors duration-300 group-hover:text-white md:text-lg'>
+                    {label}
+                  </h6>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

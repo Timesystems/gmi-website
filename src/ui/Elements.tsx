@@ -18,7 +18,7 @@ export function HeadingTitle({
 }) {
   return (
     <h2
-      className={`mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["${title?.split(' ').join('_')}"] ${className}`}
+      className={`mb-4 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 md:text-[2.25em] before:content-["${title?.split(' ').join('_')}"] ${className}`}
     >
       {children}
     </h2>
@@ -35,14 +35,14 @@ export function TeamMemberImage({
   alt: string;
 }) {
   return (
-    <div className={`relative size-full rounded-primary ${className}`}>
+    <div className={`relative size-full md:rounded-primary ${className}`}>
       <Image
         src={src}
         alt={alt}
         fill
         quality={100}
         style={{ objectFit: `cover`, objectPosition: `center` }}
-        className='rounded-primary'
+        className='md:rounded-primary'
       />
     </div>
   );
@@ -65,14 +65,12 @@ export function TeamMemberBio({
   prevClick?: any;
   nextClick?: any;
 }) {
-  'use client';
-
   return (
-    <div className='flex min-h-[510px] flex-col justify-between rounded-primary bg-primary-50 px-6 py-6 md:px-8 md:py-8'>
+    <div className='flex flex-col justify-between bg-primary-50 px-6 py-6 md:min-h-[510px] md:rounded-primary md:px-8 md:py-8'>
       <div>
         <h3 className='text-2xl font-semibold text-black-500'>{name}</h3>
         <span className='text-[0.9em] text-black-400'>{role}</span>
-        <div className='mt-4 text-black-500'>
+        <div className='mt-4 text-sm text-black-500 md:text-base'>
           {biography.map((desc, index) => (
             <p className='mb-6' key={`${name}-para-${index}`}>
               {desc}
@@ -81,7 +79,7 @@ export function TeamMemberBio({
         </div>
       </div>
 
-      <div className='mt-6 inline-flex items-center justify-between md:mt-8'>
+      <div className='mt-4 inline-flex items-center justify-between md:mt-8'>
         {/** Connect Icons */}
         <div>
           <a

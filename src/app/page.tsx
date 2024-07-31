@@ -15,12 +15,12 @@ import { BlogClip } from '@/ui/Blog';
 
 export default function Home() {
   const volunteerMembers = [
-    { name: `Scott`, image: `/images/volunteers/scott.jpg` },
-    { name: `Olivia`, image: `/images/volunteers/olivia.jpg` },
-    { name: `Jonah`, image: `/images/volunteers/jonah.jpg` },
-    { name: `Ethan`, image: `/images/volunteers/ethan.jpg` },
-    { name: `Clarke`, image: `/images/volunteers/clarke.jpg` },
-    { name: `Kelly`, image: `/images/volunteers/kelly.jpg` },
+    { name: `Scott`, image: `/images/volunteers/image-1.png` },
+    { name: `Olivia`, image: `/images/volunteers/image-2.png` },
+    { name: `Jonah`, image: `/images/volunteers/image-3.png` },
+    { name: `Ethan`, image: `/images/volunteers/image-4.png` },
+    { name: `Clarke`, image: `/images/volunteers/image-5.png` },
+    { name: `Kelly`, image: `/images/volunteers/image-6.png` },
   ];
 
   return (
@@ -28,10 +28,10 @@ export default function Home() {
       <Header background />
       <main className='overflow-hidden bg-white lg:px-4'>
         <div
-          className='mx-auto flex flex-wrap rounded-bl-[40px] rounded-br-[40px] bg-primary-700 px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[200px]'
+          className='mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[200px]'
           role='hero-overlay'
         >
-          <div className='order-2 lg:order-1 lg:h-[0%] lg:w-1/2'>
+          <div className='lg:order-1 lg:h-[0%] lg:w-1/2'>
             <div className=''>
               <h1 className='line-clamp-4 pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
                 We respond urgently to any form of Sexual and Gender-Based
@@ -42,25 +42,38 @@ export default function Home() {
                 <br />
                 of all forms of sexual and gender based violence.
               </p>
-              <a href='//#endregion' className='btn-white-outline inline-block'>
+
+              <a
+                href='//#endregion'
+                className='btn-white-outline hidden md:inline-block'
+              >
                 Learn More
               </a>
             </div>
-            <div className='pt-16'>
-              <span className='mr-4 inline-block rounded-full border border-white px-2 py-2'>
-                <HiOutlineArrowLeft />
-              </span>
-              <span className='mr-2 inline-block rounded-full border border-white px-2 py-2'>
-                <HiOutlineArrowRight />
-              </span>
+
+            <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
+              <a
+                href='//#endregion'
+                className='btn-white-outline inline-block md:hidden'
+              >
+                Learn More
+              </a>
+              <div>
+                <span className='mr-4 inline-block rounded-full border border-white px-2 py-2'>
+                  <HiOutlineArrowLeft />
+                </span>
+                <span className='mr-2 inline-block rounded-full border border-white px-2 py-2'>
+                  <HiOutlineArrowRight />
+                </span>
+              </div>
             </div>
           </div>
-          <div className='lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2'>
+          <div className='bottom-[20px] lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2'>
             <Image
               src={HomePageImage}
               alt='Perplexed Lady'
-              className='lg:scale-110'
-              style={{ objectFit: 'cover' }}
+              className='scale-110 lg:scale-110'
+              style={{ objectFit: 'cover', objectPosition: `center` }}
             />
           </div>
         </div>
@@ -81,8 +94,8 @@ export default function Home() {
         <div className='container mx-auto'>
           <div className='block md:flex md:items-center'>
             <div className='relative justify-end md:inline-flex lg:w-1/2'>
-              <div className='before-bg-addon relative mx-auto h-[75%] min-h-[400px] w-[90%] rounded-3xl bg-[url("/images/bg/get-involved.jpg")] before:left-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/dotted-style.png")] md:w-[75%]'>
-                <div className='absolute bottom-[-40px] right-[-40px] rounded-2xl bg-white py-2 pl-4 pr-0 text-sm text-black-500 shadow-md md:py-4'>
+              <div className='before-bg-addon relative mx-auto h-[75%] min-h-[400px] w-[90%] rounded-3xl bg-[url("/images/bg/joyful-students.png")] before:left-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/dotted-style.png")] md:w-[75%]'>
+                <div className='absolute bottom-[-40px] right-[-20px] rounded-2xl bg-white py-2 pl-4 pr-0 text-sm text-black-500 shadow-md md:right-[-40px] md:py-4'>
                   <span className='text-sm md:text-base'>
                     Join 200+ Other Volunteers
                   </span>
@@ -91,7 +104,7 @@ export default function Home() {
                       <span
                         key={`volunteer ${name}`}
                         className={clsx(
-                          `relative inline-block h-[36px] w-[36px] rounded-full border-[2px] border-white bg-[url("/images/volunteers/kelly.jpg")] bg-cover bg-center bg-no-repeat md:h-[48px] md:w-[48px]`,
+                          `relative inline-block h-[46px] w-[46px] rounded-full border-[2px] border-white bg-cover bg-center bg-no-repeat md:h-[48px] md:w-[48px]`,
                           {
                             'left-[-10px]': index == 1,
                             'left-[-20px]': index == 2,
@@ -100,13 +113,20 @@ export default function Home() {
                             'left-[-50px]': index == 5,
                           }
                         )}
-                      />
+                      >
+                        <Image
+                          src={image}
+                          alt=''
+                          fill
+                          className={clsx(`rounded-full`)}
+                        />
+                      </span>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
-            <div className='px-8 py-8 md:px-24 md:py-24 lg:w-1/2'>
+            <div className='mt-10 px-8 py-8 md:mt-0 md:px-24 md:py-24 lg:w-1/2'>
               <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Volunteer"]'>
                 You too can Get Involved
               </h2>

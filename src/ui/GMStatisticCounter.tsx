@@ -8,7 +8,7 @@ export default function GenderMobileStatisticCounterUp() {
         <div className='grid grid-cols-2 grid-rows-2 justify-between text-center text-sm text-black-400 md:flex md:w-[80%] md:text-[1.1em] lg:w-[60%]'>
           <div className='border-b border-black-50 px-20 py-2 md:border-0 md:p-0'>
             <h3 className='mb-2 text-[1.9em] font-semibold leading-[110%] text-black-500 md:text-[2.25em]'>
-              <CountUp end={6} duration={3.5} enableScrollSpy suffix='+' />
+              <CountUp end={7} duration={3.5} enableScrollSpy suffix='+' />
             </h3>
             <span>Years</span>
           </div>

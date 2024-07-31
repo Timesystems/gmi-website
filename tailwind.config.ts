@@ -41,7 +41,7 @@ const config: Config = {
         },
       },
       borderRadius: {
-        primary: `20px`,
+        // primary: `20px`,
       },
     },
   },

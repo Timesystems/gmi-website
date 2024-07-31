@@ -13,28 +13,32 @@ function Example() {
 export default function Faq({ className = '' }: { className?: string }) {
   const faqItems = [
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `What is the mission and vision of Gender Mobile Initiative?`,
+      answer: `Our mission is facilitating equitable systems and access to justice, forging collaborative advocacy, driving education and re-orientation for prevention and community ownership. Our vision is a gender-equitable society devoid of all forms of gender-based violence. `,
     },
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `What are the main focus areas or strategies of Gender Mobile Initiative?`,
+      answer: `Our main strategies include Legal Reform and policy advocacy, Research, Technology Adoption, Service Delivery and support, Capacity building and strengthening, Preventative education, Legal Empowerment, and Economic Empowerment.`,
     },
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `How can I report a case of abuse or violence?`,
+      answer: `We encourage reporting cases of abuse. You can use our helpline or mobile application to report incidents. Remember, don't keep silent.`,
     },
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `How can I access the CampusPal Mobile application?`,
+      answer: `The CampusPal Mobile application can be downloaded from the Apple App Store and Google Play Store. Links are available on our website. `,
     },
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `How can I become a volunteer for Gender Mobile Initiative?`,
+      answer: `You can sign up to become a volunteer through our website. We're looking for individuals committed to creating a world devoid of discrimination and violence. `,
     },
     {
-      question: `What is the question?`,
-      answer: `Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem Lorem ipsum dolor sit amet consectus. Lorem ipsum dolor sit amet consectiusdl lorem is.`,
+      question: `How can I donate to Gender Mobile Initiative?`,
+      answer: `You can donate through our website. Your donation will contribute to building a gender-equitable society. `,
+    },
+    {
+      question: `How can I contact Gender Mobile Initiative?`,
+      answer: `You can contact us through our website, social media platforms (Instagram, Twitter, Facebook, LinkedIn), or our helpline. `,
     },
   ];
   return (
@@ -49,12 +53,12 @@ export default function Faq({ className = '' }: { className?: string }) {
           Initiative, what we do, and how to make become one of us.
         </p>
       </div>
-      <div className='lg:w-[52%]'>
+      <div className='mt-6 md:mt-0 lg:w-[52%]'>
         <div className='w-full divide-y divide-black-100 rounded-xl'>
           {faqItems.map(({ question, answer }, index) => (
             <Disclosure as='div' className='py-4 md:py-6' key={`qA-${index}`}>
-              <DisclosureButton className='group flex w-full items-center justify-between'>
-                <h6 className='font-semibold'>{question}</h6>
+              <DisclosureButton className='group flex w-full items-start justify-between'>
+                <h6 className='text-left font-semibold'>{question}</h6>
                 <ChevronDownIcon className='size-5 text-primary-500 group-data-[open]:rotate-180' />
               </DisclosureButton>
               <DisclosurePanel className='mt-2 text-sm/5'>
@@ -62,15 +66,6 @@ export default function Faq({ className = '' }: { className?: string }) {
               </DisclosurePanel>
             </Disclosure>
           ))}
-          {/* <Disclosure as='div' className='p-6'>
-            <DisclosureButton className='group flex w-full items-center justify-between'>
-              <span className='text-sm/6 font-medium'>
-                Do you offer technical support?
-              </span>
-              <ChevronDownIcon className='size-5 fill-white/60 group-data-[open]:rotate-180 group-data-[hover]:fill-white/50' />
-            </DisclosureButton>
-            <DisclosurePanel className='mt-2 text-sm/5'>No.</DisclosurePanel>
-          </Disclosure> */}
         </div>
       </div>
     </div>
