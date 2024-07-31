@@ -38,7 +38,7 @@ export default function Faq({ className = '' }: { className?: string }) {
     },
   ];
   return (
-    <div className='justify-between py-10 text-black-400 md:py-16 lg:flex lg:py-24'>
+    <div className='justify-between px-6 py-10 text-black-400 md:px-0 md:py-16 lg:flex lg:py-24'>
       <div className='lg:w-[38%]'>
         <HeadingTitle className='before:content-["FAQ"]'>
           Got Questions? <br />

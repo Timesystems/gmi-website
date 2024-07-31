@@ -29,9 +29,9 @@ export default function AboutUsPage() {
       <SpacedSection bottom>
         <Container className=''>
           <div className='mx-auto w-full md:w-[90%] lg:w-2/3'>
-            <div className='flex flex-col gap-y-10 md:gap-y-12'>
+            <div className='flex-col gap-y-10 md:flex md:gap-y-12'>
               {/** Row 1 */}
-              <div className='col-span-2 grid grid-cols-2 grid-rows-1 py-5 md:py-8'>
+              <div className='col-span-2 grid-cols-2 grid-rows-1 px-4 py-5 md:grid md:px-0 md:py-8'>
                 <h3 className='mb-3 mt-4 text-3xl font-semibold'>Our Focus</h3>
                 <p>
                   The theme of our focus at Gender Mobile is protecting women
@@ -39,8 +39,8 @@ export default function AboutUsPage() {
                 </p>
               </div>
               {/** Row 2 */}
-              <div className='grid auto-cols-auto auto-rows-auto grid-cols-3 grid-rows-1 gap-x-10 gap-y-20'>
-                <div className='col-span-2 rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:px-12 md:py-14'>
+              <div className='auto-cols-auto auto-rows-auto grid-cols-3 grid-rows-1 gap-x-10 gap-y-20 md:grid'>
+                <div className='col-span-2 mx-4 mb-6 rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
                   <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                     <BsRocketTakeoff />
                   </span>
@@ -53,7 +53,7 @@ export default function AboutUsPage() {
                     re-orientation for prevention and community ownership.
                   </p>
                 </div>
-                <div className='rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:px-12 md:py-14'>
+                <div className='mx-4 mb-6 rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
                   <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                     <PiTargetFill />
                   </span>
@@ -67,8 +67,8 @@ export default function AboutUsPage() {
                 </div>
               </div>
               {/** Row 3 */}
-              <div className='rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:px-12 md:py-14'>
-                <div className='grid grid-cols-5 grid-rows-1'>
+              <div className='px-5 py-5 ring-gray-100 md:rounded-primary md:px-12 md:py-14 md:shadow-md md:ring-1'>
+                <div className='grid-cols-5 grid-rows-1 md:grid'>
                   <div>
                     <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                       <BsBullseye />
@@ -77,7 +77,8 @@ export default function AboutUsPage() {
                       Our Core Values
                     </h4>
                   </div>
-                  <ul>
+
+                  <ul className='inline-block md:ml-0 md:block'>
                     <li className='flex items-center pb-2'>
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Integrity</span>
@@ -90,8 +91,12 @@ export default function AboutUsPage() {
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Fairness</span>
                     </li>
+                    <li className='flex items-center pb-2 md:hidden'>
+                      <BsBullseye className='text-primary-500' />
+                      <span className='ml-2'>New focus point</span>
+                    </li>
                   </ul>
-                  <ul>
+                  <ul className='ml-4 inline-block md:ml-0 md:block'>
                     <li className='flex items-center pb-2'>
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Integrity</span>
@@ -104,8 +109,12 @@ export default function AboutUsPage() {
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Fairness</span>
                     </li>
+                    <li className='flex items-center pb-2 md:hidden'>
+                      <BsBullseye className='text-primary-500' />
+                      <span className='ml-2'>New focus point</span>
+                    </li>
                   </ul>
-                  <ul>
+                  <ul className='ml-4 inline-block md:ml-0 md:block'>
                     <li className='flex items-center pb-2'>
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Integrity</span>
@@ -118,8 +127,12 @@ export default function AboutUsPage() {
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Fairness</span>
                     </li>
+                    <li className='flex items-center pb-2 md:hidden'>
+                      <BsBullseye className='text-primary-500' />
+                      <span className='ml-2'>New focus</span>
+                    </li>
                   </ul>
-                  <ul>
+                  <ul className='hidden md:block'>
                     <li className='flex items-center pb-2'>
                       <BsBullseye className='text-primary-500' />
                       <span className='ml-2'>Integrity</span>
@@ -142,15 +155,25 @@ export default function AboutUsPage() {
       {/** SDG Goals */}
       <SpacedSection className='bg-primary-50' bottom>
         <Container>
-          <div className='flex justify-center'>
+          <div className='justify-center md:flex'>
             <div className='w-full gap-x-24 py-5 md:flex md:w-[90%] md:py-10 lg:w-[80%] lg:gap-x-[8em] lg:py-20'>
+              <div className='text-center md:hidden'>
+                <Image
+                  src='/images/sdg-goals.png'
+                  width={462}
+                  height={480}
+                  className='mx-auto'
+                  alt='SDG Goals'
+                />
+              </div>
               <Image
                 src='/images/sdg-goals.png'
                 width={462}
                 height={480}
+                className='hidden md:inline-block'
                 alt='SDG Goals'
               />
-              <div>
+              <div className='px-6 md:px-0'>
                 <HeadingTitle className='before:content-["FOCUS_AREA"]'>
                   SDG Under Focus
                 </HeadingTitle>
@@ -184,8 +207,8 @@ export default function AboutUsPage() {
             </div>
           </div>
           {/** Strategies List */}
-          <div className='mb-4 mt-6 md:mb-8 md:mt-12'>
-            <div className='grid grid-cols-4 grid-rows-2 gap-x-8 gap-y-8'>
+          <div className='mb-4 mt-6 px-6 md:mb-8 md:mt-12 md:px-0'>
+            <div className='grid grid-cols-2 grid-rows-4 gap-x-8 gap-y-8 md:grid-cols-4 md:grid-rows-2'>
               <div className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'>
                 <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
                   <BsBullseye />

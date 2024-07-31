@@ -51,7 +51,7 @@ export function PageIntro({
   subtitle?: string;
 }) {
   return (
-    <Container className='rounded-primary bg-primary-700 px-[20px] py-[20px] text-white md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[60px]'>
+    <Container className='bg-primary-700 px-[20px] py-[20px] text-white md:rounded-primary md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[60px]'>
       <h1
         className={clsx(
           `text-2xl font-semibold md:text-[2.8rem] md:leading-[3rem]`,
