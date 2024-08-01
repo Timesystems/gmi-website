@@ -1,5 +1,6 @@
 import Header from '@/ui/Header';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { AboutUs, PageIntro } from '@/ui/Blocks';
 import { HeadingTitle } from '@/ui/Elements';
@@ -11,6 +12,22 @@ import Faq from '@/ui/Faq';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import clsx from 'clsx';
+
+export const metadata: Metadata = {
+  title: `About Us`,
+  description: `Learn about Gender Mobile Initiative's mission, vision, and values in advancing intersectional gender equality and eliminating sexual and gender-based violence through systems change approach.`,
+  keywords: [
+    `gender equality`,
+    `gender-based violence`,
+    `intersectional gender equality`,
+    `systems change`,
+    `legal reform`,
+    `policy advocacy`,
+    `research`,
+    `education`,
+    `empowerment`,
+  ],
+};
 
 export default function AboutUsPage() {
   const coreValues = [

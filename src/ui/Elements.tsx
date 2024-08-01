@@ -18,7 +18,7 @@ export function HeadingTitle({
 }) {
   return (
     <h2
-      className={`mb-4 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 md:text-[2.25em] before:content-["${title?.split(' ').join('_')}"] ${className}`}
+      className={`mb-4 text-[1.8em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[0.9rem] before:uppercase before:text-primary-500 md:text-[2.25em] md:before:text-[1rem] before:content-["${title?.split(' ').join('_')}"] ${className}`}
     >
       {children}
     </h2>

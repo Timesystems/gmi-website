@@ -1,9 +1,27 @@
 import Header from '@/ui/Header';
+import type { Metadata } from 'next';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `Campus Safety Initiative | Preventing Sexual Harassment in Higher Education`,
+  },
+  description: `Learn about our comprehensive approach to tackling sexual harassment in Nigerian tertiary institutions through research, bystander intervention, preventative education, and technology integration.`,
+  keywords: [
+    `campus safety`,
+    `sexual harassment`,
+    `higher education`,
+    `Nigeria`,
+    `preventative education`,
+    `technology integration`,
+    `bystander intervention`,
+    `research and policies`,
+  ],
+};
 
 export default function CampusSafetyInitiativePage() {
   const tabContents = [
@@ -148,7 +166,7 @@ export default function CampusSafetyInitiativePage() {
       <SpacedSection bottom top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
-            <div className='md:w-[55%] lg:w-[60%]'>
+            <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
                 name='csi'
                 tabs={[

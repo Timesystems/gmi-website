@@ -98,8 +98,8 @@ export default function BlogListPage() {
       />
       <SpacedSection top bottom>
         <Container>
-          <div className='mx-auto md:w-[90%] lg:w-[80%]'>
-            <div className='grid grid-cols-2 gap-6'>
+          <div className='mx-auto px-6 md:w-[90%] md:px-0 lg:w-[80%]'>
+            <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-6'>
               {blogs.map((_, index) => (
                 <BlogClip
                   key={index}

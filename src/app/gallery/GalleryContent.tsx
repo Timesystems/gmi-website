@@ -79,17 +79,17 @@ export default function GalleryContent() {
           </TabList>
           <TabPanels className='md:px-20'>
             <TabPanel>
-              <div className='grid auto-rows-max grid-cols-3 gap-8'>
+              <div className='grid auto-rows-max grid-cols-2 gap-0 md:grid-cols-3 md:gap-8'>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
                   <div
                     key={i}
-                    className='group relative h-[250px] w-[250px] rounded-primary grayscale hover:grayscale-0 md:h-[430px] md:w-[430px]'
+                    className='group relative h-[250px] w-[250px] grayscale hover:grayscale-0 md:h-[430px] md:w-[430px] md:rounded-primary'
                   >
                     <Image
                       src='/images/bg/ocean-side-cleaning.jpg'
                       alt='Gallery Image'
                       fill
-                      className='rounded-primary'
+                      className='md:rounded-primary'
                       style={{ objectFit: `cover`, objectPosition: `center` }}
                     />
                     <div className='relative z-10 hidden h-[100%] w-[100%] flex-col justify-end transition-all duration-300 group-hover:flex'>
@@ -102,11 +102,11 @@ export default function GalleryContent() {
               </div>
             </TabPanel>
             <TabPanel>
-              <div className='grid auto-rows-max grid-cols-3 gap-8'>
+              <div className='grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-3 md:gap-8 md:px-0'>
                 {youtubeList.map(({ title, link, image }, i) => (
                   <div
                     key={`video-${i}`}
-                    className='relative h-[250px] w-[250px] md:h-[430px] md:w-[430px]'
+                    className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'
                   >
                     <ResourceClip
                       title={title}

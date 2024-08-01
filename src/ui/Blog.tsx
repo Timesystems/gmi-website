@@ -17,10 +17,10 @@ export function BlogClip({
 }) {
   return (
     <div
-      className='relative h-[380px] rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
+      className='relative h-[300px] rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
       style={{
         background: `url("${coverImage}") no-repeat center`,
-        backgroundSize: `contain`,
+        backgroundSize: `cover`,
       }}
     >
       <div

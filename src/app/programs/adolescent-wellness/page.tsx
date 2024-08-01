@@ -1,9 +1,28 @@
+import type { Metadata } from 'next';
 import Header from '@/ui/Header';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `Adolescent Wellness Hub | Preventing Gender-Based Violence`,
+  },
+  description: `Learn about our Adolescent Wellness Hub, a program dedicated to preventing sexual and gender-based violence among adolescents in Ekiti State through education, skill enhancement, and support services.`,
+  keywords: [
+    `adolescent wellness`,
+    `gender-based violence`,
+    `prevention`,
+    `education`,
+    `skill enhancement`,
+    `support services`,
+    `mental health`,
+    `substance abuse`,
+    `Ekiti State`,
+  ],
+};
 
 export default function AdolescentWellnessHubPage() {
   const tabContents = [
@@ -143,7 +162,7 @@ export default function AdolescentWellnessHubPage() {
       <SpacedSection bottom top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
-            <div className='md:w-[55%] lg:w-[60%]'>
+            <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
                 name='adolescent-wellness'
                 tabs={[
@@ -158,7 +177,7 @@ export default function AdolescentWellnessHubPage() {
               />
             </div>
             <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='relative h-[400px] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] lg:h-[450px]' />
+              <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
             </div>
           </div>
         </Container>

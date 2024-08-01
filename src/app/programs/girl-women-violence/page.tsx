@@ -1,9 +1,26 @@
+import type { Metadata } from 'next';
 import Header from '@/ui/Header';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+
+export const metadata: Metadata = {
+  title: `Ending Violence against Women and Girls`,
+  description: `Learn about our efforts to combat violence against women and girls in Nigeria, including sexual harassment and female genital mutilation (FGM), through community engagement, leadership mobilization, and survivor support.`,
+  keywords: [
+    `violence against women`,
+    `girls`,
+    `sexual harassment`,
+    `female genital mutilation`,
+    `FGM`,
+    `community engagement`,
+    `leadership mobilization`,
+    `survivor support`,
+    `Nigeria`,
+  ],
+};
 
 export default function GirlWomenViolencePage() {
   const tabContents = [
@@ -100,7 +117,7 @@ export default function GirlWomenViolencePage() {
       <SpacedSection bottom top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
-            <div className='md:w-[55%] lg:w-[60%]'>
+            <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
                 name='girl-women-violence'
                 tabs={['Summary', 'Strategies', 'Impact']}
@@ -108,7 +125,7 @@ export default function GirlWomenViolencePage() {
               />
             </div>
             <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='relative h-[400px] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] lg:h-[450px]' />
+              <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
             </div>
           </div>
         </Container>

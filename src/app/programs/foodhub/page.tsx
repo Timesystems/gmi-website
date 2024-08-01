@@ -1,9 +1,27 @@
+import type { Metadata } from 'next';
 import Header from '@/ui/Header';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `Food Hub | Supporting Vulnerable Women and Children`,
+  },
+  description: `Learn about our Food Hub model in Ekiti State, leveraging technology to connect donors with those in need, providing food security and support during public health emergencies.`,
+  keywords: [
+    `food security`,
+    `public health emergencies`,
+    `women's empowerment`,
+    `children's welfare`,
+    `Ekiti State`,
+    `donor engagement`,
+    `recipient support`,
+    `community volunteers`,
+  ],
+};
 
 export default function SkillUpWomenGirlsPage() {
   const tabContents = [
@@ -73,7 +91,7 @@ export default function SkillUpWomenGirlsPage() {
       <SpacedSection bottom top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
-            <div className='md:w-[55%] lg:w-[60%]'>
+            <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
                 name='foodhub'
                 tabs={['Summary', 'Approach', 'Process']}
@@ -81,7 +99,7 @@ export default function SkillUpWomenGirlsPage() {
               />
             </div>
             <div className='md:w-[45%] lg:w-[40%]'>
-              <div className='relative h-[400px] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] lg:h-[450px]' />
+              <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
             </div>
           </div>
         </Container>

@@ -76,7 +76,7 @@ const programsList = [
 const resourcesList = [
   {
     name: `Impact Reports`,
-    href: `impact-reports`,
+    href: `/impact-reports`,
   },
   {
     name: `Blog`,
@@ -354,10 +354,48 @@ export default function Header({ background }: { background?: boolean }) {
           <div className='mt-6 flow-root'>
             <div className='-my-6 divide-y divide-gray-500/10'>
               <div className='space-y-2 py-6'>
+                <Link
+                  href='/'
+                  className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
+                >
+                  Home
+                </Link>
+
+                {/** About  */}
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
-                      <DisclosureButton className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
+                      <DisclosureButton className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
+                        About Us
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? 'rotate-180' : '',
+                            'h-5 w-5 flex-none'
+                          )}
+                          aria-hidden='true'
+                        />
+                      </DisclosureButton>
+                      <DisclosurePanel className='mt-2 space-y-2'>
+                        {aboutUs.map((item) => (
+                          <DisclosureButton
+                            key={item.name}
+                            as={Link}
+                            href={item.href}
+                            className='block rounded-lg py-2 pl-6 pr-3 text-sm hover:bg-gray-50'
+                          >
+                            {item.name}
+                          </DisclosureButton>
+                        ))}
+                      </DisclosurePanel>
+                    </>
+                  )}
+                </Disclosure>
+
+                {/** Programs */}
+                <Disclosure as='div' className='-mx-3'>
+                  {({ open }) => (
+                    <>
+                      <DisclosureButton className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
                         Programs
                         <ChevronDownIcon
                           className={classNames(
@@ -371,6 +409,37 @@ export default function Header({ background }: { background?: boolean }) {
                         {programsList.map((item) => (
                           <DisclosureButton
                             key={item.name}
+                            as={Link}
+                            href={item.href}
+                            className='block rounded-lg py-2 pl-6 pr-3 text-sm hover:bg-gray-50'
+                          >
+                            {item.name}
+                          </DisclosureButton>
+                        ))}
+                      </DisclosurePanel>
+                    </>
+                  )}
+                </Disclosure>
+
+                {/** Resource links */}
+                {/** Programs */}
+                <Disclosure as='div' className='-mx-3'>
+                  {({ open }) => (
+                    <>
+                      <DisclosureButton className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
+                        Resources
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? 'rotate-180' : '',
+                            'h-5 w-5 flex-none'
+                          )}
+                          aria-hidden='true'
+                        />
+                      </DisclosureButton>
+                      <DisclosurePanel className='mt-2 space-y-2'>
+                        {resourcesList.map((item) => (
+                          <DisclosureButton
+                            key={item.name}
                             as='a'
                             href={item.href}
                             className='block rounded-lg py-2 pl-6 pr-3 text-sm hover:bg-gray-50'
@@ -382,24 +451,13 @@ export default function Header({ background }: { background?: boolean }) {
                     </>
                   )}
                 </Disclosure>
-                <a
+
+                <Link
                   href='#'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
                 >
-                  Features
-                </a>
-                <a
-                  href='#'
-                  className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
-                >
-                  Marketplace
-                </a>
-                <a
-                  href='#'
-                  className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
-                >
-                  Company
-                </a>
+                  Contact Us
+                </Link>
               </div>
               <div className='py-6'>
                 <a
@@ -408,6 +466,20 @@ export default function Header({ background }: { background?: boolean }) {
                 >
                   Donate Now
                 </a>
+                <div className='py-6 text-center'>
+                  <a
+                    href='mailto:gendermobile@gmail.com'
+                    className='inline-block rounded-full border border-primary-500 px-4 py-4 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
+                  >
+                    <PiEnvelopeSimpleFill className='text-2xl' />
+                  </a>
+                  <a
+                    href='tel:08032336192'
+                    className='ml-6 inline-block rounded-full border border-primary-500 px-4 py-4 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
+                  >
+                    <BsTelephone className='text-2xl' />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

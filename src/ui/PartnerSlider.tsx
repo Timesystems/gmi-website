@@ -25,16 +25,13 @@ export default function PartnerSlider() {
         settings: {
           slidesToShow: 6,
           slidesToScroll: 3,
-          infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -44,12 +41,19 @@ export default function PartnerSlider() {
           slidesToScroll: 1,
         },
       },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settings} className='h-[80px]'>
         {partners.map(({ name, image, width, height }) => {
           return (
             <div style={{ width: 150 }} key={name}>

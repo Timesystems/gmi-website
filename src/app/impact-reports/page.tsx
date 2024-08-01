@@ -45,12 +45,12 @@ export default function ImpactReportPage() {
       <PageIntro title='Impact Reports' />
       <SpacedSection top bottom>
         <Container>
-          <div className='md:px-20'>
-            <div className='grid auto-rows-max grid-cols-3 gap-8'>
+          <div className='px-4 md:px-20'>
+            <div className='grid auto-rows-max grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
               {reportList.map(({ title, link, image }, i) => (
                 <div
                   key={`report-${i}`}
-                  className='relative h-[250px] w-[250px] md:h-[430px] md:w-[430px]'
+                  className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'
                 >
                   <ResourceClip
                     title={title}

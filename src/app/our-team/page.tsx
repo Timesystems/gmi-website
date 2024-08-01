@@ -1,4 +1,5 @@
 import Header from '@/ui/Header';
+import type { Metadata } from 'next';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import { HeadingTitle, TeamMemberBio, TeamMemberImage } from '@/ui/Elements';
@@ -6,6 +7,21 @@ import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import PartnerSlider from '@/ui/PartnerSlider';
 import TeamMembers from './TeamMembers';
+
+export const metadata: Metadata = {
+  title: `Meet Our Team`,
+  description: `Get to know our team of dedicated professionals led by Omowumi Ogunrotimi, Esq., a renowned feminist lawyer and systems leader, working together to advance intersectional gender equality.`,
+  keywords: [
+    `gender equality`,
+    `intersectional gender equality`,
+    `feminist lawyer`,
+    `systems leader`,
+    `Omowumi Ogunrotimi`,
+    `team`,
+    `professionals`,
+    `gender-based violence`,
+  ],
+};
 
 export default function OurTeamPage() {
   return (

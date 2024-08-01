@@ -2,6 +2,7 @@ import Header from '@/ui/Header';
 import Image from 'next/image';
 import clsx from 'clsx';
 import Script from 'next/script';
+import type { Metadata } from 'next';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
 import HomePageImage from '@/assets/images/lady-on-homepage.png';
 import PartnerSlider from '@/ui/PartnerSlider';
@@ -12,6 +13,24 @@ import TestimonialSlider, { TestimonialHeading } from '@/ui/Testimonial';
 import { AboutUs } from '@/ui/Blocks';
 import { DonationBanner, HelpBanner } from '@/ui/Banners';
 import { BlogClip } from '@/ui/Blog';
+import { HeadingTitle } from '@/ui/Elements';
+
+export const metadata: Metadata = {
+  title: `Advancing Gender Equality and Combating Gender-Based Violence `,
+  description: `Learn how Gender Mobile Initiative is transforming systems, culture, and practices to achieve intersectional gender equality and eliminate sexual and gender-based violence through policy interventions, research, awareness, education, and technology adoption.`,
+  keywords: [
+    `gender equality`,
+    `gender-based violence`,
+    `women's empowerment`,
+    `intersectional gender equality`,
+    `systems change`,
+    `policy interventions`,
+    `research`,
+    `awareness`,
+    `education`,
+    `technology adoption`,
+  ],
+};
 
 export default function Home() {
   const volunteerMembers = [
@@ -33,7 +52,7 @@ export default function Home() {
         >
           <div className='lg:order-1 lg:h-[0%] lg:w-1/2'>
             <div className=''>
-              <h1 className='line-clamp-4 pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
+              <h1 className='pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
                 We respond urgently to any form of Sexual and Gender-Based
                 violence
               </h1>
@@ -127,9 +146,9 @@ export default function Home() {
               </div>
             </div>
             <div className='mt-10 px-8 py-8 md:mt-0 md:px-24 md:py-24 lg:w-1/2'>
-              <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Volunteer"]'>
+              <HeadingTitle title='Volunteer'>
                 You too can Get Involved
-              </h2>
+              </HeadingTitle>
               <p className='py-4'>
                 Are you interested in fostering a gender-equitable society
                 devoid of all forms of sexual and gender-based violence?
