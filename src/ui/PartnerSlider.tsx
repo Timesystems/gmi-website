@@ -10,7 +10,7 @@ export default function PartnerSlider() {
     infinite: true,
     speed: 2000,
     accessibility: false,
-    slidesToShow: 7,
+    slidesToShow: 3,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1000,
@@ -23,8 +23,8 @@ export default function PartnerSlider() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 6,
-          slidesToScroll: 3,
+          slidesToShow: 7,
+          slidesToScroll: 1,
         },
       },
       {
