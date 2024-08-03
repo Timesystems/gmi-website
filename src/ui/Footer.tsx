@@ -29,7 +29,7 @@ function Footer() {
                 <Link href='/about'>About Us</Link>
               </li>
               <li>
-                <a href='#'>Contact Us</a>
+                <Link href='/contact-us'>Contact Us</Link>
               </li>
               <li>
                 <a href='#'>Jobs</a>
@@ -68,7 +68,7 @@ function Footer() {
                 <a href='#'>Become a Volunteer</a>
               </li>
               <li>
-                <a href='#'>Make a Donation</a>
+                <Link href='/make-donation'>Make a Donation</Link>
               </li>
             </ul>
           </div>

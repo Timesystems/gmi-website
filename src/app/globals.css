@@ -18,6 +18,12 @@
     }
   }
 
+  textarea,
+  input,
+  select {
+    outline: none;
+  }
+
   h1,
   h2,
   h3,
@@ -28,7 +34,7 @@
   }
 }
 
-@layer utilities {
+@layer base {
   .rounded-primary {
     @apply rounded-[8px] md:rounded-[20px];
   }

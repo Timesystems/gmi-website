@@ -298,14 +298,14 @@ export default function Header({ background }: { background?: boolean }) {
               </PopoverPanel>
             </Transition>
           </Popover>
-          <a
-            href='#'
+          <Link
+            href='/contact-us'
             className={clsx(`text-sm text-gray-900`, {
               'font-semibold text-primary-500': pathname == '/contact-us',
             })}
           >
             Contact Us
-          </a>
+          </Link>
         </PopoverGroup>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <div className='flex items-center justify-center gap-x-3'>
@@ -321,12 +321,12 @@ export default function Header({ background }: { background?: boolean }) {
             >
               <BsTelephone />
             </a>
-            <a
-              href='#'
+            <Link
+              href='/make-donation'
               className='btn-primary inline-block px-4 py-2 font-heading text-[0.9em]'
             >
               Donate Now
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -453,19 +453,19 @@ export default function Header({ background }: { background?: boolean }) {
                 </Disclosure>
 
                 <Link
-                  href='#'
+                  href='/contact-us'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
                 >
                   Contact Us
                 </Link>
               </div>
               <div className='py-6'>
-                <a
-                  href='#'
+                <Link
+                  href='/make-donation'
                   className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-gray-50'
                 >
                   Donate Now
-                </a>
+                </Link>
                 <div className='py-6 text-center'>
                   <a
                     href='mailto:gendermobile@gmail.com'
