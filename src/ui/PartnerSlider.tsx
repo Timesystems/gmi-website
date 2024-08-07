@@ -12,11 +12,12 @@ export default function PartnerSlider() {
     accessibility: false,
     slidesToShow: 3,
     arrows: false,
+    rows: 1,
     autoplay: true,
     autoplaySpeed: 1000,
     swipeToSlide: true,
     useTransform: false,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     variableWidth: true,
     cssEase: 'linear',
     responsive: [
@@ -25,6 +26,7 @@ export default function PartnerSlider() {
         settings: {
           slidesToShow: 7,
           slidesToScroll: 1,
+          rows: 1,
         },
       },
       {
@@ -32,6 +34,7 @@ export default function PartnerSlider() {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
+          rows: 1,
         },
       },
       {
@@ -39,6 +42,7 @@ export default function PartnerSlider() {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
+          rows: 1,
         },
       },
       {
@@ -46,6 +50,7 @@ export default function PartnerSlider() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          rows: 1,
         },
       },
     ],
@@ -56,7 +61,7 @@ export default function PartnerSlider() {
       <Slider {...settings} className='h-[80px]'>
         {partners.map(({ name, image, width, height }) => {
           return (
-            <div style={{ width: 150 }} key={name}>
+            <div style={{ width: '150px' }} key={name}>
               <Image
                 src={image}
                 alt={name}

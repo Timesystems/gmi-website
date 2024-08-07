@@ -145,8 +145,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className='mt-10 px-8 py-8 md:mt-0 md:px-24 md:py-24 lg:w-1/2'>
-              <HeadingTitle title='Volunteer'>
+              <HeadingTitle className='before:content-["Volunteer"]'>
                 You too can Get Involved
               </HeadingTitle>
               <p className='py-4'>
