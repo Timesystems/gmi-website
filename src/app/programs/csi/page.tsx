@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
+import { RiBankLine } from 'react-icons/ri';
+import { MdGroups, MdEditDocument, MdCalendarMonth } from 'react-icons/md';
+import { HiDocumentDuplicate, HiCash } from 'react-icons/hi';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
 
@@ -180,8 +183,108 @@ export default function CampusSafetyInitiativePage() {
                 tabContent={tabContents}
               />
             </div>
-            <div className='border border-green-600 md:w-[45%] lg:w-[40%]'>
-              <div>statistics</div>
+            <div className='shadow-primary rounded-primary border-tiny mx-auto w-[95%] border-black-100 p-6 md:p-10 text-black-400 md:w-[45%] lg:w-[40%]'>
+              <div>
+                <div className='inline-flex flex-col items-start justify-start gap-5'>
+                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <RiBankLine />
+                      </div>
+                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          101
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Interested <br />
+                          Institutions
+                        </div>
+                      </div>
+                    </div>
+                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <MdGroups />
+                      </div>
+                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          62
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Management <br /> Meeting Held
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
+                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <MdEditDocument />
+                      </div>
+                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          38
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Institutions with
+                          <br />
+                          Signed MOU
+                        </div>
+                      </div>
+                    </div>
+                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <HiDocumentDuplicate />
+                      </div>
+                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          16
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Institutions with
+                          <br />
+                          Policy Template
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
+                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <MdCalendarMonth />
+                      </div>
+                      <div className='inline-flex items-start justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          17
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Institutions <br />
+                          with Scheduled Management Meeting
+                        </div>
+                      </div>
+                    </div>
+                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
+                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
+                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
+                        <HiCash />
+                      </div>
+                      <div className='inline-flex items-start justify-start gap-2 self-stretch'>
+                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
+                          10
+                        </h3>
+                        <div className='shrink grow basis-0 leading-none'>
+                          Institutions that <br />
+                          have Received the <br />
+                          Mini Grant
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

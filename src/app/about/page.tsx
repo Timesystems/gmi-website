@@ -85,7 +85,7 @@ export default function AboutUsPage() {
               </div>
               {/** Row 2 */}
               <div className='auto-cols-auto auto-rows-auto grid-cols-3 grid-rows-1 gap-x-10 gap-y-20 md:grid'>
-                <div className='col-span-2 mx-4 mb-6 rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
+                <div className='rounded-primary shadow-primary col-span-2 mx-4 mb-6 px-5 py-5 ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
                   <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                     <BsRocketTakeoff />
                   </span>
@@ -98,7 +98,7 @@ export default function AboutUsPage() {
                     re-orientation for prevention and community ownership.
                   </p>
                 </div>
-                <div className='mx-4 mb-6 rounded-primary px-5 py-5 shadow-md ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
+                <div className='rounded-primary shadow-primary mx-4 mb-6 px-5 py-5 ring-1 ring-gray-100 md:mx-0 md:mb-0 md:px-12 md:py-14'>
                   <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
                     <PiTargetFill />
                   </span>
@@ -112,7 +112,7 @@ export default function AboutUsPage() {
                 </div>
               </div>
               {/** Row 3 */}
-              <div className='px-5 py-5 ring-gray-100 md:rounded-primary md:px-12 md:py-14 md:shadow-md md:ring-1'>
+              <div className='md:rounded-primary md:shadow-primary px-5 py-5 ring-gray-100 md:px-12 md:py-14 md:ring-1'>
                 <div className='gap-x-20 md:flex'>
                   <div>
                     <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-500 text-2xl text-white'>
@@ -201,7 +201,7 @@ export default function AboutUsPage() {
               {strategiesList.map(({ label, icon }) => (
                 <div
                   key={label}
-                  className='group inline-flex flex-col items-center justify-center rounded-primary px-5 py-5 text-center shadow-md ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'
+                  className='rounded-primary shadow-primary group inline-flex flex-col items-center justify-center px-5 py-5 text-center ring-1 ring-gray-100 transition-colors duration-300 hover:bg-primary-500 group-hover:bg-primary-500 md:px-8 md:py-8'
                 >
                   <span className='flex h-[80px] w-[80px] items-center justify-center rounded-full bg-primary-50 text-2xl text-primary-500'>
                     {icon}

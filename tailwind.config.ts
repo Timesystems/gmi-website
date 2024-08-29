@@ -43,6 +43,12 @@ const config: Config = {
       borderRadius: {
         // primary: `20px`,
       },
+      boxShadow: {
+        'shadow-primary': `0px 0px 40px 0px rgba(0, 0, 0, 0.05)`,
+      },
+      borderWidth: {
+        tiny: '0.5px',
+      },
     },
   },
   plugins: [],
