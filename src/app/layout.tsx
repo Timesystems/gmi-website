@@ -2,6 +2,7 @@ import React from 'react';
 import type { Viewport, Metadata } from 'next';
 import './slick-slider.css';
 import './globals.css';
+import Script from 'next/script';
 // import 'slick-carousel/slick/slick.css';
 
 export const viewport: Viewport = {
@@ -28,7 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'
+          // integrity='sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=='
+          strategy='beforeInteractive'
+        />
+        <Script src='/js/initialize.js' />
+      </body>
     </html>
   );
 }
