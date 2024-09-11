@@ -14,6 +14,7 @@ import { AboutUs } from '@/ui/Blocks';
 import { DonationBanner, HelpBanner } from '@/ui/Banners';
 import { BlogClip } from '@/ui/Blog';
 import { HeadingTitle } from '@/ui/Elements';
+import moment from 'moment';
 
 export const metadata: Metadata = {
   title: `Advancing Gender Equality and Combating Gender-Based Violence `,
@@ -32,7 +33,27 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function Home() {
+function chunkify(items: any[], size: number) {
+  if (items.length < 1) return items;
+
+  let result = [];
+  let current = [];
+
+  items.forEach((item) => {
+    if (current.length == size) {
+      result.push(current);
+      current = [];
+    }
+
+    current.push(item);
+  });
+
+  if (current.length) result.push(current);
+
+  return result;
+}
+
+export default async function Home() {
   const volunteerMembers = [
     { name: `Scott`, image: `/images/volunteers/image-1.png` },
     { name: `Olivia`, image: `/images/volunteers/image-2.png` },
@@ -41,6 +62,16 @@ export default function Home() {
     { name: `Clarke`, image: `/images/volunteers/image-5.png` },
     { name: `Kelly`, image: `/images/volunteers/image-6.png` },
   ];
+
+  const res = await fetch(`${process.env.API_URL}`);
+  const response = await res.json();
+  let gallery = [];
+  let blogs = [];
+
+  if (response.status) {
+    gallery = chunkify(response.data.gallery, 3);
+    blogs = response.data.blog;
+  }
 
   return (
     <>
@@ -205,7 +236,18 @@ export default function Home() {
           {/** Blog List */}
           <div className='mb-5 md:mb-16 md:flex md:justify-center'>
             <div className='grid grid-cols-1 grid-rows-2 gap-2 md:grid-cols-2 md:grid-rows-1 md:gap-6 lg:w-[80%]'>
-              <BlogClip
+              {blogs.map((blog) => (
+                <BlogClip
+                  key={blog.slug}
+                  title={blog.title}
+                  description={blog.summary}
+                  category='News'
+                  coverImage={blog.featured_image}
+                  link={`/blog/${blog.slug}`}
+                  date={moment(blog.published_at).format(`MMM D, YYYY`)}
+                />
+              ))}
+              {/* <BlogClip
                 title='Effect of CO2 in our Environment'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -214,9 +256,9 @@ export default function Home() {
                 coverImage='/images/bg/get-involved.jpg'
                 link='#'
                 date='Mar 16, 2024'
-              />
+              /> */}
 
-              <BlogClip
+              {/* <BlogClip
                 title='Why Taxation?'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -225,7 +267,7 @@ export default function Home() {
                 coverImage='/images/bg/get-involved.jpg'
                 link='#'
                 date='Mar 16, 2024'
-              />
+              /> */}
             </div>
           </div>
 
@@ -276,7 +318,23 @@ export default function Home() {
               </h2>
               <div className='mt-6 lg:mt-16'>
                 <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
-                  <div className='grid gap-4'>
+                  {gallery.map((chunk, index) => {
+                    return (
+                      <div className='grid gap-4' key={`image-block-${index}`}>
+                        {chunk.map((image, index) => (
+                          <div key={`image-${index}`}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              className='h-auto max-w-full rounded-lg'
+                              src={image.path}
+                              alt='gallery image'
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })}
+                  {/* <div className='grid gap-4'>
                     <div>
                       <img
                         className='h-auto max-w-full rounded-lg'
@@ -344,7 +402,7 @@ export default function Home() {
                         alt='gallery image'
                       />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className='mt-8'>

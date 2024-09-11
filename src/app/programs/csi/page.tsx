@@ -183,7 +183,7 @@ export default function CampusSafetyInitiativePage() {
                 tabContent={tabContents}
               />
             </div>
-            <div className='shadow-primary rounded-primary border-tiny mx-auto w-[95%] border-black-100 p-6 md:p-10 text-black-400 md:w-[45%] lg:w-[40%]'>
+            <div className='shadow-primary rounded-primary mx-auto w-[95%] border-tiny border-black-100 p-6 text-black-400 md:w-[45%] md:p-10 lg:w-[40%]'>
               <div>
                 <div className='inline-flex flex-col items-start justify-start gap-5'>
                   <div className='inline-flex items-start justify-start gap-5 self-stretch'>
