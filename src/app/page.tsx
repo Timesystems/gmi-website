@@ -63,7 +63,7 @@ export default async function Home() {
     { name: `Kelly`, image: `/images/volunteers/image-6.png` },
   ];
 
-  const res = await fetch(`${process.env.API_URL}`);
+  const res = await fetch(`${process.env.API_URL}`, { cache: `no-store` });
   const response = await res.json();
   let gallery = [];
   let blogs = [];
