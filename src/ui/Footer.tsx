@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Logo from '@/assets/images/logo_light.svg';
 import Link from 'next/link';
 import { Container, SpacedSection } from '@/ui/Layouts';
-import { BsTwitterX, BsFacebook, BsYoutube, BsInstagram } from 'react-icons/bs';
+import { BsTwitterX, BsYoutube, BsInstagram } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
-import NewsLetterForm from './NewsLetterForm';
+import NewsLetterForm from '@/ui/NewsLetterForm';
 
 function Footer() {
   return (
