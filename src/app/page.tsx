@@ -2,6 +2,7 @@ import Header from '@/ui/Header';
 import Image from 'next/image';
 import clsx from 'clsx';
 import Script from 'next/script';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
 import HomePageImage from '@/assets/images/lady-on-homepage.png';
@@ -93,21 +94,21 @@ export default async function Home() {
                 of all forms of sexual and gender based violence.
               </p>
 
-              <a
-                href='//#endregion'
+              <Link
+                href='/about'
                 className='btn-white-outline hidden md:inline-block'
               >
                 Learn More
-              </a>
+              </Link>
             </div>
 
             <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
-              <a
-                href='//#endregion'
+              <Link
+                href='/about'
                 className='btn-white-outline inline-block md:hidden'
               >
                 Learn More
-              </a>
+              </Link>
               <div>
                 <span className='mr-4 inline-block rounded-full border border-white px-2 py-2'>
                   <HiOutlineArrowLeft />
@@ -135,7 +136,7 @@ export default async function Home() {
       </Container>
       <SpacedSection>
         <Container className='text-black-400 lg:px-16'>
-          <AboutUs buttonText='Learn More' buttonLink='/about-us' />
+          <AboutUs buttonText='Learn More' buttonLink='/about' />
         </Container>
       </SpacedSection>
       {/** Program Reach Section */}

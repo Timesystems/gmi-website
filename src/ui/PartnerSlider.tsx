@@ -61,7 +61,11 @@ export default function PartnerSlider() {
       <Slider {...settings} className='h-[80px]'>
         {partners.map(({ name, image, width, height }) => {
           return (
-            <div style={{ width: '150px' }} key={name}>
+            <div
+              style={{ width: '150px' }}
+              key={name}
+              className='grayscale hover:grayscale-0'
+            >
               <Image
                 src={image}
                 alt={name}

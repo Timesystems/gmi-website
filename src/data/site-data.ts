@@ -15,12 +15,12 @@ export const partners: Partner[] = [
     width: 150,
     height: 75,
   },
-  // {
-  //   name: `AVF`,
-  //   image: `/images/partners/avf.png`,
-  //   width: 150,
-  //   height: 75,
-  // },
+  {
+    name: `AVF`,
+    image: `/images/partners/avf.png`,
+    width: 150,
+    height: 75,
+  },
   {
     name: `Co Impact`,
     image: `/images/partners/coimpact.png`,
@@ -39,30 +39,30 @@ export const partners: Partner[] = [
     width: 75,
     height: 75,
   },
-  // {
-  //   name: `Gym`,
-  //   image: `/images/partners/gym.png`,
-  //   width: 150,
-  //   height: 75,
-  // },
+  {
+    name: `Gym`,
+    image: `/images/partners/gym.png`,
+    width: 150,
+    height: 75,
+  },
   {
     name: `ICPC`,
     image: `/images/partners/icpc.png`,
     width: 75,
     height: 75,
   },
-  // {
-  //   name: `NOA`,
-  //   image: `/images/partners/noa.ong`,
-  //   width: 75,
-  //   height: 75,
-  // },
-  // {
-  //   name: `Ondo State`,
-  //   image: `/images/partners/ondo.png`,
-  //   width: 75,
-  //   height: 75,
-  // },
+  {
+    name: `NOA`,
+    image: `/images/partners/noa.png`,
+    width: 75,
+    height: 75,
+  },
+  {
+    name: `Ondo State`,
+    image: `/images/partners/ondo.png`,
+    width: 75,
+    height: 75,
+  },
   {
     name: `Palladium`,
     image: `/images/partners/palladium.png`,
