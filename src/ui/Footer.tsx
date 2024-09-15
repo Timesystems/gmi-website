@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { BsTwitterX, BsFacebook, BsYoutube, BsInstagram } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
+import NewsLetterForm from './NewsLetterForm';
 
 function Footer() {
   return (
@@ -80,6 +81,7 @@ function Footer() {
               Subscribe to our newsletter to receive the latest updates and
               exclusive offers.
             </p>
+            <NewsLetterForm />
           </div>
         </div>
         <div className='justify-between py-4 text-[0.88em] lg:flex'>
