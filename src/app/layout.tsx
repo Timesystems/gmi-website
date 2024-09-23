@@ -30,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <RouteTransition />
         {children}
         {/* <Script
           src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js'
