@@ -71,7 +71,7 @@ export default function PartnerSlider() {
                 alt={name}
                 width={width}
                 height={height}
-                quality={100}
+                quality={99}
                 className='mr-4 inline-block'
               />
             </div>
