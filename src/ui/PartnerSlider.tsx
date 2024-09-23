@@ -12,7 +12,7 @@ export default function PartnerSlider() {
     accessibility: false,
     slidesToShow: 3,
     arrows: false,
-    rows: 1,
+    rows: 1, // Ensure this is set to 1
     autoplay: true,
     autoplaySpeed: 1000,
     swipeToSlide: true,
