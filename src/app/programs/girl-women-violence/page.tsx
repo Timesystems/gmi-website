@@ -29,84 +29,48 @@ export default function GirlWomenViolencePage() {
         Executive Summary
       </h3>
       <p className='mb-5'>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
+        As an organization driven to contribute meaningfully towards ending
+        Violence Against Women and Girls, we implemented the Ending Violence
+        Against Women and Girls (E/VAWG) project supported by the Nigerian Women
+        Trust Fund (NWTF).
       </p>
       <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Combating Female Genital Mutilation (FGM)
+        Understanding the need.
       </h4>
       <p>
-        Female Genital Mutilation is a harmful traditional practice that
-        violates the bodily autonomy of girls and women, perpetuating
-        deep-rooted gender inequalities. In Ekiti State, we&apos;ve mobilized
-        significant efforts to prevent and respond to the prevalence of FGM.
-        Through engagement with culture and faith leaders, survivor networks,
-        and community mobilization, we&apos;ve worked tirelessly to end this
-        practice.
+        World Health Organisation study indicates that globally 1 in 3 (30%) of
+        women worldwide have been subjected to either physical and/or sexual
+        intimate partner violence or non-partner sexual violence in their
+        lifetime. Violence against women – particularly intimate partner
+        violence and sexual violence – is a major public health problem and a
+        violation of women&apos;s human rights.
       </p>
     </>,
     <>
-      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
+      {/* <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Our strategies include
-      </h3>
+      </h3> */}
       <ul className='tab-content-list'>
-        <li>Engaging culture and faith leaders as norm entrepreneurs.</li>
         <li>
-          Establishing survivor networks to provide comprehensive support.
+          Education: Providing 100 women and girls with knowledge and skills on
+          combating violence against women and girls.
         </li>
-        <li>Sharing personal stories of those affected by FGM.</li>
         <li>
-          Conducting house-to-house mobilization to pledge support for ending
-          FGM.
+          Survivor Empowerment: Strengthening the agency of survivors and
+          empowering them to foster community level accountability.
         </li>
       </ul>
-
-      <p className=''>
-        Additionally, with support from AU-UNICEF, we&apos;ve prioritized
-        bolstering the mental health and wellbeing of FGM survivors. Through
-        impactful radio jingles and live sessions, we&apos;ve sensitized over
-        50,000 listeners, extending awareness and support to those in need.
-      </p>
     </>,
     <>
-      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
+      <p>
+        Program Funding: Initially funded by NWTF, the training created and
+        strengthened a network of young women with improved knowledge of
+        community mobilization, leadership and strategic actions geared towards
+        ending violence against women and girls.
+      </p>
+      {/* <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Impact and Achievements
-      </h3>
-      <ul className='tab-content-list'>
-        <li>
-          Community Engagement: We&apos;ve reached ten communities and impacted
-          over 347,000 individuals through reflective dialogues and community
-          facilitator trainings.
-        </li>
-        <li>
-          Pledges to End FGM: Our efforts have mobilized 347,000 pledges to end
-          FGM, demonstrating a growing commitment to eradicating this harmful
-          practice.
-        </li>
-        <li>
-          Leadership Engagement: Five traditional rulers have assumed the role
-          of norm entrepreneurs, denouncing FGM and mobilizing their communities
-          for change.
-        </li>
-        <li>
-          Youth Empowerment: Over 1,000 adolescents have been equipped with
-          life-building and advocacy skills, empowering them to become agents of
-          change in their communities.
-        </li>
-        <li>
-          Survivor Support: We&apos;ve reached sixty FGM survivors, providing
-          them with resources and support to advocate against the practice.
-        </li>
-        <li>
-          Radio Sensitization: Fifty thousand radio listeners have been
-          sensitized, leading to increased awareness and support for survivors.
-        </li>
-      </ul>
+      </h3> */}
     </>,
   ];
 
@@ -120,7 +84,7 @@ export default function GirlWomenViolencePage() {
             <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
                 name='girl-women-violence'
-                tabs={['Summary', 'Strategies', 'Impact']}
+                tabs={['Summary', 'Approach', 'Impact']}
                 tabContent={tabContents}
               />
             </div>

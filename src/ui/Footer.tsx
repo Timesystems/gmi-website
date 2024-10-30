@@ -111,8 +111,8 @@ function Footer() {
             </div>
             <div className='col-span-2 hidden lg:inline-block'>
               <p>
-                Wuraola House, Ori- Apata, <br />
-                Fiyinfoluwa Street, Ado-Ekiti, Ekiti State.
+                Behind AB Hotel, Olora Street, <br /> Adebayo, Ado-Ekiti, Ekiti
+                State.
               </p>
             </div>
             <div className='mb-4 lg:mb-0'>

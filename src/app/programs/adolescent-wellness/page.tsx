@@ -31,64 +31,57 @@ export default function AdolescentWellnessHubPage() {
         Executive Summary
       </h3>
       <p className='mb-5'>
-        The Adolescent Wellness Hub, a program initiated by the Gender Mobile
-        Initiative, is dedicated to preventing sexual and gender-based violence
-        (SGBV) among adolescents aged 12 to 19 in Ekiti State. Our mission is to
-        equip adolescents with the knowledge, skills, and resources necessary to
-        foster gender equality and create safer communities for all.
+        In furtherance of our work on GBV prevention, the adolescent wellness
+        hub project promotes mental wellness among adolescents. This is owing to
+        our experience interacting with different groups of adolescents and
+        identifying the effects of GBV and other social issues on their mental
+        health.
       </p>
       <h4 className='mb-1 text-base font-semibold text-black-500'>
         Understanding the Need
       </h4>
       <p>
-        Through a survey conducted in 2019, we identified a concerning
-        prevalence of school-related sexual and gender-based violence among
-        adolescents in Ekiti State. In response, we developed a modular manual
-        and trained 42 volunteers to deliver it effectively.
+        According to the World Health Organization, one in seven, 10 - 19 years
+        old experience mental disorders and account for 13% of the global burden
+        of disease in this age group. The myths on mental illness, shortage of
+        mental health practitioners and care givers, limited budgetary
+        allocation on mental health in Nigeria, accounts for a high caseload of
+        depression, and ranks Nigeria 15th in the global index of suicide
+        occurrence. Our experience working with adolescents in Ekiti State,
+        identified that low socioeconomic status, positive history of sexual
+        abuse, family dysfunction, witnessed frequent violence, death of a
+        mother are significantly and independently associated to depression in
+        children and adolescents
       </p>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Our Approach
       </h3>
-      <p className='mb-5'>The Adolescent Hub project focuses on:</p>
       <ul className='tab-content-list'>
         <li>
-          Education: Providing adolescents with knowledge on improving gender
-          equality and understanding patterns of violence.
+          Education: Providing adolescents with knowledge on improving mental
+          wellness.
         </li>
         <li>
-          Skill Enhancement: Enhancing adolescents&apos; skills in reporting GBV
-          incidents.
+          Skill Enhancement: Enhancing adolescents&apos; skills in seeking
+          professional support on mental health challenges
+        </li>
+        <li>
+          Sports and Games: Utilizing recreational activities to build
+          confidence and create a safe space for expression.
+        </li>
+        <li>
+          Media Sensitization: Using traditional media to scale up the
+          project&apos;s reach to more members of the community.
         </li>
       </ul>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Impact and Achievements
+        The Problem
       </h3>
-      <ul className='tab-content-list'>
-        <li>
-          Program Funding: Initially funded by the Pollination Grant, the
-          project has received support from various sources, including the
-          Global Youth Mobilization fund.
-        </li>
-        <li>
-          Reach: Since 2019, we have visited 17 secondary schools across three
-          local government areas, reaching over 13,250 adolescents.
-        </li>
-        <li>
-          Support Services: We have improved the learning experiences of
-          in-school adolescents through support groups, counseling, and access
-          to confidential reporting via technology-based platforms.
-        </li>
-      </ul>
-    </>,
-    <>
-      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Addressing Mental Health Challenges
-      </h3>
-      <p className='mb-5'>
+      <p>
         In recognition of the exacerbating prevalence of mental illness among
         adolescents, our project funded by the Global Youth Mobilization fund
         aims to:
@@ -108,50 +101,54 @@ export default function AdolescentWellnessHubPage() {
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Objectives
+        Activities
       </h3>
-      <ul className='tab-content-list'>
-        <li>
-          To mobilize campaigns, drive action towards ending violence against
-          boys and girls.
-        </li>
-        <li>To provide a safe learning environment unimpeded by violence.</li>
-        <li>To create a network of violence free and healthy adolescents.</li>
-        <li>
-          To raise young advocates and champions against gender -based violence.
-        </li>
-      </ul>
+      <p className='mb-3'>
+        Gender Mobile Initiative implemented these projects in phases,
+        activities were carried out in All Souls’ Grammar School, AUD Grammar
+        School and Olaoluwa Muslim Grammar School in Ado Ekiti.
+        Capacity-building sessions were undertaken over the course of 4 weeks in
+        schools on the Concept of Mental Health and Mental Disorder,
+        predisposing Factors, Symptoms, and Stigmatization Associated with
+        Mental Challenges and Mental Healthcare seeking Behaviour.
+      </p>
+      <p className='mb-3'>
+        A Peer Educators training was also organized which trained 45 in-school
+        adolescents across secondary schools in Ado Ekiti on mental wellness.
+        The program has also enhanced participants&apos; knowledge of the
+        predisposing factors responsible for mental health challenges,
+        demystified myths and misconceptions around mental health challenges,
+        and provided access to counseling and psychosocial support to those in
+        need.
+      </p>
+      <p className='mb-3'>
+        A friendly football match themed ‘Football for Mental Wellness’ was
+        organized in partnership with the Ekiti Football Association (EFA) at
+        Baptist Comprehensive High School, Ado-Ekiti. Participants involved
+        pupils from the three beneficiary schools of the Adolescent Wellness Hub
+        (ADH). The match highlighted the importance of extracurricular
+        activities such as sports in the promotion of adolescent mental
+        well-being.
+      </p>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Activities
+        The Impact
       </h3>
-      <p className='mb-5'>
-        The Gender Mobile team visited 8 secondary schools in Gbonyin Local
-        Government Area in Ekiti State, to carry out a baseline study using
-        questionnaires as a tool on students between ages 12 -19 years prior to
-        the commencement of the adolescent hub project. Analyzed data indicated
-        the prevalence of violence and the need for an intervention to nip it in
-        the bud. A total of 55 facilitators were trained by the Nigeria Girls
-        Guide and Kids & Teens Resource Centre. The first phase of the
-        Adolescent Hub Project covered 7 secondary schools in 7 rural
-        communities of Gbonyin Local Government Area of Ekiti State, in South
-        West Nigeria.
+      <p className='mb-3'>
+        Program Funding: Initially funded by the Global Youth Mobilization fund
       </p>
-      <h4 className='mb-1 text-base font-semibold text-black-500'>
-        Project Scope:
-      </h4>
-      <p>
-        Gender Mobile administered a module for 7 weeks in rural communities.
-        This exposes adolescents to information on gender based violence,
-        identifying patterns of violence, demystifying harmful myths, exposing
-        patterns of sexual harassment and it consequences, life skills for
-        adolescents on assertive communication and negotiating skills,
-        leadership, and social responsibility. These modules are administered by
-        volunteer facilitators trained by The Nigerian Girls Guide, Kids & Teens
-        Resource Centre, and other partner organizations, with support of The
-        Pollination Project.
-      </p>
+      <ul className='tab-content-list'>
+        <li>
+          Reach: In 2022, we have built the capacities of over 1500 students and
+          45 in-school adolescents as peer educators on mental health wellness.
+        </li>
+        <li>
+          Support Services: We have improved the learning experiences of
+          in-school adolescents through support groups, counseling, and access
+          to confidential reporting via technology-based platforms.
+        </li>
+      </ul>
     </>,
   ];
 
@@ -168,10 +165,9 @@ export default function AdolescentWellnessHubPage() {
                 tabs={[
                   'Summary',
                   'Approach',
-                  'Impact',
                   'Problem',
-                  'Objectives',
                   'Activities',
+                  'Impact',
                 ]}
                 tabContent={tabContents}
               />

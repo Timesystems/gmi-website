@@ -50,6 +50,10 @@ const programsList = [
     href: `/programs/girl-women-violence`,
   },
   {
+    name: `Adolescent Hub`,
+    href: `/programs/adolescent-hub`,
+  },
+  {
     name: `Adolescent Wellness Hub`,
     href: `/programs/adolescent-wellness`,
   },

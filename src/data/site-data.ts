@@ -143,9 +143,10 @@ export const teams = [
     name: `Blessing Omotunde`,
     role: `Ekiti State Lead`,
     bio: [
-      `Blessing Omotunde currently serves as the Ekiti State Lead at Gender Mobile Initiative. In the last 5 years and has made significant contributions to community development.
-Blessing holds a Bachelor Degree in Microbiology and a postgraduate diploma in Gender and Development Studies. She is presently pursuing an MSc in Social Work at Ekiti State University, Nigeria.`,
-      `She is interested in initiatives around mental health and gender-based violence prevention aimed at creating safe spaces for girls and women in underserved communities, allowing them to learn and thrive without facing experiences that would hinder their educational and social outcomes.`,
+      `Blessing Omotunde currently serves as the Ekiti State Lead at Gender Mobile Initiative.
+        In the last 5 years, she has made significant contributions to community development through various initiatives at both local and national levels. 
+        Blessing’s educational background has been in Gender and Development Studies.`,
+      `She is interested in initiatives particularly focused on mental health and gender-based violence prevention that aim to create safe spaces for girls and women in underserved communities, empowering them to learn and thrive with improved educational and social outcomes.`,
     ],
     linkedin: `https://linkedin.com/in/blessingomotunde`,
     email: `omotunde.blessing@gendermobile.org`,
@@ -174,15 +175,14 @@ Blessing holds a Bachelor Degree in Microbiology and a postgraduate diploma in G
     image: `/images/team/emmanuel-olatunde.png`,
   },
   {
-    name: `Nwaiwu Elizabeth Chiamaka`,
+    name: `Joyce Odabi-Okoye`,
     role: `Communications Officer 1`,
     bio: [
-      `Nwaiwu Elizabeth is a development communicator working at the intersection of gender, feminism and communication. I have experience in using digital and new media to influence social and behavioural change. `,
-      `With over five years of experience in the field, I've worked with various non-profit organizations, NGOs, crafting compelling narratives that shed light on critical development issues such as education, healthcare, environmental sustainability, and social justice. My expertise lies in strategic communication, content creation, and stakeholder engagement. 
-In her free time, she loves to analyze legal dramas and crime documentaries.`,
+      `Joyce Odabi-Okoye is a dedicated legal professional specializing in human rights and gender equity. With a strong commitment to justice and advocacy, Joyce leverages her legal expertise to contribute to shaping sustainable frameworks, structures, policies, and systems aimed at combating sexual and gender-based violence. Her work is focused on Safeguarding, empowering communities, 
+      and driving meaningful advancements in gender equality, with a dedication to creating lasting societal impact.`,
     ],
-    linkedin: `https://linkedin.com/in/elizabeth-chiamaka-nwaiwu/`,
-    email: `chiamaka.elizabeth@gendermobile.org`,
+    linkedin: ``,
+    email: ``,
     image: `/images/team/elizabeth-chiamaka.png`,
   },
   {
@@ -221,7 +221,9 @@ In her free time, she loves to analyze legal dramas and crime documentaries.`,
     name: `Sadeeq Abioye`,
     role: `Program Officer`,
     bio: [
-      `Sadeeq works as a programs officer at Gender Mobile Initiative. He is a Community Service Specialist and a Public Health Advocate Championing Digital Safety. I am also a result-based Programs/Project manager who is Gender and Disability Inclined. I engage in community projects by utilizing positive risks in the environment to make changes and enable progress. I have acquired different skill sets across a wide range of Project interventions either working individually or in a team. I am passionate about child development, Gender equality and I advocate towards achieving Sustainable Development Goals (SDGs) with focus.`,
+      `Sadeeq Abioye is a Community Activist and Service Specialist. He is a One Health and Gender Equality Advocate, A result-based Program Manager with Gender and Disability Inclusive knowledge. He engages in community projects by utilizing positive risks in the environment to make changes and enable progress. 
+       He has acquired different skill sets across various project interventions working individually or in a team. He is passionate about child development and advocates for achieving Sustainable Development Goals (SDGs). He is working across the implementation of different projects that are of 
+       Public health importance, drive SDGs, and focus on child development, Protection, and Gender Equality.`,
     ],
     linkedin: `https://linkedin.com/in/abioye-sadeeq-adewale`,
     email: `abioye.sadeeq@gendermobile.org`,
