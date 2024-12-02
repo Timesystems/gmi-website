@@ -46,7 +46,7 @@ export default async function GalleryPage({
                 Videos
               </Link>
             </div>
-            <div className='md:px-20'>
+            <div className='xl:px-20'>
               <div className='grid auto-rows-max grid-cols-2 gap-0 md:grid-cols-3 md:gap-8'>
                 {photos.map(
                   ({

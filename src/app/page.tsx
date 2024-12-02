@@ -16,6 +16,8 @@ import { DonationBanner, HelpBanner } from '@/ui/Banners';
 import { BlogClip } from '@/ui/Blog';
 import { HeadingTitle } from '@/ui/Elements';
 import moment from 'moment';
+import { VolunterModal } from '@/ui/Modal';
+import { VolunteersBanner } from '@/ui/Volunteer';
 
 export const metadata: Metadata = {
   title: `Advancing Gender Equality and Combating Gender-Based Violence `,
@@ -55,14 +57,7 @@ function chunkify(items: any[], size: number) {
 }
 
 export default async function Home() {
-  const volunteerMembers = [
-    { name: `Scott`, image: `/images/volunteers/image-1.png` },
-    { name: `Olivia`, image: `/images/volunteers/image-2.png` },
-    { name: `Jonah`, image: `/images/volunteers/image-3.png` },
-    { name: `Ethan`, image: `/images/volunteers/image-4.png` },
-    { name: `Clarke`, image: `/images/volunteers/image-5.png` },
-    { name: `Kelly`, image: `/images/volunteers/image-6.png` },
-  ];
+
 
   const res = await fetch(`${process.env.API_URL}`, { cache: `no-store` });
   const response = await res.json();
@@ -146,35 +141,7 @@ export default async function Home() {
           <div className='block md:flex md:items-center'>
             <div className='relative justify-end md:inline-flex lg:w-1/2'>
               <div className='before-bg-addon relative mx-auto h-[75%] min-h-[400px] w-[90%] rounded-3xl bg-[url("/images/bg/joyful-students.png")] before:left-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/dotted-style.png")] md:w-[75%]'>
-                <div className='absolute bottom-[-40px] right-[-20px] rounded-2xl bg-white py-2 pl-4 pr-0 text-sm text-black-500 shadow-md md:right-[-40px] md:py-4'>
-                  <span className='text-sm md:text-base'>
-                    Join 200+ Other Volunteers
-                  </span>
-                  <div className='mt-2'>
-                    {volunteerMembers.map(({ name, image }, index) => (
-                      <span
-                        key={`volunteer ${name}`}
-                        className={clsx(
-                          `relative inline-block h-[46px] w-[46px] rounded-full border-[2px] border-white bg-cover bg-center bg-no-repeat md:h-[48px] md:w-[48px]`,
-                          {
-                            'left-[-10px]': index == 1,
-                            'left-[-20px]': index == 2,
-                            'left-[-30px]': index == 3,
-                            'left-[-40px]': index == 4,
-                            'left-[-50px]': index == 5,
-                          }
-                        )}
-                      >
-                        <Image
-                          src={image}
-                          alt=''
-                          fill
-                          className={clsx(`rounded-full`)}
-                        />
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <VolunteersBanner />
               </div>
             </div>
 
@@ -187,12 +154,7 @@ export default async function Home() {
                 devoid of all forms of sexual and gender-based violence?
               </p>
               <div className='py-4'>
-                <a
-                  href='#'
-                  className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
-                >
-                  Sign Up Now
-                </a>
+                <VolunterModal />
               </div>
             </div>
           </div>
