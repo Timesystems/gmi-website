@@ -38,6 +38,7 @@ const config: Config = {
           700: `#080806`,
           800: `#060605`,
           900: `#050504`,
+          rgba_5: 'rgba(0, 0, 0, 0.54)',
         },
       },
       borderRadius: {
