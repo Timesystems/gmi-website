@@ -1,7 +1,7 @@
 /**
  * List of partners images and name
  */
-import type { Partner } from '@/lib/types';
+import type { nigeriaStatesTypes, Partner, wayToReachUs } from '@/lib/types';
 export const partners: Partner[] = [
   {
     name: `Ford`,
@@ -284,4 +284,68 @@ export const teams = [
     email: `temitope@gendermobile.org`,
     image: `/images/team/temitope-ale.png`,
   },
+];
+/**
+ * List of contatc us options
+ */
+export const reachUs: wayToReachUs[] = [
+  {
+    id: 1,
+    title: 'Request a Call',
+    description: 'Just request a call and we will call you',
+    //  func: () => {},
+  },
+  {
+    id: 2,
+    title: 'Send a Message',
+    description: 'We are here to listen and help',
+    //  func: () => {
+    //    handleSendMessageClick();
+    //  },
+  },
+  {
+    id: 3,
+    title: 'Report a Case',
+    description: 'We treat every case with urgency',
+    //  func: () => {},
+  },
+];
+
+export const nigeriaStates: nigeriaStatesTypes[] = [
+  { id: 1, name: 'Abia', value: 'Abia' },
+  { id: 2, name: 'Adamawa', value: 'Adamawa' },
+  { id: 3, name: 'Akwa Ibom', value: 'Akwa Ibom' },
+  { id: 4, name: 'Anambra', value: 'Anambra' },
+  { id: 5, name: 'Bauchi', value: 'Bauchi' },
+  { id: 6, name: 'Bayelsa', value: 'Bayelsa' },
+  { id: 7, name: 'Benue', value: 'Benue' },
+  { id: 8, name: 'Borno', value: 'Borno' },
+  { id: 9, name: 'Cross River', value: 'Cross River' },
+  { id: 10, name: 'Delta', value: 'Delta' },
+  { id: 11, name: 'Ebonyi', value: 'Ebonyi' },
+  { id: 12, name: 'Edo', value: 'Edo' },
+  { id: 13, name: 'Ekiti', value: 'Ekiti' },
+  { id: 14, name: 'Enugu', value: 'Enugu' },
+  { id: 15, name: 'Gombe', value: 'Gombe' },
+  { id: 16, name: 'Imo', value: 'Imo' },
+  { id: 17, name: 'Jigawa', value: 'Jigawa' },
+  { id: 18, name: 'Kaduna', value: 'Kaduna' },
+  { id: 19, name: 'Kano', value: 'Kano' },
+  { id: 20, name: 'Katsina', value: 'Katsina' },
+  { id: 21, name: 'Kebbi', value: 'Kebbi' },
+  { id: 22, name: 'Kogi', value: 'Kogi' },
+  { id: 23, name: 'Kwara', value: 'Kwara' },
+  { id: 24, name: 'Lagos', value: 'Lagos' },
+  { id: 25, name: 'Nasarawa', value: 'Nasarawa' },
+  { id: 26, name: 'Niger', value: 'Niger' },
+  { id: 27, name: 'Ogun', value: 'Ogun' },
+  { id: 28, name: 'Ondo', value: 'Ondo' },
+  { id: 29, name: 'Osun', value: 'Osun' },
+  { id: 30, name: 'Oyo', value: 'Oyo' },
+  { id: 31, name: 'Plateau', value: 'Plateau' },
+  { id: 32, name: 'Rivers', value: 'Rivers' },
+  { id: 33, name: 'Sokoto', value: 'Sokoto' },
+  { id: 34, name: 'Taraba', value: 'Taraba' },
+  { id: 35, name: 'Yobe', value: 'Yobe' },
+  { id: 36, name: 'Zamfara', value: 'Zamfara' },
 ];
