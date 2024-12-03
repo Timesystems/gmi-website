@@ -49,7 +49,7 @@ const Hero = () => {
             id: 5,
             title: 'Become a Volunteer',
             des: <span>
-                What is missing is "U".
+                What is missing is {`"U"`}.
                 <br />
                 We need you to create the society we envision.
 
