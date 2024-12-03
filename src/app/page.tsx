@@ -5,7 +5,7 @@ import Script from 'next/script';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
-import HomePageImage from '@/assets/images/lady-on-homepage.png';
+
 import PartnerSlider from '@/ui/PartnerSlider';
 import Footer from '@/ui/Footer';
 import { SpacedSection, Container } from '@/ui/Layouts';
@@ -18,6 +18,7 @@ import { HeadingTitle } from '@/ui/Elements';
 import moment from 'moment';
 import { VolunterModal } from '@/ui/Modal';
 import { VolunteersBanner } from '@/ui/Volunteer';
+import Hero from '@/ui/Hero';
 
 export const metadata: Metadata = {
   title: `Advancing Gender Equality and Combating Gender-Based Violence `,
@@ -72,58 +73,7 @@ export default async function Home() {
   return (
     <>
       <Header background />
-      <main className='overflow-hidden bg-white lg:px-4'>
-        <div
-          className='mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[200px]'
-          role='hero-overlay'
-        >
-          <div className='lg:order-1 lg:h-[0%] lg:w-1/2'>
-            <div className=''>
-              <h1 className='pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
-                We respond urgently to any form of Sexual and Gender-Based
-                violence
-              </h1>
-              <p className='pb-10 text-[1.15rem] text-white'>
-                We are commited to fostering a gender-equitable society devoid{' '}
-                <br />
-                of all forms of sexual and gender based violence.
-              </p>
-
-              <Link
-                href='/about'
-                className='btn-white-outline hidden md:inline-block'
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
-              <Link
-                href='/about'
-                className='btn-white-outline inline-block md:hidden'
-              >
-                Learn More
-              </Link>
-              <div>
-                <span className='mr-4 inline-block rounded-full border border-white px-2 py-2'>
-                  <HiOutlineArrowLeft />
-                </span>
-                <span className='mr-2 inline-block rounded-full border border-white px-2 py-2'>
-                  <HiOutlineArrowRight />
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className='bottom-[20px] lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2'>
-            <Image
-              src={HomePageImage}
-              alt='Perplexed Lady'
-              className='scale-110 lg:scale-110'
-              style={{ objectFit: 'cover', objectPosition: `center` }}
-            />
-          </div>
-        </div>
-      </main>
+      <Hero />
 
       {/** Partner slider */}
       <Container className='px-4 py-10'>
@@ -179,7 +129,7 @@ export default async function Home() {
 
       {/** Blog Purview Section */}
       <section className='mb-20'>
-        <div className='container mx-auto bg-primary-50 px-6 py-10 md:px-16 md:py-16'>
+        <div className=' mx-auto bg-primary-50 px-6 py-10 md:px-16 md:py-16'>
           <div className='mb-4 text-center md:mb-16'>
             <h2 className='mb-2 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Blog"] md:mb-4 md:text-[2.25em]'>
               Explore Our Latest Insights
@@ -197,18 +147,19 @@ export default async function Home() {
           </div>
 
           {/** Blog List */}
-          <div className='mb-5 md:mb-16 md:flex md:justify-center'>
-            <div className='grid grid-cols-1 grid-rows-2 gap-2 md:grid-cols-2 md:grid-rows-1 md:gap-6 lg:w-[80%]'>
+          <div className='mb-5 md:mb-16 md:flex md:justify-center max-w-[75rem] mx-auto'>
+            <div className='flex items-center justify-between gap-4 flex-col md:flex-row w-full'>
               {blogs.map((blog) => (
-                <BlogClip
-                  key={blog.slug}
-                  title={blog.title}
-                  description={blog.summary}
-                  category='News'
-                  coverImage={blog.featured_image}
-                  link={`/blog/${blog.slug}`}
-                  date={moment(blog.published_at).format(`MMM D, YYYY`)}
-                />
+                <div key={blog.slug} className="w-full bg-red" >
+                  <BlogClip
+                    title={blog.title}
+                    description={blog.summary}
+                    category='News'
+                    coverImage={blog.featured_image}
+                    link={`/blog/${blog.slug}`}
+                    date={moment(blog.published_at).format(`MMM D, YYYY`)}
+                  />
+                </div>
               ))}
               {/* <BlogClip
                 title='Effect of CO2 in our Environment'

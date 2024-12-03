@@ -17,7 +17,7 @@ export function BlogClip({
 }) {
   return (
     <div
-      className='relative h-[300px] rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
+      className='relative h-[300px] min-w-full rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
       style={{
         background: `url("${coverImage}") no-repeat center`,
         backgroundSize: `cover`,
@@ -35,10 +35,10 @@ export function BlogClip({
           <span className='text-black-300'>{date}</span>
           <span className='text-primary-500'>{category}</span>
         </div>
-        <a href='#' className='mb-3 font-heading text-[1.3em] font-semibold'>
+        <a href='#' className='mb-3 font-heading block text-[1.3em] font-semibold truncate'>
           {title}
         </a>
-        <p className='text-sm text-black-400'>{description}</p>
+        <p className='text-sm text-black-400  line-clamp-2 '>{description}</p>
         <a
           href={link}
           className='mt-3 block font-heading text-sm font-semibold text-primary-500'
