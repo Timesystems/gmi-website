@@ -4,7 +4,7 @@ import { ModalLayout } from './Layouts'
 import { VolunteersBanner, VolunteersForm } from './Volunteer'
 import { IoClose } from "react-icons/io5";
 
-export async function VolunterModal() {
+export function VolunterModal() {
 
     const [isOpen, setIsOpen] = useState(false)
     const handleToggle = (e) => {
