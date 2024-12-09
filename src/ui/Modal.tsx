@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { ModalLayout } from './Layouts'
 import { VolunteersBanner, VolunteersForm } from './Volunteer'
 import { IoClose } from "react-icons/io5";
+import { HeadingTitle } from './Elements';
 
 export function VolunterModal() {
 
@@ -20,32 +21,31 @@ export function VolunterModal() {
             >
                 Sign Up Now
             </button>
-            <ModalLayout isOpen={isOpen} handleModalStatus={(e) => handleToggle(e)} modalSize={"max-w-[80rem]"} classname='rounded-[1.25rem] overflow-x-hidden' >
+            <ModalLayout isOpen={isOpen} handleModalStatus={(e) => handleToggle(e)} modalSize={"max-w-[1024px]"} classname='rounded-[1.25rem] overflow-x-hidden' >
                 <div className='flex item-center' >
                     {/* col one */}
-                    <div className="hidden md:block w-full max-w-[36.25rem] relative min-h-full volunterBg ">
+                    <div className="hidden md:block w-full max-w-[36.25rem] relative min-h-full  volunterBg ">
                         <VolunteersBanner position='left-1/2 -translate-x-1/2 bottom-10' />
                     </div>
 
                     {/* col 2 */}
-                    <div className="w-full px-5 py-10 md:px-20 md:py-20 relative">
+                    <div className="w-full px-5 py-10 md:px-10 md:py-6 relative">
                         {/* close Button */}
-                        <button className="absolute md:right-10 right-5 md:top-10 top-5 w-7  h-7 md:w-11 md:h-11 bg-primary-50 rounded-full flex items-center justify-center" onClick={() => handleToggle(false)}>
-                            <IoClose className=" text-base md:text-[1.25rem]" />
+                        <button className="absolute md:right-10 right-5 md:top-5 top-5 w-7  h-7 md:w-10 md:h-10 bg-primary-50 rounded-full flex items-center justify-center z-10" onClick={() => handleToggle(false)}>
+                            <IoClose className=" text-base md:text-[1.15rem]" />
                         </button>
 
                         {/* title section */}
 
                         <div className="">
-                            <p className="text-primary-500 text-base">
-                                Volunteer
-                            </p>
-                            <h3 className="sm:text-[1.5rem] md:text-[2.5rem] font-semibold">
+
+
+                            <HeadingTitle className='before:content-["Volunteer"]'>
                                 Sign Up to Become a Volunteer
-                            </h3>
+                            </HeadingTitle>
                         </div>
 
-                        <div className=" mt-5 md:mt-10">
+                        <div className=" mt-5 md:mt-5">
                             <VolunteersForm />
                         </div>
 

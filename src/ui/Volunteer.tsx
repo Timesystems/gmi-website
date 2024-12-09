@@ -21,7 +21,7 @@ export function VolunteersBanner({ position }: { position?: string; }) {
             <span className='text-sm md:text-base'>
                 Join 200+ Other Volunteers
             </span>
-            <div className='mt-2'>
+            <div className='mt-2 overflow-hidden max-h-[46px] '>
                 {volunteerMembers?.map(({ name, image }, index) => (
                     <span
                         key={`volunteer ${name}`}
@@ -71,7 +71,7 @@ export function VolunteersForm() {
         console.log("handleChange", reportData)
     }
     return (
-        <div className="space-y-5">
+        <div className="space-y-5 overflow-hidden">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5 ">
                 <Input
                     onChange={(e) => handleChange(e)}
