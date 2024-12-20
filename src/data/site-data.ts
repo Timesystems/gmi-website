@@ -88,7 +88,7 @@ export const teams = [
     name: `Dr. Feyishola Kadiri`,
     role: `Research and Policy Lead`,
     bio: [
-      `Dr. Feyishola Kadiri is currently the Research and Policy Lead at Gender Mobile Initiative. Dr. Kadiri is a result-oriented development professional expert with an interest in sustainability at the intersection of economy, society and culture. Presently, Dr. Kadiri has demonstrated experience in gender equality and gender-based violence and extensive experience in policy research and project management.`,
+      `Dr. Feyishola Kadiri is currently the Research and Policy Lead at Gender Mobile Initiative. Dr. Kadiri is a result-oriented development professional expert with an interest in sustainability at the intersection of economy, society and culture. Dr. Kadiri has extensive experience in project management, research, evidence-based advocacy, and gender-based violence prevention programming`,
       `Dr. Kadiri is a Fellow of the Higher Education Academy in the UK, holds a PhD in Management Studies from the University of Essex, an MSc degree in Development Economics and Policy from the University of Manchester, UK, an MBA in General Management from the University of Lagos and a BSc (Hons) in Economics from Ajayi Crowther University.`,
     ],
     linkedin: `https://linkedin.com/in/feyishola-kadiri-nee-ayenuyo-phd-40b95045`,
