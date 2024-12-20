@@ -46,7 +46,7 @@ export function VolunterModal() {
                         </div>
 
                         <div className=" mt-5 md:mt-5">
-                            <VolunteersForm />
+                            <VolunteersForm handleToggle={handleToggle} />
                         </div>
 
                     </div>

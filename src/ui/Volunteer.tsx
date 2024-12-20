@@ -1,10 +1,12 @@
 "use client"
 
 import { nigeriaStates } from "@/data/site-data";
+import { postRequest } from "@/lib/api/apiHelper";
 import { Input, Select } from "@headlessui/react";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export function VolunteersBanner({ position }: { position?: string; }) {
     const volunteerMembers = [
@@ -50,7 +52,8 @@ export function VolunteersBanner({ position }: { position?: string; }) {
 }
 
 
-export function VolunteersForm() {
+export function VolunteersForm({ handleToggle }) {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const intialData = {
         name: "",
         email: "",
@@ -62,13 +65,38 @@ export function VolunteersForm() {
         gender: ""
     }
     const [reportData, setReportData] = useState(intialData)
+    const { name,
+        email,
+        phoneNo,
+        state,
+        city,
+        qualification,
+        motivation,
+        gender, } = reportData
 
     const handleChange = (e) => {
         const { name, value } = e.target
         setReportData({ ...reportData, [name]: value })
     }
-    const handleSubmit = () => {
+
+    const handleSubmit = async () => {
         console.log("handleChange", reportData)
+
+        const payload = {
+            type: 'volunteer',
+            data: reportData
+        }
+        try {
+            const response = await postRequest("/form-submission", payload);
+            setReportData(intialData)
+            handleToggle(false)
+            toast.success(response?.message)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setIsLoading(false)
+        }
+
     }
     return (
         <div className="space-y-5 overflow-hidden">
@@ -79,6 +107,7 @@ export function VolunteersForm() {
                     placeholder='First Name/Last Name'
                     className='input w-full'
                     name="name"
+                    value={name}
                 />
                 <Input
                     onChange={(e) => handleChange(e)}
@@ -86,6 +115,7 @@ export function VolunteersForm() {
                     placeholder='Email'
                     className='input w-full'
                     name="email"
+                    value={email}
                 />
             </div>
 
@@ -96,12 +126,14 @@ export function VolunteersForm() {
                     placeholder='Phone Number'
                     className='input w-full'
                     name="phoneNo"
+                    value={phoneNo}
                 />
 
                 <Select
                     aria-label='Select your Gender'
                     className='input w-full'
                     name="gender"
+                    value={gender}
                     onChange={(e) => handleChange(e)}
                 >
                     <option value=''>Gender</option>
@@ -118,6 +150,7 @@ export function VolunteersForm() {
                     aria-label='Select your State'
                     className='input w-full'
                     name="state"
+                    value={state}
                     onChange={(e) => handleChange(e)}
                 >
                     <option value=''>State of Residence</option>
@@ -134,6 +167,7 @@ export function VolunteersForm() {
                     placeholder='City or Residence'
                     className='input w-full'
                     name="city"
+                    value={city}
                 />
 
             </div>
@@ -144,6 +178,7 @@ export function VolunteersForm() {
                     aria-label='Select your Qualification'
                     className='input w-full'
                     name="qualification"
+                    value={qualification}
                     onChange={(e) => handleChange(e)}
                 >
                     <option value=''>Qualification</option>
@@ -160,11 +195,12 @@ export function VolunteersForm() {
                     placeholder='Motivation'
                     className='input w-full'
                     name="motivation"
+                    value={motivation}
                 />
 
             </div>
             <div className="mt-10">
-                <button className='btn-primary' onClick={handleSubmit} >Sign Up</button>
+                <button className='btn-primary' onClick={handleSubmit} disabled={isLoading}>Sign Up</button>
             </div>
         </div >
     )

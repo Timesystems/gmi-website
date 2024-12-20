@@ -74,7 +74,7 @@ const Hero = () => {
     return (
         <main className="overflow-hidden bg-white lg:px-4">
             <div
-                className="mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 py-4 pt-[40px] text-white lg:container px-4 md:px-20 lg:px-10 l:pt-[200px]"
+                className="mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 py-4 pt-[40px] text-white lg:container px-4 md:px-20 lg:px-10 lg:pt-[80px]"
                 role="hero-overlay"
             >
                 {/* Left Side */}
