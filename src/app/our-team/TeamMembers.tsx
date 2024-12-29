@@ -39,10 +39,10 @@ export default function TeamMembers() {
         <Slider
           {...settings}
           ref={(slider: any) => (sliderImageRef = slider)}
-          className='h-full rounded-primary'
+          className='rounded-primary h-full'
         >
           {teams.map(({ image, name }) => (
-            <div key={`image-${name}`} className='h-[510px] rounded-primary'>
+            <div key={`image-${name}`} className='rounded-primary h-[510px]'>
               <TeamMemberImage src={image} alt={name} />
             </div>
           ))}
@@ -54,7 +54,7 @@ export default function TeamMembers() {
             asNavFor={nav}
             {...settings}
             ref={(slider: any) => (sliderContentRef = slider)}
-            className='h-full rounded-primary'
+            className='rounded-primary h-full'
           >
             {teams.map(({ name, role, email, linkedin, bio }) => (
               <div key={`bio-${name}`}>

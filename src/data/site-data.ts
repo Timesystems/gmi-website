@@ -349,3 +349,17 @@ export const nigeriaStates: nigeriaStatesTypes[] = [
   { id: 35, name: 'Yobe', value: 'Yobe' },
   { id: 36, name: 'Zamfara', value: 'Zamfara' },
 ];
+
+/**
+ * List of allowed volunteer professions
+ */
+export const professions = [
+  { label: `Doctor`, value: `Doctor` },
+  { label: `Lawyer`, value: `Lawyer` },
+  { label: `Nurse`, value: `Nurse` },
+  { label: `Engineer`, value: `Engineer` },
+  { label: `Teacher`, value: `Teacher` },
+  { label: `Psychologist`, value: `Psychologist` },
+  { label: `Law Enforcement`, value: `Law Enforcement` },
+  { label: `Therapist`, value: `Therapist` },
+];
