@@ -58,8 +58,6 @@ function chunkify(items: any[], size: number) {
 }
 
 export default async function Home() {
-
-
   const res = await fetch(`${process.env.API_URL}`, { cache: `no-store` });
   const response = await res.json();
   let gallery = [];
@@ -129,7 +127,7 @@ export default async function Home() {
 
       {/** Blog Purview Section */}
       <section className='mb-20'>
-        <div className=' mx-auto bg-primary-50 px-6 py-10 md:px-16 md:py-16'>
+        <div className='mx-auto bg-primary-50 px-6 py-10 md:px-16 md:py-16'>
           <div className='mb-4 text-center md:mb-16'>
             <h2 className='mb-2 text-[1.6em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Blog"] md:mb-4 md:text-[2.25em]'>
               Explore Our Latest Insights
@@ -147,10 +145,10 @@ export default async function Home() {
           </div>
 
           {/** Blog List */}
-          <div className='mb-5 md:mb-16 md:flex md:justify-center max-w-[75rem] mx-auto'>
-            <div className='flex items-center justify-between gap-4 flex-col md:flex-row w-full'>
+          <div className='mx-auto mb-5 max-w-[75rem] md:mb-16 md:flex md:justify-center'>
+            <div className='flex w-full flex-col items-center justify-between gap-4 md:flex-row'>
               {blogs.map((blog) => (
-                <div key={blog.slug} className="w-full bg-red" >
+                <div key={blog.slug} className='bg-red w-full'>
                   <BlogClip
                     title={blog.title}
                     description={blog.summary}
@@ -161,37 +159,16 @@ export default async function Home() {
                   />
                 </div>
               ))}
-              {/* <BlogClip
-                title='Effect of CO2 in our Environment'
-                description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Sed vulputate mi sit ame.'
-                category='AutoMobile'
-                coverImage='/images/bg/get-involved.jpg'
-                link='#'
-                date='Mar 16, 2024'
-              /> */}
-
-              {/* <BlogClip
-                title='Why Taxation?'
-                description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Sed vulputate mi sit ame.'
-                category='Government'
-                coverImage='/images/bg/get-involved.jpg'
-                link='#'
-                date='Mar 16, 2024'
-              /> */}
             </div>
           </div>
 
           <div className='text-center'>
-            <a
-              href='#'
+            <Link
+              href='/blog'
               className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
             >
               View All Blogs
-            </a>
+            </Link>
           </div>
         </div>
       </section>
