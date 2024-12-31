@@ -15,7 +15,7 @@ export default function GenderMobileStatisticCounterUp() {
           <div className='border-b border-l border-black-50 px-10 py-2 sm:px-20 md:border-0 md:p-0'>
             <h3 className='mb-2 text-[1.9em] font-semibold leading-[110%] text-black-500 md:text-[2.25em]'>
               <CountUp
-                end={30}
+                end={20}
                 start={5}
                 enableScrollSpy
                 duration={3}
@@ -39,7 +39,7 @@ export default function GenderMobileStatisticCounterUp() {
           <div className='border-l border-black-50 px-10 py-2 sm:px-20 md:border-0 md:p-0'>
             <h3 className='mb-2 text-[1.9em] font-semibold leading-[110%] text-black-500 md:text-[2.25em]'>
               <CountUp
-                end={50000}
+                end={500000}
                 start={1000}
                 duration={3.5}
                 enableScrollSpy

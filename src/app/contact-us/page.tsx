@@ -1,12 +1,45 @@
+'use client';
 import Header from '@/ui/Header';
+import { useRef, useState } from 'react';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import { HeadingTitle } from '@/ui/Elements';
 import { Input, Textarea, Select } from '@headlessui/react';
+import { reachUs } from '@/data/site-data';
+import { RequestACall, ReportACase, ContactForm } from '@/ui/Contact';
 
 export default function GalleryPage() {
+  const [requestCall, setRequestCall] = useState(false);
+  const [reportCase, setReportCase] = useState(false);
+  const handleRequestCall = (e: boolean) => {
+    setRequestCall(e);
+  };
+  const handleReportCase = (e: boolean) => {
+    setReportCase(e);
+  };
+
+  const messageInputRef = useRef<HTMLInputElement>(null);
+  const handleSendMessageClick = () => {
+    messageInputRef.current?.focus();
+  };
+  const handleFunctions = (id: number) => {
+    switch (id) {
+      case 1:
+        handleRequestCall(true);
+        break;
+      case 2:
+        handleSendMessageClick();
+        break;
+      case 3:
+        handleReportCase(true);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <>
       <Header />
@@ -16,27 +49,24 @@ export default function GalleryPage() {
           <div className='mx-3 mt-4 flex flex-wrap items-start justify-center gap-y-6 text-black-500 md:flex-nowrap md:gap-x-10 md:gap-y-0 lg:gap-x-16'>
             {/** Help links */}
             <div className='rounded-primary w-full border border-black-100 px-8 py-8 text-[1.1rem] md:w-[350px] lg:w-[420px]'>
-              <h3 className='mb-3 text-xl fpont-semibold leading-[1.8rem] md:text-2xl md:leading-[2rem]'>
-                There a various ways you can reach us!
+              <h3 className='mb-3 text-xl font-semibold leading-[1.8rem] md:text-2xl md:leading-[2rem]'>
+                There are various means to reach us.
               </h3>
-              <div className='border-t border-black-100 py-4 md:py-3'>
-                <h5 className='my-2 text-lg font-semibold text-primary-500 md:my-1'>
-                  Request a call
-                </h5>
-                <span>Just request a call and we will call you</span>
-              </div>
-              <div className='border-t border-black-100 py-4 md:py-3'>
-                <h5 className='my-2 text-lg font-semibold text-primary-500 md:my-1'>
-                  Send a Message
-                </h5>
-                <span>We are here to listen and help</span>
-              </div>
-              <div className='border-t border-black-100 py-4 md:py-3'>
-                <h5 className='my-2 text-lg font-semibold text-primary-500 md:my-1'>
-                  Report a Case
-                </h5>
-                <span>We treat every case with urgency</span>
-              </div>
+
+              {reachUs?.map(({ id, title, description }) => {
+                return (
+                  <button
+                    key={id}
+                    className='w-full border-t border-black-100 py-4 text-left md:py-3'
+                    onClick={() => handleFunctions(id)}
+                  >
+                    <h5 className='my-2 text-lg font-semibold text-primary-500 md:my-1'>
+                      {title}
+                    </h5>
+                    <span>{description}</span>
+                  </button>
+                );
+              })}
             </div>
             {/** Help link ends */}
 
@@ -52,52 +82,7 @@ export default function GalleryPage() {
                   we can!
                 </p>
               </div>
-              <div>
-                <div className='grid grid-cols-1 grid-rows-5 gap-y-4 md:grid-cols-2 md:grid-rows-3 md:items-end md:gap-x-8 md:gap-y-6 lg:gap-x-10'>
-                  <div>
-                    <Input
-                      type='text'
-                      placeholder='First Name / Last Name'
-                      className='w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500'
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type='text'
-                      placeholder='Email'
-                      className='w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500'
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type='text'
-                      placeholder='Phone Number'
-                      className='w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500'
-                    />
-                  </div>
-                  <div>
-                    <Select
-                      aria-label='Select your Gender'
-                      className='w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500'
-                    >
-                      <option value=''>Gender</option>
-                      <option value='Female'>Female</option>
-                      <option value='Male'>Male</option>
-                      <option value='Others'>Others</option>
-                    </Select>
-                  </div>
-                  <div className='md:col-span-2'>
-                    <Textarea
-                      placeholder='Your Message'
-                      rows={1}
-                      className='w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500'
-                    />
-                  </div>
-                </div>
-                <div className='mt-4 md:mt-6'>
-                  <button className='btn-primary'>Send Message</button>
-                </div>
-              </div>
+              <ContactForm messageInputRef={messageInputRef} />
             </div>
           </div>
         </Container>
@@ -111,6 +96,15 @@ export default function GalleryPage() {
 
       {/** Footer */}
       <Footer />
+      {/** Modals  */}
+      <RequestACall
+        isOpen={requestCall}
+        handleModalStatus={(e) => handleRequestCall(e)}
+      />
+      <ReportACase
+        isOpen={reportCase}
+        handleModalStatus={(e) => handleReportCase(e)}
+      />
     </>
   );
 }

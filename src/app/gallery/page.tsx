@@ -46,8 +46,8 @@ export default async function GalleryPage({
                 Videos
               </Link>
             </div>
-            <div className='md:px-20'>
-              <div className='grid auto-rows-max grid-cols-2 gap-0 md:grid-cols-3 md:gap-8'>
+            <div className='xl:px-20'>
+              <div className='flex flex-wrap justify-center items-center gap-4 md:gap-8'>
                 {photos.map(
                   ({
                     id,
@@ -60,12 +60,12 @@ export default async function GalleryPage({
                   }) => (
                     <div
                       key={id}
-                      className='md:rounded-primary group relative h-[250px] w-[250px] grayscale hover:grayscale-0 md:h-[430px] md:w-[430px]'
+                      className='md:rounded-primary group relative  grayscale hover:grayscale-0 md:w-[30%] w-[40%]  sm:h-[300px] h-[200px]  md:h-[400px]'
                     >
                       <Image
                         src={link}
                         alt='Gallery Image'
-                        fill
+                        layout="fill"
                         className='md:rounded-primary'
                         style={{ objectFit: `cover`, objectPosition: `center` }}
                       />

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import Link from 'next/link';
 
 export function BlogClip({
   title,
@@ -17,7 +18,7 @@ export function BlogClip({
 }) {
   return (
     <div
-      className='relative h-[300px] rounded-primary transition-all duration-300 group-hover:grayscale md:h-[380px]'
+      className='rounded-primary relative h-[300px] min-w-full transition-all duration-300 group-hover:grayscale md:h-[380px]'
       style={{
         background: `url("${coverImage}") no-repeat center`,
         backgroundSize: `cover`,
@@ -35,16 +36,19 @@ export function BlogClip({
           <span className='text-black-300'>{date}</span>
           <span className='text-primary-500'>{category}</span>
         </div>
-        <a href='#' className='mb-3 font-heading text-[1.3em] font-semibold'>
+        <Link
+          href={link}
+          className='mb-3 block truncate font-heading text-[1.3em] font-semibold'
+        >
           {title}
-        </a>
-        <p className='text-sm text-black-400'>{description}</p>
-        <a
+        </Link>
+        <p className='line-clamp-2 text-sm text-black-400'>{description}</p>
+        <Link
           href={link}
           className='mt-3 block font-heading text-sm font-semibold text-primary-500'
         >
           Read More
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -62,7 +66,7 @@ export function RelatedBlogClip({
   return (
     <div className='text-center'>
       <div
-        className={clsx(`block h-[250px] w-full rounded-primary bg-center`)}
+        className={clsx(`rounded-primary block h-[250px] w-full bg-center`)}
         style={{
           backgroundSize: `cover`,
           background: `url(${coverImage}) no-repeat `,

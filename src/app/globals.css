@@ -36,6 +36,9 @@
 }
 
 @layer base {
+  .input {
+    @apply w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500;
+  }
   .rounded-primary {
     @apply rounded-[8px] md:rounded-[20px];
   }
@@ -53,7 +56,7 @@
   }
 
   .btn-primary {
-    @apply btn-base border border-primary-500 bg-primary-500 text-white hover:bg-white hover:text-primary-500;
+    @apply btn-base border border-primary-500 bg-primary-500 text-white hover:bg-white hover:text-primary-500 disabled:opacity-75;
   }
 
   .btn-primary-outline {
@@ -147,4 +150,50 @@
 
 .slick-track {
   display: flex !important;
+}
+
+/* remove number input default appreance */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.volunterBg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(/images/students-2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

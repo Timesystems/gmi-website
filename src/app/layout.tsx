@@ -3,6 +3,7 @@ import type { Viewport, Metadata } from 'next';
 import './slick-slider.css';
 import './globals.css';
 import Script from 'next/script';
+import { Toaster } from 'react-hot-toast';
 // import 'slick-carousel/slick/slick.css';
 
 export const viewport: Viewport = {
@@ -37,6 +38,7 @@ export default function RootLayout({
           strategy='beforeInteractive'
         />
         <Script src='/js/initialize.js' /> */}
+        <Toaster />
       </body>
     </html>
   );
