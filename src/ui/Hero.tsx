@@ -27,7 +27,7 @@ const Hero = () => {
       ),
       buttonText: 'Learn More',
       imgUrl: Slide1,
-      btnFunc: () => {},
+      link: `/about`,
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ const Hero = () => {
       buttonText: 'Donate Now',
       imgUrl: Slide2,
       style: `lg:relative lg:right-[-110px]`,
-      btnFunc: () => {},
+      link: `/make-donation`,
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const Hero = () => {
       ),
       buttonText: 'Learn More',
       imgUrl: Slide3,
-      btnFunc: () => {},
+      link: `/about`,
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ const Hero = () => {
       ),
       buttonText: 'Donate Now',
       imgUrl: Slide4,
-      btnFunc: () => {},
+      link: `/make-donation`,
     },
     {
       id: 5,
@@ -83,7 +83,7 @@ const Hero = () => {
       ),
       buttonText: 'Sign Up Now',
       imgUrl: Slide5,
-      btnFunc: () => {},
+      link: `/#volunteer`,
     },
   ];
 
@@ -116,7 +116,7 @@ const Hero = () => {
             </p>
             <div className='relative'>
               <Link
-                href='/about'
+                href={`${slides?.[activeIndex]?.link}`}
                 className='btn-white-outline absolute top-0 hidden md:inline-block'
               >
                 {slides?.[activeIndex]?.buttonText}
@@ -127,7 +127,7 @@ const Hero = () => {
           {/* Controls */}
           <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
             <Link
-              href='/about'
+              href={`${slides?.[activeIndex]?.link}`}
               className='btn-white-outline inline-block md:hidden'
             >
               {slides?.[activeIndex]?.buttonText}

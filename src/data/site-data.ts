@@ -350,6 +350,27 @@ export const nigeriaStates: nigeriaStatesTypes[] = [
   { id: 36, name: 'Zamfara', value: 'Zamfara' },
 ];
 
+export const testimonials = [
+  {
+    text: `I commend Gender Mobile Initiative for their unwavering dedication to creating a culture of respect and equality in our higher institutions. Your work is crucial in creating a safer and more inclusive learning environment for all students, and I look forward to seeing the continued impact that you will undoubtedly make in the future. Thank you for all that you do. `,
+    name: `Permanent Secretary`,
+    title: `Ministry of Higher Education, Science and Technology`,
+  },
+  {
+    text: `Collaborating with Gender Mobile Initiative is indeed an experience that surpasses our imagination. In this present generation where sexual harassment has become the order of the day in our Tertiary Institutions, the Initiative's giant stride to curb this indecent act is the most needed move. Kudos to Gender Mobile Initiative.`,
+    name: `Dr Mrs. Lydia Tsammani`,
+    title: `Commissioner of Higher Education`,
+  },
+  {
+    text: `Gender Mobile's unique mission has deeply touched me. Attending their program in Abuja earlier this year was incredibly inspiring, and it motivated me to invite them to Taraba State. I was thrilled when they came and conducted their program for stakeholders in our tertiary institutions. I'm even happier to see that some institutions have already embraced it.
+Being invited for a 30-minute live TV show to educate the public about the program was an honor and a testament to its impact. I sincerely hope Gender Mobile's presence in our state continues to grow, and I am committed to providing every possible support.
+Thank you so much, Gender Mobile—I am so proud of all you do. Keep up the excellent work!
+`,
+    name: `Dr Augustina Godwin`,
+    title: `Commissioner for Education`,
+  },
+];
+
 /**
  * List of allowed volunteer professions
  */

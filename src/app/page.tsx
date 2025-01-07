@@ -93,7 +93,10 @@ export default async function Home() {
               </div>
             </div>
 
-            <div className='mt-10 px-8 py-8 md:mt-0 md:px-24 md:py-24 lg:w-1/2'>
+            <div
+              className='mt-10 px-8 py-8 md:mt-0 md:px-24 md:py-24 lg:w-1/2'
+              id='volunteer'
+            >
               <HeadingTitle className='before:content-["Volunteer"]'>
                 You too can Get Involved
               </HeadingTitle>
@@ -225,84 +228,15 @@ export default async function Home() {
                       </div>
                     );
                   })}
-                  {/* <div className='grid gap-4'>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                  </div>
-                  <div className='grid gap-4'>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                  </div>
-                  <div className='hidden gap-4 md:grid'>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                    <div>
-                      <img
-                        className='h-auto max-w-full rounded-lg'
-                        src='https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg'
-                        alt='gallery image'
-                      />
-                    </div>
-                  </div> */}
                 </div>
               </div>
               <div className='mt-8'>
-                <a
-                  href='#'
+                <Link
+                  href='/gallery'
                   className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
                 >
                   View More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
