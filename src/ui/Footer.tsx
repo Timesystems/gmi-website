@@ -81,9 +81,11 @@ function Footer() {
               Subscribe to our newsletter to receive the latest updates and
               exclusive offers.
             </p>
+
             <NewsLetterForm />
           </div>
         </div>
+
         <div className='justify-between py-4 text-[0.88em] lg:flex'>
           <div className='col-span-3 grid-cols-4 grid-rows-1 gap-10 lg:grid'>
             {/** Mobile address show only */}

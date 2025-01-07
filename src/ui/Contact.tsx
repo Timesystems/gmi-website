@@ -1,6 +1,6 @@
 import { Input, Select, Textarea } from '@headlessui/react';
 import { ModalLayout } from './Layouts';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { postRequest } from '@/lib/api/apiHelper';
 import toast from 'react-hot-toast';
 
@@ -222,6 +222,7 @@ export function ReportACase({
 
 export function ContactForm({ messageInputRef }) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState(false);
   const intialData = {
     name: '',
     phone: '',
@@ -229,6 +230,11 @@ export function ContactForm({ messageInputRef }) {
     gender: '',
     message: '',
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const [reportData, setReportData] = useState(intialData);
   // destructure the contact form data
   const { name, phone, email, gender, message } = reportData;
@@ -257,6 +263,8 @@ export function ContactForm({ messageInputRef }) {
       setIsLoading(false);
     }
   };
+
+  if (!isClient) return null;
   return (
     <div>
       <div className='grid grid-cols-1 grid-rows-5 gap-y-4 md:grid-cols-2 md:grid-rows-3 md:items-end md:gap-x-8 md:gap-y-6 lg:gap-x-10'>

@@ -68,7 +68,9 @@ export function VolunteersForm({ handleToggle }) {
     setReportData({ ...reportData, [name]: value });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e?.preventDefault();
+
     const isFormValid = ['name', 'phone', 'email', 'city', 'message'].every(
       (field) => !!reportData[field]
     );
@@ -90,7 +92,7 @@ export function VolunteersForm({ handleToggle }) {
     }
   };
   return (
-    <div className='space-y-5 overflow-hidden'>
+    <form className='space-y-5 overflow-hidden' onSubmit={handleSubmit}>
       <div className='flex flex-col items-center gap-4 md:flex-row md:gap-5'>
         <Input
           onChange={(e) => handleChange(e)}
@@ -188,14 +190,10 @@ export function VolunteersForm({ handleToggle }) {
         />
       </div>
       <div className='mt-10'>
-        <button
-          className='btn-primary'
-          onClick={handleSubmit}
-          disabled={isLoading}
-        >
+        <button type='submit' className='btn-primary' disabled={isLoading}>
           Sign Up
         </button>
       </div>
-    </div>
+    </form>
   );
 }
