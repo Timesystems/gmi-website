@@ -88,16 +88,16 @@ const resourcesList = [
   },
   {
     name: `Press Releases`,
-    href: `#`,
+    href: `/press-releases`,
   },
   {
     name: `Publications/Research`,
-    href: `#`,
+    href: `/publications`,
   },
-  {
-    name: `Interviews/Media Tour`,
-    href: `#`,
-  },
+  // {
+  //   name: `Interviews/Media Tour`,
+  //   href: `#`,
+  // },
   {
     name: `News`,
     href: `#`,

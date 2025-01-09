@@ -49,10 +49,10 @@ function Footer() {
                 <Link href='/blog'>Blog</Link>
               </li>
               <li>
-                <Link href='/blog'>Press Release</Link>
+                <Link href='/press-releases'>Press Release</Link>
               </li>
               <li>
-                <Link href='/blog'>Publications/Research</Link>
+                <Link href='/publications'>Publications/Research</Link>
               </li>
             </ul>
           </div>
@@ -60,13 +60,13 @@ function Footer() {
             <h5 className='text-base font-semibold text-black-200'>Actions</h5>
             <ul>
               <li>
-                <a href='#'>Report a Case</a>
+                <a href='/contact-us'>Report a Case</a>
               </li>
               <li>
-                <a href='#'>Request Call</a>
+                <a href='/contact-us'>Request Call</a>
               </li>
               <li>
-                <a href='#'>Become a Volunteer</a>
+                <a href='/#volunteer'>Become a Volunteer</a>
               </li>
               <li>
                 <Link href='/make-donation'>Make a Donation</Link>
