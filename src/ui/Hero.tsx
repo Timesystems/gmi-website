@@ -27,6 +27,7 @@ const Hero = () => {
       ),
       buttonText: 'Learn More',
       imgUrl: Slide1,
+      style: ``,
       link: `/about`,
     },
     {
@@ -56,6 +57,7 @@ const Hero = () => {
       ),
       buttonText: 'Learn More',
       imgUrl: Slide3,
+      style: ``,
       link: `/about`,
     },
     {
@@ -69,6 +71,7 @@ const Hero = () => {
       ),
       buttonText: 'Donate Now',
       imgUrl: Slide4,
+      style: ``,
       link: `/make-donation`,
     },
     {
@@ -83,6 +86,7 @@ const Hero = () => {
       ),
       buttonText: 'Sign Up Now',
       imgUrl: Slide5,
+      style: ``,
       link: `/#volunteer`,
     },
   ];
