@@ -31,11 +31,7 @@ export default function AdolescentWellnessHubPage() {
         Executive Summary
       </h3>
       <p className='mb-5'>
-        In furtherance of our work on GBV prevention, the adolescent wellness
-        hub project promotes mental wellness among adolescents. This is owing to
-        our experience interacting with different groups of adolescents and
-        identifying the effects of GBV and other social issues on their mental
-        health.
+        In furtherance of our work on SGBV prevention, the adolescent wellness hub project promotes mental wellness among adolescents. This is owing to our experience interacting with different groups of adolescents and identifying the effects of SGBV and other social issues on their mental health.
       </p>
       <h4 className='mb-1 text-base font-semibold text-black-500'>
         Understanding the Need

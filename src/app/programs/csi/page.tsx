@@ -58,7 +58,7 @@ export default function CampusSafetyInitiativePage() {
           Lack of a survivor-centred grievance redress mechanism.
         </li>
         <li>
-          Lack of a survivor-centred grievance redress mechanism.
+          Lack of a survivor-centred reporting channel.
         </li>
       </ul>
     </>,
@@ -168,7 +168,7 @@ export default function CampusSafetyInitiativePage() {
                   'Summary',
                   'Problem',
                   'Approach',
-                  'Outcomes',
+                  'Outcome',
                   'Goal',
                   'Learnings',
                 ]}
