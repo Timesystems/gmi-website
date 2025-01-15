@@ -27,19 +27,15 @@ export const metadata: Metadata = {
 };
 
 export default function CampusSafetyInitiativePage() {
+
   const tabContents = [
+
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Executive Summary
       </h3>
       <p>
-        Sexual harassment has unfortunately become a pervasive issue within
-        learning environments, particularly in tertiary institutions across
-        Nigeria. Shocking statistics from a study on Community Health Education
-        by Owoaje E.T. and Olusola Taiwo revealed that 69.8% of respondents
-        experienced sexual harassment during their time as students in tertiary
-        institutions. Perpetrators often include male classmates and lecturers,
-        highlighting the urgent need for intervention.
+        Sexual harassment in higher education institutions is a significant gendered experience that has long- term debilitating mental and physical impact, impairs victim’s learning and educational outcomes and potentially results in lower grades or withdrawal from the Institution. The epidemic proportion of the problem as emblematic of today’s system is represented by the disturbing statistics of the World Bank which further elevates our social consciousness on the disproportionate impact on over 3million women and girls who are increasingly deprived of an equitable, safe and healthy access to education due to experiences of sexual harassment. Sexual harassment is deeply entrenched in Higher education institutions and protected by processes.
       </p>
     </>,
     <>
@@ -51,18 +47,18 @@ export default function CampusSafetyInitiativePage() {
         factors, including:
       </p>
       <ul className='tab-content-list'>
-        <li>Poor Responses: Both at individual and institutional levels.</li>
+        <li>Unequal power relations.</li>
         <li>
-          Lack of Comprehensive Policies: Many institutions lack clear policies
-          addressing sexual harassment.
+          Lack of comprehensive legal and policy frameworks.
         </li>
         <li>
-          Ineffective Implementation: Even when policies exist, they are often
-          poorly implemented.
+          Poor implementation of existing policy and legal frameworks.
         </li>
         <li>
-          Lack of Reporting Channels: Students may feel reluctant to report
-          incidents due to a lack of accessible reporting channels.
+          Lack of a survivor-centred grievance redress mechanism.
+        </li>
+        <li>
+          Lack of a survivor-centred grievance redress mechanism.
         </li>
       </ul>
     </>,
@@ -77,18 +73,15 @@ export default function CampusSafetyInitiativePage() {
       </p>
       <ul className='tab-content-list'>
         <li>
-          Research and Policies: We advocate for the development and
-          implementation of robust policies to address sexual harassment on
-          campuses.
+          Research and Policies : We advocate for the enactment and institutionalization of policy and legal frameworks at the national, sub-national, and institutional levels.
         </li>
         <li>
-          Bystander Intervention: Encouraging students and staff to intervene
-          and support victims when witnessing instances of harassment.
+          Bystander Intervention: It is built on a competency framework that supports students, faculty, and staff to assume the social responsibility of preventing and responding to sexual harassment.
+
         </li>
         <li>
-          Preventative Education: Providing educational programs and workshops
-          to raise awareness about sexual harassment and empower individuals to
-          recognize and prevent it.
+          Preventative Education: It is a co-creation process that mainstreams prevention into institutional practices and culture through various methodologies.
+
         </li>
         <li>
           Technology Integration: Leveraging technology for case reporting, data
@@ -99,43 +92,42 @@ export default function CampusSafetyInitiativePage() {
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Our Impact
+        Outcomes
       </h3>
-      <p>
-        Drawing from personal angle stories collected from various Nigerian
-        institutions, including Afe Babalola University, Ado-Ekiti, Ede
-        Polytechnic, Tai Solarin University, and Lagos State University, we
-        understand the urgency of addressing this issue. By implementing
-        sustainable strategies that complement and reinforce one another, we aim
-        to create safer and more respectful learning environments for all
-        students.
-      </p>
+      <p>Anticipated outcomes are across systems, people, and organizational levels. </p>
+      <ul className='tab-content-list'>
+        <li>
+          The enactment/formulation of legal and policy frameworks for adoption and implementation across all Tertiary Education institutions.
+        </li>
+        <li>
+          Strengthened institutional accountability mechanisms.
+
+        </li>
+        <li>
+          Mainstreamed preventative education
+
+        </li>
+        <li>
+          Empowered and supported students to report and access justice.
+        </li>
+        <li>
+          Reduced vulnerability and increased feeling of safety of students
+
+        </li>
+        <li>
+          Active participation of female students in decision making process on prevention and response.
+        </li>
+      </ul>
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        Deliverables of the Project
+        Goal
       </h3>
-      <ul className='tab-content-list'>
-        <li>
-          Provide technical support to institutions through their policy
-          validation process.
-        </li>
-        <li>
-          Provide a mini grant to support logistical demands during the process
-        </li>
-        <li>
-          Print up to 100 copies of the policy to be distributed across faculty
-          libraries
-        </li>
-        <li>
-          Build the capacity of 100 Campus Ambassadors in each Institution.
-        </li>
-        <li>
-          Support Institutions to set up an independent Sexual Harassment
-          Prohibition Committee. 
-        </li>
-        <li>Handover the Mobile Application Platform to each Institution.</li>
-      </ul>
+      <p>
+        We have an aspirational goal of ending sexual harassment in educational environments by ensuring that women and girls have healthy, safe, and equitable access to education without experiences of sexual harassment.
+
+      </p>
+
     </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
@@ -176,8 +168,8 @@ export default function CampusSafetyInitiativePage() {
                   'Summary',
                   'Problem',
                   'Approach',
-                  'Impact',
-                  'Deliverables',
+                  'Outcomes',
+                  'Goal',
                   'Learnings',
                 ]}
                 tabContent={tabContents}
@@ -193,14 +185,15 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-center justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          101
+                          20
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Interested <br />
-                          Institutions
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          subnational   <br />
+                          regions
                         </div>
                       </div>
                     </div>
+                    {/* second col */}
                     <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
                     <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
                       <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
@@ -208,14 +201,16 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-center justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          62
+                          107
+
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Management <br /> Meeting Held
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          tertiary <br /> institutions
                         </div>
                       </div>
                     </div>
                   </div>
+                  {/* thrid col */}
                   <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
                   <div className='inline-flex items-start justify-start gap-5 self-stretch'>
                     <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
@@ -224,12 +219,12 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-center justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          38
+                          88
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Institutions with
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          MoUs
                           <br />
-                          Signed MOU
+                          co-executed
                         </div>
                       </div>
                     </div>
@@ -240,16 +235,18 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-center justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          16
+                          36
+
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Institutions with
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          sub-nationals -
                           <br />
-                          Policy Template
+                          Policy Dissemination
                         </div>
                       </div>
                     </div>
                   </div>
+                  {/* forth col */}
                   <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
                   <div className='inline-flex items-start justify-start gap-5 self-stretch'>
                     <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
@@ -258,11 +255,12 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-start justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          17
+                          889
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Institutions <br />
-                          with Scheduled Management Meeting
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          Campus <br /> Champions
+                          {/* <br />
+                          Policy Dissemination */}
                         </div>
                       </div>
                     </div>
@@ -273,12 +271,11 @@ export default function CampusSafetyInitiativePage() {
                       </div>
                       <div className='inline-flex items-start justify-start gap-2 self-stretch'>
                         <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          10
+                          75
                         </h3>
-                        <div className='shrink grow basis-0 leading-none'>
-                          Institutions that <br />
-                          have Received the <br />
-                          Mini Grant
+                        <div className='shrink grow basis-0 leading-none capitalize'>
+                          operational policies
+                          <span className="opacity-0" >this is just to hold the line </span>
                         </div>
                       </div>
                     </div>

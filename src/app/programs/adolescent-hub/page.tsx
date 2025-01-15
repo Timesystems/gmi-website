@@ -115,9 +115,7 @@ export default function AdolescentHubPage() {
       </p>
       <ul className='tab-content-list'>
         <li>
-          Reach: Since 2019, we have implemented an extensive collaboration with
-          17 secondary schools across three local government areas, reaching
-          over 13, 250 adolescents.
+          Reach: We have implemented in 21 secondary schools and graduated 13,250 adolescents across 9 communities in 3 Local Government Areas.
         </li>
         <li>
           Support Services: We have improved the learning experiences of

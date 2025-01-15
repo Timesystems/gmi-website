@@ -99,6 +99,26 @@ export default function AdolescentWellnessHubPage() {
         </li>
       </ul>
     </>,
+
+    <>
+      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
+        The Impact
+      </h3>
+      <p className='mb-3'>
+        Program Funding: Initially funded by the Global Youth Mobilization fund
+      </p>
+      <ul className='tab-content-list'>
+        <li>
+          Reach: In 2022, we have built the capacities of over 1500 students and
+          45 in-school adolescents as peer educators on mental health wellness.
+        </li>
+        <li>
+          Support Services: We have improved the learning experiences of
+          in-school adolescents through support groups, counseling, and access
+          to confidential reporting via technology-based platforms.
+        </li>
+      </ul>
+    </>,
     <>
       <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
         Activities
@@ -130,26 +150,7 @@ export default function AdolescentWellnessHubPage() {
         activities such as sports in the promotion of adolescent mental
         well-being.
       </p>
-    </>,
-    <>
-      <h3 className='mb-3 text-2xl font-semibold text-black-500 md:mb-5'>
-        The Impact
-      </h3>
-      <p className='mb-3'>
-        Program Funding: Initially funded by the Global Youth Mobilization fund
-      </p>
-      <ul className='tab-content-list'>
-        <li>
-          Reach: In 2022, we have built the capacities of over 1500 students and
-          45 in-school adolescents as peer educators on mental health wellness.
-        </li>
-        <li>
-          Support Services: We have improved the learning experiences of
-          in-school adolescents through support groups, counseling, and access
-          to confidential reporting via technology-based platforms.
-        </li>
-      </ul>
-    </>,
+    </>
   ];
 
   return (
@@ -164,10 +165,10 @@ export default function AdolescentWellnessHubPage() {
                 name='adolescent-wellness'
                 tabs={[
                   'Summary',
-                  'Approach',
                   'Problem',
-                  'Activities',
+                  'Approach',
                   'Impact',
+                  'Activities',
                 ]}
                 tabContent={tabContents}
               />
