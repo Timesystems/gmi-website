@@ -66,7 +66,7 @@ const programsList = [
     href: `/programs/foodhub`,
   },
   {
-    name: `WOWANi`,
+    name: `WOMANi`,
     href: `https://womani.org`,
     external: true,
   },
