@@ -314,13 +314,13 @@ export default function Header({ background }: { background?: boolean }) {
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
           <div className='flex items-center justify-center gap-x-3'>
             <a
-              href='mailto:gendermobile@gmail.com'
+              href='mailto: info@gendermobile.org'
               className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
             >
               <PiEnvelopeSimpleFill />
             </a>
             <a
-              href='tel:08032336192'
+              href='tel:09038806700'
               className='inline-block rounded-full border border-primary-500 px-2 py-2 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
             >
               <BsTelephone />
@@ -472,13 +472,13 @@ export default function Header({ background }: { background?: boolean }) {
                 </Link>
                 <div className='py-6 text-center'>
                   <a
-                    href='mailto:gendermobile@gmail.com'
+                    href='mailto: info@gendermobile.org'
                     className='inline-block rounded-full border border-primary-500 px-4 py-4 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <PiEnvelopeSimpleFill className='text-2xl' />
                   </a>
                   <a
-                    href='tel:08032336192'
+                    href='tel:09038806700'
                     className='ml-6 inline-block rounded-full border border-primary-500 px-4 py-4 text-primary-500 transition-colors duration-300 hover:bg-primary-500 hover:text-white'
                   >
                     <BsTelephone className='text-2xl' />

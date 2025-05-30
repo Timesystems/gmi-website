@@ -23,7 +23,7 @@ export const partners: Partner[] = [
   },
   {
     name: `Co Impact`,
-    image: `/images/partners/coimpact.png`,
+    image: `/images/partners/coImpact.png`,
     width: 150,
     height: 75,
   },
@@ -96,7 +96,7 @@ export const teams = [
     image: `/images/team/feyishola-kadiri.png`,
   },
   {
-    name: `Josephine Christopher`,
+    name: `Maryam Ali Muktar`,
     role: `Programs Manager`,
     bio: [
       `Christopher Josephine is a project management and development professional, social justice advocate and a Gender expert. She has nine years demonstrated experience, administrating, and working with development and humanitarian organization; conceptualizing, designing, implementing right-based projects across gender equlity  child rights, education, women and youth empowerment and humanitarian interventions, policy and legal reforms, gender, and social inclusion. `,

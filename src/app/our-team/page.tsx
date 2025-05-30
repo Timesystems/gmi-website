@@ -33,7 +33,7 @@ export default function OurTeamPage() {
       />
 
       {/** Executive Director section */}
-      <SpacedSection top bottom>
+      {/* <SpacedSection top bottom>
         <Container>
           <div className='flex flex-wrap justify-between md:flex-nowrap'>
             <div className='order-2 w-full md:w-[50%] lg:w-[58%]'>
@@ -49,23 +49,19 @@ export default function OurTeamPage() {
               />
             </div>
             <div className='order-1 h-[350px] w-full md:h-auto md:w-[45%] lg:w-[40%]'>
-              <div className='size-full bg-[url("/images/team/omowunmi.png")] bg-cover bg-center bg-no-repeat md:rounded-primary' />
+              <div className='md:rounded-primary size-full bg-[url("/images/team/omowunmi.png")] bg-cover bg-center bg-no-repeat' />
             </div>
           </div>
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
       {/** Partner slider */}
-      <Container className='px-4 py-10'>
+      {/* <Container className='px-4 py-10'>
         <PartnerSlider />
-      </Container>
+      </Container> */}
 
       {/** Rest of the Team section */}
       <SpacedSection top bottom>
         <Container>
-          <div className='mb-10 md:mb-14'>
-            <HeadingTitle>Team Members</HeadingTitle>
-          </div>
-
           <TeamMembers />
         </Container>
       </SpacedSection>

@@ -12,6 +12,8 @@ import Faq from '@/ui/Faq';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import clsx from 'clsx';
+import PartnerSlider from '@/ui/PartnerSlider';
+import { GetInvolve } from '@/ui/GetInvolve';
 
 export const metadata: Metadata = {
   title: `About Us`,
@@ -216,12 +218,16 @@ export default function AboutUsPage() {
         </Container>
       </SpacedSection>
 
+      {/* Our partner section   */}
+      <Container className=''>
+        <PartnerSlider />
+      </Container>
       {/** Donation Banner */}
-      <SpacedSection top bottom>
+      {/* <SpacedSection top bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** FAQ Section */}
       <SpacedSection className='bg-primary-50' bottom>
@@ -230,6 +236,8 @@ export default function AboutUsPage() {
         </Container>
       </SpacedSection>
 
+      {/* Volunteer  */}
+      <GetInvolve />
       {/** Testimonial section */}
       <SpacedSection bottom>
         <Container>
