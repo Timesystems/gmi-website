@@ -6,15 +6,27 @@ import {
   DialogTitle,
 } from '@headlessui/react';
 import Image from 'next/image';
+import React from 'react';
 import { useState } from 'react';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
+import { IoClose } from 'react-icons/io5';
 import { PiEnvelopeSimpleFill, PiLinkedinLogoFill } from 'react-icons/pi';
+
+interface TeamMemberData {
+  image: string;
+  name: string;
+  role: string;
+  bio: string[];
+  email: string;
+  linkedin?: string;
+}
 
 export default function TeamMemberModal({
   children,
   data,
 }: {
   children: React.ReactNode;
+  data: TeamMemberData;
 }) {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -41,10 +53,17 @@ export default function TeamMemberModal({
           <div className='flex min-h-full items-center justify-center p-4'>
             <DialogPanel
               transition
-              className='data-closed:transform-[scale(95%)] data-closed:opacity-0 w-full max-w-[900px] rounded-xl bg-white p-6 backdrop-blur-2xl duration-300 ease-out'
+              className='data-closed:transform-[scale(95%)] data-closed:opacity-0 w-full max-w-[1280px] rounded-xl bg-white p-4 backdrop-blur-2xl duration-300 ease-out md:p-[3.75rem]'
             >
-              <div className='flex w-full bg-red-400'>
-                <div className='relative h-[28.125rem] w-full max-w-[22.5rem] overflow-hidden rounded-[1.25rem]'>
+              <button
+                className='absolute right-5 top-5 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-primary-50 md:right-10 md:top-5 md:h-10 md:w-10'
+                onClick={() => close()}
+              >
+                <IoClose className='text-base md:text-[1.15rem]' />
+              </button>
+
+              <div className='flex w-full flex-col md:flex-row'>
+                <div className='relative h-[350px] w-full overflow-hidden rounded-[1.25rem] md:h-[28.125rem] md:max-w-[22.5rem] lg:shrink-0'>
                   <Image
                     src={data?.image}
                     alt='Team Image'
@@ -55,7 +74,7 @@ export default function TeamMemberModal({
                 </div>
 
                 <div className=''>
-                  <div className='md:rounded-primary flex flex-col justify-between bg-primary-50 px-6 py-6 md:min-h-[510px] md:px-8 md:py-8'>
+                  <div className='md:rounded-primary flex flex-col justify-between px-1 py-6 md:min-h-[510px] md:px-8 md:py-8'>
                     <div>
                       <h3 className='text-2xl font-semibold text-black-500'>
                         {data?.name}

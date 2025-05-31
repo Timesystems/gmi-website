@@ -1,7 +1,7 @@
 'use client';
-import { useRef, useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import { TeamMemberBio, TeamMemberImage } from '@/ui/Elements';
+// import { useRef, useState, useEffect } from 'react';
+// import Slider from 'react-slick';
+// import { TeamMemberBio, TeamMemberImage } from '@/ui/Elements';
 import { teams } from '@/data/site-data';
 import Image from 'next/image';
 import { PiEnvelopeSimpleFill } from 'react-icons/pi';

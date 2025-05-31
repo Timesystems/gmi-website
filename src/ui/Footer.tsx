@@ -119,7 +119,7 @@ function Footer() {
             </div>
             <div className='mb-4 lg:mb-0'>
               <p>
-                <a href='tel:0700 000 0002'>0700 000 0002</a> <br />
+                <a href='tel:+2349038806700'>+234 9038 806 700</a> <br />
                 <a href='mailto:info@gendermobile.org'>info@gendermobile.org</a>
               </p>
             </div>

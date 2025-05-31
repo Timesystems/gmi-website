@@ -40,10 +40,20 @@ const aboutUs = [
   },
 ];
 
-const programsList = [
+export const programsList = [
   {
     name: `Campus Safety Initiative`,
     href: `/programs/csi`,
+  },
+  {
+    name: `WOMANi`,
+    href: `https://womani.org`,
+    external: true,
+  },
+  {
+    name: `CampusPal`,
+    href: `https://campuspal.ng`,
+    external: true,
   },
   {
     name: `Ending Violence against Women and Girls`,
@@ -64,16 +74,6 @@ const programsList = [
   {
     name: `Food Hub`,
     href: `/programs/foodhub`,
-  },
-  {
-    name: `WOMANi`,
-    href: `https://womani.org`,
-    external: true,
-  },
-  {
-    name: `CampusPal`,
-    href: `https://campuspal.ng`,
-    external: true,
   },
 ];
 
@@ -221,7 +221,7 @@ export default function Header({ background }: { background?: boolean }) {
                 }
               )}
             >
-              Programs
+              <Link href='/programs'>Programs</Link>
               <ChevronDownIcon
                 className='h-5 w-5 flex-none text-gray-400'
                 aria-hidden='true'
