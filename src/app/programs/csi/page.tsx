@@ -27,6 +27,39 @@ export const metadata: Metadata = {
   ],
 };
 
+const statsData = [
+  {
+    icon: <RiBankLine />,
+    value: 20,
+    label: 'subnational <br /> regions',
+  },
+  {
+    icon: <MdGroups />,
+    value: 107,
+    label: 'tertiary <br /> institutions',
+  },
+  {
+    icon: <MdEditDocument />,
+    value: 88,
+    label: 'MoUs <br /> co-executed',
+  },
+  {
+    icon: <HiDocumentDuplicate />,
+    value: 36,
+    label: 'sub-nationals - <br /> Policy Dissemination',
+  },
+  {
+    icon: <MdCalendarMonth />,
+    value: 889,
+    label: 'Campus <br /> Champions',
+  },
+  {
+    icon: <HiCash />,
+    value: 75,
+    label: 'operational <br /> policies',
+  },
+];
+
 export default function CampusSafetyInitiativePage() {
   const tabContents = [
     <>
@@ -159,8 +192,8 @@ export default function CampusSafetyInitiativePage() {
     <>
       <Header />
       <PageIntro title='Campus Safety Initiative' />
-      <SpacedSection bottom top>
-        <Container className='pb-28 md:px-8'>
+      <SpacedSection top>
+        <Container className='border-b border-b-black-100 pb-[3.75rem] md:px-8'>
           <div className='md:flex md:gap-x-10'>
             <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
               <TabElement
@@ -178,126 +211,38 @@ export default function CampusSafetyInitiativePage() {
             </div>
 
             <ImageIllustration />
+          </div>
+        </Container>
+      </SpacedSection>
+      {/** Donation Banner */}
 
-            <div className='shadow-primary rounded-primary mx-auto hidden w-[95%] border-tiny border-black-100 p-6 text-black-400 md:w-[45%] md:p-10 lg:w-[40%]'>
-              <div>
-                <div className='inline-flex flex-col items-start justify-start gap-5'>
-                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <RiBankLine />
-                      </div>
-                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          20
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          subnational <br />
-                          regions
-                        </div>
-                      </div>
+      <SpacedSection top bottom>
+        <Container className='px-4 md:px-8'>
+          <div>
+            <div className='grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2 md:gap-[3.75rem] lg:grid-cols-3'>
+              {statsData?.map((item) => {
+                return (
+                  <div className='flex items-start gap-3' key={item?.label}>
+                    <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-base text-primary-500'>
+                      {item?.icon}
                     </div>
-                    {/* second col */}
-                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <MdGroups />
-                      </div>
-                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          107
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          tertiary <br /> institutions
-                        </div>
+                    <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                      <h3 className='font-heading text-[2.375rem] font-semibold text-black-500'>
+                        {item?.value}
+                      </h3>
+                      <div className='shrink grow basis-0 capitalize leading-none text-black-400 md:text-base'>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: item?.label }}
+                        />
                       </div>
                     </div>
                   </div>
-                  {/* thrid col */}
-                  <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
-                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <MdEditDocument />
-                      </div>
-                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          88
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          MoUs
-                          <br />
-                          co-executed
-                        </div>
-                      </div>
-                    </div>
-                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <HiDocumentDuplicate />
-                      </div>
-                      <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          36
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          sub-nationals -
-                          <br />
-                          Policy Dissemination
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* forth col */}
-                  <div className='h-[0.50px] self-stretch bg-[#b3b3b3]' />
-                  <div className='inline-flex items-start justify-start gap-5 self-stretch'>
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <MdCalendarMonth />
-                      </div>
-                      <div className='inline-flex items-start justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          889
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          Campus <br /> Champions
-                          {/* <br />
-                          Policy Dissemination */}
-                        </div>
-                      </div>
-                    </div>
-                    <div className='w-[0.50px] self-stretch bg-[#b3b3b3]' />
-                    <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-3'>
-                      <div className='inline-flex h-[50px] w-[50px] items-center justify-center rounded-full bg-primary-50 p-[15px] text-primary-500'>
-                        <HiCash />
-                      </div>
-                      <div className='inline-flex items-start justify-start gap-2 self-stretch'>
-                        <h3 className='font-heading text-4xl font-semibold text-black-500'>
-                          75
-                        </h3>
-                        <div className='shrink grow basis-0 capitalize leading-none'>
-                          operational policies
-                          <span className='opacity-0'>
-                            this is just to hold the line{' '}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </Container>
       </SpacedSection>
-
-      {/** Donation Banner */}
-      <SpacedSection bottom top>
-        <Container>
-          <DonationBanner />
-        </Container>
-      </SpacedSection>
-
       <Footer />
     </>
   );

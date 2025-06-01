@@ -41,8 +41,8 @@ export default async function BlogListPage({
       <SpacedSection top bottom>
         <Container>
           <div className='mx-auto px-6 md:w-[90%] md:px-0 lg:w-[80%]'>
-            <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-6'>
-              {blogs.map((_, index) => (
+            <div className='grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-6'>
+              {blogs?.map((_, index) => (
                 <BlogClip
                   key={index}
                   title={_.title}
@@ -81,11 +81,11 @@ export default async function BlogListPage({
           ) : null}
         </Container>
       </SpacedSection>
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />

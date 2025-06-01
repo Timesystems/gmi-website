@@ -85,11 +85,11 @@ export default async function BlogViewPage({
           </div>
         </Container>
       </SpacedSection>
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />

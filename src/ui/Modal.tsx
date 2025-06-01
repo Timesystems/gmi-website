@@ -5,20 +5,28 @@ import { VolunteersBanner, VolunteersForm } from './Volunteer';
 import { IoClose } from 'react-icons/io5';
 import { HeadingTitle } from './Elements';
 
-export function VolunterModal() {
+export function VolunterModal({
+  openButton,
+}: {
+  openButton?: React.ReactNode;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = (e: boolean) => {
     setIsOpen(e);
   };
   return (
     <>
-      <button
-        // href='#'
-        className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
-        onClick={() => handleToggle(true)}
-      >
-        Sign Up Now
-      </button>
+      {openButton ? (
+        <button onClick={() => handleToggle(true)}> {openButton}</button>
+      ) : (
+        <button
+          // href='#'
+          className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
+          onClick={() => handleToggle(true)}
+        >
+          Sign Up
+        </button>
+      )}
       <ModalLayout
         isOpen={isOpen}
         handleModalStatus={(e) => handleToggle(e)}
