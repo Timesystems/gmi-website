@@ -13,11 +13,11 @@ import { IoClose } from 'react-icons/io5';
 import { PiEnvelopeSimpleFill, PiLinkedinLogoFill } from 'react-icons/pi';
 
 interface TeamMemberData {
-  image: string;
-  name: string;
-  role: string;
-  bio: string[];
-  email: string;
+  image?: string;
+  name?: string;
+  role?: string;
+  bio?: string[];
+  email?: string;
   linkedin?: string;
 }
 
@@ -84,7 +84,7 @@ export default function TeamMemberModal({
                       </span>
                       <div className='mt-4 text-sm text-black-500 md:text-base'>
                         {data?.bio?.map((desc, index) => (
-                          <p className='mb-6' key={`${name}-para-${index}`}>
+                          <p className='mb-6' key={index}>
                             {desc}
                           </p>
                         ))}
