@@ -5,6 +5,7 @@ import { PageIntro } from '@/ui/Blocks';
 import { RelatedBlogClip } from '@/ui/Blog';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
+import { BlogComment } from '@/ui/BlogComment';
 
 export async function generateMetadata({
   params,
@@ -66,16 +67,14 @@ export default async function BlogViewPage({
       <PageIntro title={title} subtitle={`GenderMobile`} />
       <SpacedSection bottom>
         <Container>
-          <div className='px-6 py-10 md:flex md:gap-16'>
-            <div>
+          <div className='gap-5 px-6 py-10 md:flex md:gap-16'>
+            <div className='w-full max-w-[47.625rem]'>
               <div
-                className='blog-body md:w-[65%]'
+                className='blog-body'
                 dangerouslySetInnerHTML={{ __html: body }}
               />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-              quae impedit dolor modi provident natus, et enim laudantium rem
-              perferendis ut libero doloremque porro obcaecati omnis, ad
-              laboriosam quis exercitationem?
+
+              <BlogComment />
             </div>
 
             <div className='md:w-[35%]'>

@@ -226,7 +226,16 @@ export default function Header({
             </Transition>
           </Popover>
 
-          <Popover className='relative'>
+          <Link
+            href='/programs'
+            className={clsx(`text-sm leading-6 text-gray-900`, {
+              'font-semibold text-primary-500': pathname == '/',
+            })}
+          >
+            Programs
+          </Link>
+
+          {/* <Popover className='relative'>
             <PopoverButton
               className={clsx(
                 `flex items-center gap-x-1 text-sm text-gray-900`,
@@ -277,7 +286,8 @@ export default function Header({
                 </div>
               </PopoverPanel>
             </Transition>
-          </Popover>
+          </Popover> */}
+
           <Popover className='relative'>
             <PopoverButton
               className={clsx(
@@ -497,13 +507,13 @@ export default function Header({
                 </Disclosure>
 
                 {/** Programs */}
-                <Disclosure as='div' className='-mx-3'>
+                {/* <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
                       <button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
                         <Link href={'/programs'}>Programs</Link>
                         <DisclosureButton className=''>
-                          {/* <Link href={'/programs'}></Link> */}
+                          
                           <ChevronDownIcon
                             className={classNames(
                               open ? 'rotate-180' : '',
@@ -527,10 +537,17 @@ export default function Header({
                       </DisclosurePanel>
                     </>
                   )}
-                </Disclosure>
+                </Disclosure> */}
+
+                <Link
+                  href='/programs'
+                  className='-mx-3 block rounded-lg px-3 py-2 text-base hover:bg-gray-50'
+                >
+                  Programs
+                </Link>
 
                 {/** Resource links */}
-                {/** Programs */}
+
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
