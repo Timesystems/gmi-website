@@ -103,7 +103,7 @@ export default function GalleryContent() {
             </TabPanel>
             <TabPanel>
               <div className='grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-3 md:gap-8 md:px-0'>
-                {youtubeList?.map(({ title, link, image }, i) => (
+                {youtubeList.map(({ title, link, image }, i) => (
                   <div
                     key={`video-${i}`}
                     className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'
