@@ -11,14 +11,14 @@ import TeamMemberModal from './TeamMemberModal';
 export default function TeamMembers() {
   return (
     <div className='grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-      {teams?.map((item) => {
+      {teams?.map((item, i) => {
         return (
           <div
             className='w-full rounded-[1.25rem] bg-green-50 p-3 sm:p-3 md:p-5'
-            key={item?.email}
+            key={i}
           >
-            <TeamMemberModal data={item}>
-              <>
+            <TeamMemberModal data={item} className='w-full'>
+              <div className='w-full'>
                 <div className='relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]'>
                   <Image
                     src={item?.image}
@@ -28,6 +28,7 @@ export default function TeamMembers() {
                     style={{ objectFit: `cover`, objectPosition: `center` }}
                   />
                 </div>
+
                 <div className='mt-5 flex items-center justify-between'>
                   <div className='text-left'>
                     <h3 className='text-md font-bold text-green-500 md:text-xl'>
@@ -51,7 +52,7 @@ export default function TeamMembers() {
                     </a>
                   </div>
                 </div>
-              </>
+              </div>
             </TeamMemberModal>
           </div>
         );

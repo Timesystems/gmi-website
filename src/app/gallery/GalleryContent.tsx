@@ -83,7 +83,7 @@ export default function GalleryContent() {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
                   <div
                     key={i}
-                    className='group relative h-[250px] w-[250px] grayscale hover:grayscale-0 md:h-[430px] md:w-[430px] md:rounded-primary'
+                    className='md:rounded-primary group relative h-[250px] w-[250px] grayscale hover:grayscale-0 md:h-[430px] md:w-[430px]'
                   >
                     <Image
                       src='/images/bg/ocean-side-cleaning.jpg'
@@ -93,7 +93,7 @@ export default function GalleryContent() {
                       style={{ objectFit: `cover`, objectPosition: `center` }}
                     />
                     <div className='relative z-10 hidden h-[100%] w-[100%] flex-col justify-end transition-all duration-300 group-hover:flex'>
-                      <span className='relative bottom-0 z-10 h-[auto] rounded-b-primary bg-black-400 py-3 text-center text-sm text-white opacity-80'>
+                      <span className='rounded-b-primary relative bottom-0 z-10 h-[auto] bg-black-400 py-3 text-center text-sm text-white opacity-80'>
                         People cleaning Ocean on outreach day
                       </span>
                     </div>
@@ -103,7 +103,7 @@ export default function GalleryContent() {
             </TabPanel>
             <TabPanel>
               <div className='grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-3 md:gap-8 md:px-0'>
-                {youtubeList.map(({ title, link, image }, i) => (
+                {youtubeList?.map(({ title, link, image }, i) => (
                   <div
                     key={`video-${i}`}
                     className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'

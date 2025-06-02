@@ -24,9 +24,11 @@ interface TeamMemberData {
 export default function TeamMemberModal({
   children,
   data,
+  className,
 }: {
   children: React.ReactNode;
   data: TeamMemberData;
+  className?: string;
 }) {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -39,13 +41,15 @@ export default function TeamMemberModal({
   }
 
   return (
-    <>
-      <button onClick={open}>{children}</button>
+    <div className='w-full'>
+      <button onClick={open} className={`min-w-full ${className} `}>
+        {children}
+      </button>
 
       <Dialog
         open={isOpen}
         as='div'
-        className='relative z-50 focus:outline-none'
+        className='relative z-50 w-full focus:outline-none'
         onClose={close}
       >
         <DialogBackdrop className='fixed inset-0 z-40 bg-black-rgba_5' />
@@ -83,11 +87,11 @@ export default function TeamMemberModal({
                         {data?.role}
                       </span>
                       <div className='mt-4 text-sm text-black-500 md:text-base'>
-                        {data?.bio?.map((desc, index) => (
+                        {/* {data?.bio?.map((desc, index) => (
                           <p className='mb-6' key={index}>
                             {desc}
                           </p>
-                        ))}
+                        ))} */}
                         {/* <p className='mb-6'>{data?.bio}</p> */}
                       </div>
                     </div>
@@ -118,6 +122,6 @@ export default function TeamMemberModal({
           </div>
         </div>
       </Dialog>
-    </>
+    </div>
   );
 }

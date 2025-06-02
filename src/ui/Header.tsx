@@ -103,7 +103,7 @@ const resourcesList = [
   // },
   {
     name: `News`,
-    href: `#`,
+    href: `/news`,
   },
   {
     name: `Gallery`,
@@ -433,6 +433,8 @@ export default function Header({
           </div>
         </div>
       </nav>
+
+      {/* Mobile nav  */}
       <Dialog
         className='lg:hidden'
         open={mobileMenuOpen}
@@ -498,16 +500,19 @@ export default function Header({
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => (
                     <>
-                      <DisclosureButton className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
-                        Programs
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? 'rotate-180' : '',
-                            'h-5 w-5 flex-none'
-                          )}
-                          aria-hidden='true'
-                        />
-                      </DisclosureButton>
+                      <button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base leading-7 text-gray-900 hover:bg-gray-50'>
+                        <Link href={'/programs'}>Programs</Link>
+                        <DisclosureButton className=''>
+                          {/* <Link href={'/programs'}></Link> */}
+                          <ChevronDownIcon
+                            className={classNames(
+                              open ? 'rotate-180' : '',
+                              'h-5 w-5 flex-none'
+                            )}
+                            aria-hidden='true'
+                          />
+                        </DisclosureButton>
+                      </button>
                       <DisclosurePanel className='mt-2 space-y-2'>
                         {programsList.map((item) => (
                           <DisclosureButton

@@ -45,7 +45,7 @@ export function BlogClip({
         >
           {title}
         </Link>
-        <p className='line-clamp-2 h-[52px] text-sm text-black-400'>
+        <p className='line-clamp-2 h-[49px] text-sm text-black-400'>
           {description}
         </p>
         <Link

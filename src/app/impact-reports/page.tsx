@@ -28,6 +28,33 @@ export default async function ImpactReportPage() {
     );
   }
 
+  const report = [
+    {
+      id: 1,
+      title: 'GMI Impact Report 2019',
+      link: '#',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2019',
+      link: '#',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2019',
+      link: '#',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2019',
+      link: '#',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -35,11 +62,11 @@ export default async function ImpactReportPage() {
       <SpacedSection top bottom>
         <Container>
           <div className='px-4 md:px-20'>
-            <div className='grid auto-rows-max grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8'>
-              {reportList?.map(({ id, title, link, image }) => (
+            <div className='md:grid-co ls-3 grid auto-rows-max grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8'>
+              {report?.map(({ title, link, image }, i) => (
                 <div
-                  key={`report-${id}`}
-                  className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'
+                  key={`report-${i}`}
+                  className='relative h-[300px] w-full max-w-[36.875rem] md:h-[430px] md:w-full'
                 >
                   <ResourceClip
                     title={title}
