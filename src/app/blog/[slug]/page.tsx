@@ -77,7 +77,7 @@ export default async function BlogViewPage({
               <BlogComment />
             </div>
 
-            <div className='md:w-[35%]'>
+            <div className='mt-6 md:mt-0 md:w-[35%]'>
               {relatedBlogs.map(({ title, link, coverImage }, index) => (
                 <div key={`${title}-${index}`} className='mb-4 md:mb-8'>
                   <RelatedBlogClip
