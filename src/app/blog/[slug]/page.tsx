@@ -67,10 +67,17 @@ export default async function BlogViewPage({
       <SpacedSection bottom>
         <Container>
           <div className='px-6 py-10 md:flex md:gap-16'>
-            <div
-              className='blog-body md:w-[65%]'
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
+            <div>
+              <div
+                className='blog-body md:w-[65%]'
+                dangerouslySetInnerHTML={{ __html: body }}
+              />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+              quae impedit dolor modi provident natus, et enim laudantium rem
+              perferendis ut libero doloremque porro obcaecati omnis, ad
+              laboriosam quis exercitationem?
+            </div>
+
             <div className='md:w-[35%]'>
               {relatedBlogs.map(({ title, link, coverImage }, index) => (
                 <div key={`${title}-${index}`} className='mb-4 md:mb-8'>

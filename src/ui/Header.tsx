@@ -62,10 +62,10 @@ export const programsList = [
     name: `Ending Violence against Women and Girls`,
     href: `/programs/girl-women-violence`,
   },
-  {
-    name: `Adolescent Hub`,
-    href: `/programs/adolescent-hub`,
-  },
+  // {
+  //   name: `Adolescent Hub`,
+  //   href: `/programs/adolescent-hub`,
+  // },
   {
     name: `Adolescent Wellness Hub`,
     href: `/programs/adolescent-wellness`,
@@ -263,9 +263,13 @@ export default function Header({
                             {item.name}
                           </a>
                         ) : (
-                          <Link href={item.href} className='block'>
+                          <CloseButton
+                            as={Link}
+                            href={item.href}
+                            className='block'
+                          >
                             {item.name}
-                          </Link>
+                          </CloseButton>
                         )}
                       </div>
                     </div>
@@ -306,9 +310,13 @@ export default function Header({
                       className='relative rounded-lg px-4 py-2 text-sm transition-colors duration-200 hover:bg-gray-50 hover:text-primary-500'
                     >
                       <div className='flex-auto'>
-                        <Link href={item.href} className='block'>
+                        <CloseButton
+                          as={Link}
+                          href={item.href}
+                          className='block'
+                        >
                           {item.name}
-                        </Link>
+                        </CloseButton>
                       </div>
                     </div>
                   ))}

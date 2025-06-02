@@ -183,11 +183,11 @@ export default function AdolescentWellnessHubPage() {
       </SpacedSection>
 
       {/** Donation Banner */}
-      <SpacedSection bottom top>
+      {/* <SpacedSection bottom top>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       <Footer />
     </>

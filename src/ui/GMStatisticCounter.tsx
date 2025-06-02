@@ -36,14 +36,14 @@ export default function GenderMobileStatisticCounterUp() {
   ];
   return (
     <section className='overflow-hidden bg-primary-700 md:rounded-[1.25rem]'>
-      <div className='container mx-auto flex justify-center py-10 md:px-0 md:py-12 lg:py-16'>
-        <div className='flex w-full flex-col justify-between px-3 text-sm text-black-400 md:flex md:w-[90%] md:gap-4 md:text-[1.1em] lg:w-[90%]'>
+      <div className='container mx-auto flex justify-center md:px-0'>
+        <div className='flex w-full flex-col justify-between px-3 text-sm text-black-400 md:flex md:w-[90%] md:text-[1.1em] lg:w-[90%]'>
           {counterData?.map(({ id, counterNo, title }) => (
             <div
-              className='border-b-green-5 flex items-end gap-3 border-b py-10 first:py-0 first:pb-10 last:border-none last:py-0 last:pt-10'
+              className='border-b-green-5 gap- flex max-h-[190px] items-end gap-5 border-b py-10 last:border-none'
               key={id}
             >
-              <h3 className='mb-2 w-full text-[2.9em] font-semibold leading-[110%] text-white md:text-[100px]'>
+              <h3 className='mb max-h-[110px] w-full text-[2.9em] font-semibold leading-[110%] text-white md:text-[100px]'>
                 <CountUp
                   end={counterNo}
                   duration={3.5}
@@ -51,7 +51,7 @@ export default function GenderMobileStatisticCounterUp() {
                   suffix='+'
                 />
               </h3>
-              <p className='w-full text-white'>{title}</p>
+              <p className='md:text-sxl w-full text-green-50'>{title}</p>
             </div>
           ))}
         </div>

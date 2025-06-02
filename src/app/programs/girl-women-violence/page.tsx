@@ -79,7 +79,7 @@ export default function GirlWomenViolencePage() {
     <>
       <Header />
       <PageIntro title='Ending Violence against Women and Girls' />
-      <SpacedSection bottom top>
+      <SpacedSection top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
             <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
@@ -99,11 +99,11 @@ export default function GirlWomenViolencePage() {
       </SpacedSection>
 
       {/** Donation Banner */}
-      <SpacedSection bottom top>
+      {/* <SpacedSection bottom top>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       <Footer />
     </>

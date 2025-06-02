@@ -40,6 +40,10 @@ const config: Config = {
           900: `#050504`,
           rgba_5: 'rgba(0, 0, 0, 0.54)',
         },
+        green: {
+          50: '#E9F2F1',
+          500: '#277E74',
+        },
       },
       borderRadius: {
         // primary: `20px`,
