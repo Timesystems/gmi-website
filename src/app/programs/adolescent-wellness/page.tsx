@@ -5,6 +5,7 @@ import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+import ImageIllustration from '../ImageIllustration';
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +32,11 @@ export default function AdolescentWellnessHubPage() {
         Executive Summary
       </h3>
       <p className='mb-5'>
-        In furtherance of our work on SGBV prevention, the adolescent wellness hub project promotes mental wellness among adolescents. This is owing to our experience interacting with different groups of adolescents and identifying the effects of SGBV and other social issues on their mental health.
+        In furtherance of our work on SGBV prevention, the adolescent wellness
+        hub project promotes mental wellness among adolescents. This is owing to
+        our experience interacting with different groups of adolescents and
+        identifying the effects of SGBV and other social issues on their mental
+        health.
       </p>
       <h4 className='mb-1 text-base font-semibold text-black-500'>
         Understanding the Need
@@ -146,7 +151,7 @@ export default function AdolescentWellnessHubPage() {
         activities such as sports in the promotion of adolescent mental
         well-being.
       </p>
-    </>
+    </>,
   ];
 
   return (
@@ -169,19 +174,20 @@ export default function AdolescentWellnessHubPage() {
                 tabContent={tabContents}
               />
             </div>
-            <div className='md:w-[45%] lg:w-[40%]'>
+            <ImageIllustration />
+            {/* <div className='md:w-[45%] lg:w-[40%]'>
               <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
-            </div>
+            </div> */}
           </div>
         </Container>
       </SpacedSection>
 
       {/** Donation Banner */}
-      <SpacedSection bottom top>
+      {/* <SpacedSection bottom top>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       <Footer />
     </>

@@ -47,7 +47,7 @@ export function VolunteersBanner({ position }: { position?: string }) {
   );
 }
 
-export function VolunteersForm({ handleToggle }) {
+export function VolunteersForm({ handleToggle }: { handleToggle: unknown }) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const intialData = {
     name: '',

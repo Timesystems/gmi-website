@@ -74,17 +74,19 @@ export default async function Home() {
       <Hero />
 
       {/** Partner slider */}
-      <Container className='px-4 py-10'>
+      {/* <Container className='px-4 py-10'>
         <PartnerSlider />
-      </Container>
+      </Container> */}
       <SpacedSection>
         <Container className='text-black-400 lg:px-16'>
           <AboutUs buttonText='Learn More' buttonLink='/about' />
         </Container>
       </SpacedSection>
       {/** Program Reach Section */}
-      <GenderMobileStatisticCounterUp />
-      <section className='pb-20'>
+      <Container className='py-[3.75rem]'>
+        <GenderMobileStatisticCounterUp />
+      </Container>
+      {/* <section className='pb-20'>
         <div className='container mx-auto'>
           <div className='block md:flex md:items-center'>
             <div className='relative justify-end md:inline-flex lg:w-1/2'>
@@ -110,10 +112,14 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Container className=''>
+        <PartnerSlider />
+      </Container>
 
       {/** Call for Help section */}
-      <SpacedSection bottom>
+      <SpacedSection top bottom>
         <Container>
           <HelpBanner />
         </Container>
@@ -172,73 +178,6 @@ export default async function Home() {
             >
               View All Blogs
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/** Tweets and Gallery section */}
-      <section className='mb-24'>
-        <div className='container mx-auto'>
-          <div className='items-center md:grid md:grid-cols-2 md:grid-rows-1 md:gap-[150px]'>
-            <div className='mb-16 px-6 md:mb-0 md:px-0'>
-              <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Insights"]'>
-                Our Latest Tweets
-              </h2>
-              <div className='mt-4 lg:mt-16'>
-                <div className='lg:hidden'>
-                  <a
-                    className='twitter-timeline'
-                    data-height='500'
-                    href='https://twitter.com/Gendermobile_NG?ref_src=twsrc%5Etfw'
-                  >
-                    Tweets by Gendermobile_NG
-                  </a>
-                </div>
-                <div className='hidden lg:block'>
-                  <a
-                    className='twitter-timeline'
-                    data-height='750'
-                    href='https://twitter.com/Gendermobile_NG?ref_src=twsrc%5Etfw'
-                  >
-                    Tweets by Gendermobile_NG
-                  </a>
-                </div>
-                <Script src='https://platform.twitter.com/widgets.js' />
-              </div>
-            </div>
-            <div className='px-6 md:px-0'>
-              <h2 className='mb-4 text-[2.25em] font-semibold leading-[120%] text-black-500 before:relative before:bottom-[-5px] before:block before:font-body before:text-[16px] before:uppercase before:text-primary-500 before:content-["Gallery"]'>
-                Experience Our Impact
-              </h2>
-              <div className='mt-6 lg:mt-16'>
-                <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
-                  {gallery.map((chunk, index) => {
-                    return (
-                      <div className='grid gap-4' key={`image-block-${index}`}>
-                        {chunk.map((image, index) => (
-                          <div key={`image-${index}`}>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              className='h-auto max-w-full rounded-lg'
-                              src={image.path}
-                              alt='gallery image'
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className='mt-8'>
-                <Link
-                  href='/gallery'
-                  className='btn inline-block rounded-full border border-primary-500 bg-primary-500 px-6 py-2 font-heading text-white hover:text-white'
-                >
-                  View More
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>

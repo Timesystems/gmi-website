@@ -5,6 +5,7 @@ import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+import ImageIllustration from '../ImageIllustration';
 
 export const metadata: Metadata = {
   title: {
@@ -115,7 +116,8 @@ export default function AdolescentHubPage() {
       </p>
       <ul className='tab-content-list'>
         <li>
-          Reach: We have implemented in 21 secondary schools and graduated 13,250 adolescents across 9 communities in 3 Local Government Areas.
+          Reach: We have implemented in 21 secondary schools and graduated
+          13,250 adolescents across 9 communities in 3 Local Government Areas.
         </li>
         <li>
           Support Services: We have improved the learning experiences of
@@ -140,19 +142,21 @@ export default function AdolescentHubPage() {
                 tabContent={tabContents}
               />
             </div>
-            <div className='md:w-[45%] lg:w-[40%]'>
+
+            <ImageIllustration />
+            {/* <div className='md:w-[45%] lg:w-[40%]'>
               <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
-            </div>
+            </div> */}
           </div>
         </Container>
       </SpacedSection>
 
       {/** Donation Banner */}
-      <SpacedSection bottom top>
+      {/* <SpacedSection bottom top>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       <Footer />
     </>

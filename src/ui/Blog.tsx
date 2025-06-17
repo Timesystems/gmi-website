@@ -18,23 +18,26 @@ export function BlogClip({
 }) {
   return (
     <div
-      className='rounded-primary relative h-[300px] min-w-full transition-all duration-300 group-hover:grayscale md:h-[380px]'
+      className='rounded-primary relative h-[300px] min-w-full overflow-hidden transition-all duration-300 group-hover:grayscale md:h-[380px]'
       style={{
         background: `url("${coverImage}") no-repeat center`,
         backgroundSize: `cover`,
       }}
     >
+      <div className='absolute inset-0 bg-[#0B0B0933]' />
       <div
-        className='absolute mx-auto w-[90%] rounded-[20px] bg-white px-6 py-6 text-black-600'
+        className='absolute mx-auto h-[220px] w-[90%] rounded-[20px] bg-white px-6 py-6 text-black-600'
         style={{
-          top: `60%`,
+          bottom: `-80px`,
           left: `50%`,
           transform: `translate(-50%, -50%)`,
         }}
       >
         <div className='mb-2 flex justify-between text-[0.75em]'>
-          <span className='text-black-300'>{date}</span>
-          <span className='text-primary-500'>{category}</span>
+          {/* <span className='text-black-300'>{date}</span> */}
+          <span className='capitalize text-primary-500'>
+            {category || 'category'}
+          </span>
         </div>
         <Link
           href={link}
@@ -42,7 +45,9 @@ export function BlogClip({
         >
           {title}
         </Link>
-        <p className='line-clamp-2 text-sm text-black-400'>{description}</p>
+        <p className='line-clamp-2 h-[49px] text-sm text-black-400'>
+          {description}
+        </p>
         <Link
           href={link}
           className='mt-3 block font-heading text-sm font-semibold text-primary-500'

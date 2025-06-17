@@ -5,6 +5,7 @@ import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
 import TabElement from '@/ui/TabElement';
+import ImageIllustration from '../ImageIllustration';
 
 export const metadata: Metadata = {
   title: {
@@ -88,7 +89,7 @@ export default function SkillUpWomenGirlsPage() {
     <>
       <Header />
       <PageIntro title='Food Hub' />
-      <SpacedSection bottom top>
+      <SpacedSection top>
         <Container className='pb-28 md:px-8'>
           <div className='md:flex md:gap-x-10'>
             <div className='mb-6 px-4 md:mb-0 md:w-[55%] md:px-0 lg:w-[60%]'>
@@ -98,19 +99,21 @@ export default function SkillUpWomenGirlsPage() {
                 tabContent={tabContents}
               />
             </div>
-            <div className='md:w-[45%] lg:w-[40%]'>
+
+            <ImageIllustration />
+            {/* <div className='md:w-[45%] lg:w-[40%]'>
               <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
-            </div>
+            </div> */}
           </div>
         </Container>
       </SpacedSection>
 
       {/** Donation Banner */}
-      <SpacedSection bottom top>
+      {/* <SpacedSection bottom top>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       <Footer />
     </>

@@ -28,6 +28,32 @@ export default async function GalleryVideosPage({
     }));
   }
 
+  const youtList = [
+    {
+      id: 1,
+      title: 'Video Title Here',
+      link: '#',
+      image: '/images/blog/related-blog-2.png',
+    },
+    {
+      id: 1,
+      title: 'Video Title Here',
+      link: '#',
+      image: '/images/blog/related-blog-2.png',
+    },
+    {
+      id: 1,
+      title: 'Video Title Here',
+      link: '#',
+      image: '/images/blog/related-blog-2.png',
+    },
+    {
+      id: 1,
+      title: 'Video Title Here',
+      link: '#',
+      image: '/images/blog/related-blog-2.png',
+    },
+  ];
   return (
     <>
       <Header />
@@ -43,16 +69,17 @@ export default async function GalleryVideosPage({
               >
                 Images
               </Link>
-              <button className='rounded-full border border-primary-500 bg-primary-500 px-4 py-1 font-heading text-[0.9rem] text-black-500 text-white transition-colors duration-300'>
+              <button className='rounded-full border border-primary-500 bg-primary-500 px-4 py-1 font-heading text-[0.9rem] text-white transition-colors duration-300'>
                 Videos
               </button>
             </div>
             <div className='md:px-20'>
-              <div className='grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-3 md:gap-8 md:px-0'>
-                {ytList.map(({ title, link, image }, i) => (
+              <div className='md:grid-c ols-3 grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-2 md:gap-8 md:px-0'>
+                {/* {ytList.map(({ title, link, image }, i) => ( */}
+                {youtList.map(({ title, link, image }, i) => (
                   <div
                     key={`video-${i}`}
-                    className='relative h-[300px] w-full md:h-[430px] md:w-[430px]'
+                    className='relative h-[300px] w-full md:h-[430px] md:w-full'
                   >
                     <ResourceClip
                       title={title}

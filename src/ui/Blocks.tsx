@@ -37,7 +37,7 @@ export function AboutUs({
       </div>
 
       <div className='text-center lg:inline-flex lg:items-center'>
-        <div className='before-bg-addon after-bg-addon relative mx-auto h-[340px] w-[90%] rounded-primary bg-[url("/images/bg/standing-students.png")] before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")] lg:h-[75%] lg:w-[75%]' />
+        <div className='before-bg-addon after-bg-addon rounded-primary relative mx-auto h-[340px] w-[90%] bg-[url("/images/bg/standing-students.png")] before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")] lg:h-[75%] lg:w-[75%]' />
       </div>
     </div>
   );
@@ -46,19 +46,22 @@ export function AboutUs({
 export function PageIntro({
   title,
   subtitle,
+  boxWidth,
 }: {
   title: string;
   subtitle?: string;
+  boxWidth?: string;
 }) {
   return (
-    <Container className='mx-auto w-[96%] rounded-primary bg-primary-700 px-[20px] py-[20px] text-white md:w-full md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[60px]'>
+    <Container className='rounded-primary mx-auto w-[96%] bg-primary-700 px-[20px] py-[20px] text-white md:w-full md:px-[40px] md:py-[40px] lg:px-[60px] lg:py-[60px]'>
       <h1
         className={clsx(
           `text-2xl font-semibold md:text-[2.8rem] md:leading-[3rem]`,
           {
             'mb-4 md:mb-8': !!subtitle,
             'md:w-[70%] lg:w-[55%]': !subtitle,
-          }
+          },
+          boxWidth
         )}
       >
         {title}

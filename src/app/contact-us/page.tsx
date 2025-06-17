@@ -1,6 +1,6 @@
 'use client';
 import Header from '@/ui/Header';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
@@ -13,6 +13,7 @@ import { RequestACall, ReportACase, ContactForm } from '@/ui/Contact';
 export default function GalleryPage() {
   const [requestCall, setRequestCall] = useState(false);
   const [reportCase, setReportCase] = useState(false);
+
   const handleRequestCall = (e: boolean) => {
     setRequestCall(e);
   };
@@ -24,6 +25,7 @@ export default function GalleryPage() {
   const handleSendMessageClick = () => {
     messageInputRef.current?.focus();
   };
+
   const handleFunctions = (id: number) => {
     switch (id) {
       case 1:
@@ -42,7 +44,10 @@ export default function GalleryPage() {
 
   return (
     <>
-      <Header />
+      <Header
+      // handleRequestCall={handleRequestCall}
+      // handleReportCase={handleReportCase}
+      />
       <PageIntro title='Contact Us' />
       <SpacedSection bottom top>
         <Container>
@@ -88,11 +93,11 @@ export default function GalleryPage() {
         </Container>
       </SpacedSection>
 
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />

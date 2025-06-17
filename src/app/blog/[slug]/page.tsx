@@ -5,6 +5,7 @@ import { PageIntro } from '@/ui/Blocks';
 import { RelatedBlogClip } from '@/ui/Blog';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
+import { BlogComment } from '@/ui/BlogComment';
 
 export async function generateMetadata({
   params,
@@ -66,12 +67,17 @@ export default async function BlogViewPage({
       <PageIntro title={title} subtitle={`GenderMobile`} />
       <SpacedSection bottom>
         <Container>
-          <div className='px-6 py-10 md:flex md:gap-16'>
-            <div
-              className='blog-body md:w-[65%]'
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
-            <div className='md:w-[35%]'>
+          <div className='gap-5 px-6 py-10 md:flex md:gap-16'>
+            <div className='w-full max-w-[47.625rem]'>
+              <div
+                className='blog-body'
+                dangerouslySetInnerHTML={{ __html: body }}
+              />
+
+              <BlogComment />
+            </div>
+
+            <div className='mt-6 md:mt-0 md:w-[35%]'>
               {relatedBlogs.map(({ title, link, coverImage }, index) => (
                 <div key={`${title}-${index}`} className='mb-4 md:mb-8'>
                   <RelatedBlogClip
@@ -85,11 +91,11 @@ export default async function BlogViewPage({
           </div>
         </Container>
       </SpacedSection>
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />

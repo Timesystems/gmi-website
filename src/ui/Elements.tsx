@@ -35,7 +35,7 @@ export function TeamMemberImage({
   alt: string;
 }) {
   return (
-    <div className={`relative size-full md:rounded-primary ${className}`}>
+    <div className={`md:rounded-primary relative size-full ${className}`}>
       <Image
         src={src}
         alt={alt}
@@ -66,7 +66,7 @@ export function TeamMemberBio({
   nextClick?: any;
 }) {
   return (
-    <div className='flex flex-col justify-between bg-primary-50 px-6 py-6 md:min-h-[510px] md:rounded-primary md:px-8 md:py-8'>
+    <div className='md:rounded-primary flex flex-col justify-between bg-primary-50 px-6 py-6 md:min-h-[510px] md:px-8 md:py-8'>
       <div>
         <h3 className='text-2xl font-semibold text-black-500'>{name}</h3>
         <span className='text-[0.9em] text-black-400'>{role}</span>
@@ -136,7 +136,7 @@ export function ResourceClip({
   youtube?: boolean;
 }) {
   return (
-    <div className='group relative size-full rounded-primary'>
+    <div className='rounded-primary group relative size-full'>
       {image ? (
         <Image
           src={image}
@@ -161,8 +161,8 @@ export function ResourceClip({
         </a>
       ) : null}
       <div className='absolute bottom-[20px] left-[2.5%] z-10 mx-auto w-[95%] flex-col justify-end transition-all duration-300'>
-        <div className='relative bottom-0 z-10 h-[auto] rounded-primary bg-white px-5 py-3 text-sm text-black-500 md:px-6 md:py-5'>
-          <h3 className='mb-3 text-lg font-semibold'>{title}</h3>
+        <div className='rounded-primary relative bottom-0 z-10 h-[auto] bg-white px-5 py-3 text-sm text-black-500 md:px-6 md:py-5'>
+          <h3 className='mb-3 text-lg font-semibold md:text-2xl'>{title}</h3>
           <a
             href={link}
             className='font-heading font-semibold text-primary-500'

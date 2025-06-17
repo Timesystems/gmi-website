@@ -47,7 +47,7 @@ export default async function GalleryPage({
               </Link>
             </div>
             <div className='xl:px-20'>
-              <div className='flex flex-wrap justify-center items-center gap-4 md:gap-8'>
+              <div className='flex flex-wrap items-center justify-center gap-4 md:gap-8'>
                 {photos.map(
                   ({
                     id,
@@ -60,12 +60,12 @@ export default async function GalleryPage({
                   }) => (
                     <div
                       key={id}
-                      className='md:rounded-primary group relative  grayscale hover:grayscale-0 md:w-[30%] w-[40%]  sm:h-[300px] h-[200px]  md:h-[400px]'
+                      className='md:rounded-primary group relative h-[200px] w-[40%] grayscale hover:grayscale-0 sm:h-[300px] md:h-[400px] md:w-[30%]'
                     >
                       <Image
                         src={link}
                         alt='Gallery Image'
-                        layout="fill"
+                        layout='fill'
                         className='md:rounded-primary'
                         style={{ objectFit: `cover`, objectPosition: `center` }}
                       />
@@ -109,11 +109,11 @@ export default async function GalleryPage({
         </Container>
       </SpacedSection>
 
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />
