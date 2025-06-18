@@ -61,7 +61,7 @@ export default function OurTeamPage() {
 
       {/** Rest of the Team section */}
       <SpacedSection top bottom>
-        <Container>
+        <Container className='px-3'>
           <TeamMembers />
         </Container>
       </SpacedSection>

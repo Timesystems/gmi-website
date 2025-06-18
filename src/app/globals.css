@@ -5,6 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
   html {
     font-family: 'EB Garamond', serif;
@@ -39,9 +41,11 @@
   .input {
     @apply w-full border-b border-black-100 py-3 placeholder:text-black-300 data-[focus]:border-primary-500 data-[focus]:placeholder:text-black-500;
   }
+
   .rounded-primary {
     @apply rounded-[8px] md:rounded-[20px];
   }
+
   .before-bg-addon {
     @apply before:absolute before:-z-[1] before:block before:h-[116px] before:w-[116px] before:rounded-[10px];
   }
@@ -62,6 +66,7 @@
   .btn-primary-outline {
     @apply btn-base border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white;
   }
+
   /* .btn-primary:hover {
     box-shadow: inset 0 0 0 2em #fff;
     transition: all 0.5s;
@@ -94,44 +99,47 @@
   @apply my-2 list-inside list-image-[url(/images/tiny/bullseye.svg)] text-black-400;
 }
 
-.tab-content-list > li {
+.tab-content-list>li {
   @apply mb-3;
 }
-.tab-content-list > li > h6 {
+
+.tab-content-list>li>h6 {
   display: inline;
   @apply font-body font-semibold after:block;
 }
 
-.blog-body > h1,
-.blog-body > h2,
-.blog-body > h3,
-.blog-body > h4,
-.blog-body > h5,
-.blog-body > h6 {
+.blog-body>h1,
+.blog-body>h2,
+.blog-body>h3,
+.blog-body>h4,
+.blog-body>h5,
+.blog-body>h6 {
   @apply mb-3 font-semibold text-black-500 md:mb-5;
 }
 
-.blog-body > h1 {
+.blog-body>h1 {
   font-size: 2rem;
 }
 
-.blog-body > h2 {
+.blog-body>h2 {
   font-size: 1.6rem;
 }
 
-.blog-body > h3 {
+.blog-body>h3 {
   font-size: 1.4rem;
 }
-.blog-body > h4 {
+
+.blog-body>h4 {
   font-size: 1.2rem;
   @apply mb-2 md:mb-3;
 }
-.blog-body > h5 {
+
+.blog-body>h5 {
   font-size: 1.1rem;
   @apply mb-2;
 }
 
-.blog-body > p {
+.blog-body>p {
   line-height: 160%;
   @apply mb-5;
 }
@@ -176,6 +184,7 @@ input[type='number'] {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .fade-in {
   animation: fadeIn 0.5s ease-in;
 }
@@ -188,6 +197,7 @@ input[type='number'] {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -197,6 +207,7 @@ input[type='number'] {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }

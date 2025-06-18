@@ -19,13 +19,13 @@ export default function TeamMembers() {
           >
             <TeamMemberModal data={item} className='w-full'>
               <div className='w-full'>
-                <div className='relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]'>
+                <div className='relative h-[18.125rem] w-full overflow-hidden rounded-[1.25rem]'>
                   <Image
                     src={item?.image}
                     alt='Team Image'
                     layout='fill'
                     className='md:rounded-primary'
-                    style={{ objectFit: `cover`, objectPosition: `center` }}
+                    style={{ objectFit: `cover`, objectPosition: `top` }}
                   />
                 </div>
 

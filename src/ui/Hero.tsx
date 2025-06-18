@@ -18,13 +18,13 @@ const Hero = () => {
     {
       id: 1,
       title:
-        'We respond urgently to any form of Sexual and Gender-Based violence',
-      des: (
-        <span>
-          We are committed to fostering a gender-equitable society devoid <br />{' '}
-          of all forms of sexual and gender-based violence.
-        </span>
-      ),
+        'We influence sexual and gender-based violence policies at all levels and transform social norms that sustain sexual and gender-based violence through a co-creation process that fosters local ownership.',
+      // des: (
+      //   <span>
+      //     We are committed to fostering a gender-equitable society devoid <br />{' '}
+      //     of all forms of sexual and gender-based violence.
+      //   </span>
+      // ),
       buttonText: 'Learn More',
       imgUrl: Slide1,
       style: ``,
