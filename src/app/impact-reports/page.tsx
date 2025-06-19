@@ -31,26 +31,38 @@ export default async function ImpactReportPage() {
   const report = [
     {
       id: 1,
-      title: 'GMI Impact Report 2019',
-      link: '#',
+      title: 'GMI Impact Report 2023',
+      link: 'https://drive.google.com/file/d/12rLhJLKM4QSbSNR6mNuG0_4D4_u1Q9WY/view?usp=drive_link',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2022',
+      link: 'https://drive.google.com/file/d/1vYGVP49PrwL3eR0ZH68Fd4E85V0xkiBh/view?usp=drive_link',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2021',
+      link: 'https://drive.google.com/file/d/1f7_ncwVl940E0Z0brgOWCRaHb_xYJegz/view?usp=drive_link',
+      image: '/images/bg/ocean-side-cleaning.jpg',
+    },
+    {
+      id: 1,
+      title: 'GMI Impact Report 2020',
+      link: 'https://drive.google.com/file/d/1bwe7kgKaAzgWAtI9CKX2SzAPzDhyljRU/view?usp=drive_link',
       image: '/images/bg/ocean-side-cleaning.jpg',
     },
     {
       id: 1,
       title: 'GMI Impact Report 2019',
-      link: '#',
+      link: 'https://drive.google.com/file/d/1YXv9cj3HPwq9yHzuADK7_XopRHAnvDe9/view?usp=drive_link',
       image: '/images/bg/ocean-side-cleaning.jpg',
     },
     {
       id: 1,
-      title: 'GMI Impact Report 2019',
-      link: '#',
-      image: '/images/bg/ocean-side-cleaning.jpg',
-    },
-    {
-      id: 1,
-      title: 'GMI Impact Report 2019',
-      link: '#',
+      title: 'GMI Impact Report 2018',
+      link: 'https://drive.google.com/file/d/1ZS9JMvanRrwDngdjAOzAZjE3eqE67e_c/view?usp=drive_link',
       image: '/images/bg/ocean-side-cleaning.jpg',
     },
   ];

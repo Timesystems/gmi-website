@@ -38,35 +38,28 @@ export default function AllProgramsPage() {
           <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
             {programsList?.slice(0, 7)?.map((item, i) => {
               return (
-                <div className='relative h-[400px] w-full' key={i}>
+                <div
+                  className='rounded-primary relative h-[400px] w-full overflow-hidden'
+                  key={i}
+                >
                   <div className='flex-auto'>
-                    {item.external ? (
-                      <a href={item.href} className='block' target='_blank'>
-                        <Image
-                          src={`/images/programs/Image_${i + 1}.png`}
-                          alt='Gallery Image'
-                          fill
-                          className='rounded-primary'
-                          style={{
-                            objectFit: `cover`,
-                            objectPosition: `center`,
-                          }}
-                        />
-                      </a>
-                    ) : (
-                      <Link href={item.href} className='block'>
-                        <Image
-                          src={`/images/programs/Image_${i + 1}.png`}
-                          alt='Gallery Image'
-                          fill
-                          className='rounded-primary'
-                          style={{
-                            objectFit: `cover`,
-                            objectPosition: `center`,
-                          }}
-                        />
-                      </Link>
-                    )}
+                    <a href={item.href} className='block' target='_blank'>
+                      <div className='absolute inset-0 z-20 flex items-end bg-gradient-to-b from-transparent to-[#0B0B09] p-5 md:p-10'>
+                        <div className='font-sans text-xl font-bold text-white'>
+                          {item?.name}
+                        </div>
+                      </div>
+                      <Image
+                        src={`/images/programs/Image_${i + 1}.png`}
+                        alt='Gallery Image'
+                        fill
+                        className='rounded-primary'
+                        style={{
+                          objectFit: `cover`,
+                          objectPosition: `center`,
+                        }}
+                      />
+                    </a>
                   </div>
                 </div>
               );
@@ -86,3 +79,18 @@ export default function AllProgramsPage() {
     </>
   );
 }
+
+// : (
+//   <Link href={item.href} className='block'>
+//     <Image
+//       src={`/images/programs/Image_${i + 1}.png`}
+//       alt='Gallery Image'
+//       fill
+//       className='rounded-primary'
+//       style={{
+//         objectFit: `cover`,
+//         objectPosition: `center`,
+//       }}
+//     />
+//   </Link>
+// )
