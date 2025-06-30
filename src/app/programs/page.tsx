@@ -43,7 +43,11 @@ export default function AllProgramsPage() {
                   key={i}
                 >
                   <div className='flex-auto'>
-                    <a href={item.href} className='block' target='_blank'>
+                    <a
+                      href={item.href}
+                      className='block h-full w-full'
+                      target='_blank'
+                    >
                       <div className='absolute inset-0 z-20 flex items-end bg-gradient-to-b from-transparent to-[#0B0B09] p-5 md:p-10'>
                         <div className='font-sans text-xl font-bold text-white'>
                           {item?.name}
@@ -53,7 +57,7 @@ export default function AllProgramsPage() {
                         src={`/images/programs/Image_${i + 1}.png`}
                         alt='Gallery Image'
                         fill
-                        className='rounded-primary'
+                        className='rounded-primary relative'
                         style={{
                           objectFit: `cover`,
                           objectPosition: `center`,
