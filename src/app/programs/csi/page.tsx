@@ -210,7 +210,13 @@ export default function CampusSafetyInitiativePage() {
               />
             </div>
 
-            <ImageIllustration />
+            <ImageIllustration
+              images={[
+                '/images/placeholder/p_1.jpg',
+                '/images/placeholder/p_2.jpg',
+                '/images/placeholder/p_3.jpg',
+              ]}
+            />
           </div>
         </Container>
       </SpacedSection>

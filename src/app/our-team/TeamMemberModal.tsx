@@ -5,6 +5,7 @@ import {
   DialogPanel,
   DialogTitle,
 } from '@headlessui/react';
+import { log } from 'console';
 import Image from 'next/image';
 import React from 'react';
 import { useState } from 'react';
@@ -13,10 +14,10 @@ import { IoClose } from 'react-icons/io5';
 import { PiEnvelopeSimpleFill, PiLinkedinLogoFill } from 'react-icons/pi';
 
 interface TeamMemberData {
-  image?: string;
+  image?: unknown;
   name?: string;
   role?: string;
-  bio?: string[];
+  bio?: string[] | string;
   email?: string;
   linkedin?: string;
 }
@@ -39,6 +40,9 @@ export default function TeamMemberModal({
   function close() {
     setIsOpen(false);
   }
+  console.log('====================================');
+  console.log('data formodal', data);
+  console.log('====================================');
 
   return (
     <div className='w-full'>
@@ -87,11 +91,15 @@ export default function TeamMemberModal({
                         {data?.role}
                       </span>
                       <div className='mt-4 text-sm text-black-500 md:text-base'>
-                        {/* {data?.bio?.map((desc, index) => (
-                          <p className='mb-6' key={index}>
-                            {desc}
-                          </p>
-                        ))} */}
+                        {Array.isArray(data?.bio) ? (
+                          data.bio.map((desc, index) => (
+                            <p className='mb-6' key={index}>
+                              {desc}
+                            </p>
+                          ))
+                        ) : data?.bio ? (
+                          <p className='mb-6'>{data.bio}</p>
+                        ) : null}
                         {/* <p className='mb-6'>{data?.bio}</p> */}
                       </div>
                     </div>

@@ -37,7 +37,7 @@ export function AboutUs({
       </div>
 
       <div className='text-center lg:inline-flex lg:items-center'>
-        <div className='before-bg-addon after-bg-addon rounded-primary relative mx-auto h-[340px] w-[90%] bg-[url("/images/bg/standing-students.png")] before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")] lg:h-[75%] lg:w-[75%]' />
+        <div className='before-bg-addon after-bg-addon rounded-primary relative mx-auto h-[340px] w-[90%] bg-[url("/images/bg/standing-students.png")] bg-cover bg-no-repeat before:right-[-30px] before:top-[-30px] before:bg-[url("/images/tiny/solid-style.png")] after:bottom-[-30px] after:left-[-30px] after:bg-[url("/images/tiny/dotted-style.png")] lg:h-[75%] lg:w-[75%]' />
       </div>
     </div>
   );
