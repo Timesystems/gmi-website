@@ -36,7 +36,7 @@ export default function GenderMobileStatisticCounterUp() {
     {
       id: 6,
       title:
-        'People Reached - - Mobilized for intersectional gender justice and the collective end of SGBV',
+        'People Reached - Mobilized for intersectional gender justice and the collective end of SGBV',
       counterNo: 500000,
     },
   ];
