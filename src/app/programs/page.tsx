@@ -72,7 +72,7 @@ export default function AllProgramsPage() {
         </Container>
       </SpacedSection>
 
-      {/** Donation Banner */}
+      {/** Donation Banner  for preview */}
       <SpacedSection bottom top>
         <Container>
           <DonationBanner />
