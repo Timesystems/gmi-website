@@ -5,32 +5,38 @@ export default function GenderMobileStatisticCounterUp() {
   const counterData = [
     {
       id: 1,
-      title: 'Years',
+      title:
+        'Years - Driving systems change and shifting culture for a future free from SGBV.',
       counterNo: 7,
     },
     {
       id: 2,
-      title: 'Projects',
+      title:
+        'Projects - Bold interventions influencing policies, challenging power, and safeguarding dignity',
       counterNo: 20,
     },
     {
       id: 3,
-      title: 'Sub-Nationals',
+      title:
+        'Sub-Nationals - Collaborating across states to embed justice in governance and service delivery',
       counterNo: 20,
     },
     {
       id: 4,
-      title: 'Communities',
+      title:
+        'Communities - Rewriting the social scripts that enable silence, stigma, and sexual violence',
       counterNo: 100,
     },
     {
       id: 5,
-      title: 'Educational Institutions',
+      title:
+        'Educational Institutions - Partnering to dismantle and prevent sexual harassment on campuses.',
       counterNo: 150,
     },
     {
       id: 6,
-      title: 'People Reached',
+      title:
+        'People Reached - - Mobilized for intersectional gender justice and the collective end of SGBV',
       counterNo: 500000,
     },
   ];
@@ -51,7 +57,9 @@ export default function GenderMobileStatisticCounterUp() {
                   suffix='+'
                 />
               </h3>
-              <p className='md:text-sxl w-full text-green-50'>{title}</p>
+              <p className='md:text-md w-full font-semibold text-green-50'>
+                {title}
+              </p>
             </div>
           ))}
         </div>

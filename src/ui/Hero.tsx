@@ -106,11 +106,16 @@ const Hero = () => {
   return (
     <main className='overflow-hidden bg-white lg:px-4'>
       <div
-        className='mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
+        className='bg-prima ry-700 mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
         role='hero-overlay'
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/placeholder/header_1.jpg)',
+        }}
       >
         {/* Left Side */}
-        <div className='lg:order-1 lg:h-[0%] lg:w-1/2'>
+        {/* <div className='lg:order-1 lg:h-[0%] lg:w-1/2'> */}
+        <div className='lg:order-1 lg:h-[0%]'>
           <div className={`md:min-h-[407px] ${animation}`}>
             <h1 className='pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
               {slides?.[activeIndex]?.title}
@@ -154,7 +159,7 @@ const Hero = () => {
         </div>
 
         {/* Right Side */}
-        <div
+        {/* <div
           className={`bottom-[20px] lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2 ${animation}`}
         >
           <Image
@@ -165,7 +170,7 @@ const Hero = () => {
             )}
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
-        </div>
+        </div> */}
       </div>
     </main>
   );

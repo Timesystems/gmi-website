@@ -174,7 +174,13 @@ export default function AdolescentWellnessHubPage() {
                 tabContent={tabContents}
               />
             </div>
-            <ImageIllustration />
+            <ImageIllustration
+              images={[
+                '/images/placeholder/p_7.jpg',
+                '/images/placeholder/p_8.jpg',
+                '/images/placeholder/p_9.jpg',
+              ]}
+            />
             {/* <div className='md:w-[45%] lg:w-[40%]'>
               <div className='relative mx-auto h-[400px] w-[95%] rounded-3xl bg-[url("/images/bg/ocean-side-cleaning.jpg")] bg-cover bg-center bg-no-repeat md:h-[400px] md:w-full lg:h-[450px]' />
             </div> */}

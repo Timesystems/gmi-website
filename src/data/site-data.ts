@@ -89,6 +89,7 @@ export const teams = [
     role: `Executive Lead`,
     bio: [
       'Omowumi Ogunrotimi is a Feminist lawyer and founder of Gender Mobile Initiative with over a decade of experience in accelerating systems-change to transform structures and practices that enable violence against women and girls and preserve gender disparities. She has led key advocacies and more recently, led the advocacy eort for the passage of the Sexual Harassment Prohibition Bill by the Federal House of Representatives. Her work at Gender Mobile Initiative facilitated the state-level adoption of sexual harassment policy frameworks by 21 subnational governments and over 100 higher education institutions. She leads the co-creation of approaches to combat gender-based corruption through policy influencing, preventative education, technology integration, and social norms programming.',
+
       'She is an Ashoka Fellow and recipient of awards such as the Commonwealth Award, JCI ten outstanding young persons of Nigeria, World Justice Forum Honoree, YALI award on leadership and Human Rights, Attorney General award on gender equality, Global Citizen Prize, among others',
     ],
     linkedin: `http://linkedin.com/in/omowumi-ogunrotimi`,
@@ -98,19 +99,21 @@ export const teams = [
   {
     name: `Maryam Ali Mukhtar`,
     role: `Programs Manager`,
-    bio: `
-    Maryam Muktar is the Programme Manager at Gender Mobile
-Initiative, where she leads strategic programs aimed at
-combating gender-based violence and promoting gender
-equity in Nigerian tertiary institutions. With a strong
-background in advocacy, policy implementation, and
-community engagement, she has played a key role in
-developing safeguarding frameworks and student-led
-initiatives to create safer learning environments. Passionate
-about institutional accountability and social justice, Maryam
-works to empower young advocates and drive systemic
-change through policy reforms and capacity-building
-programs.`,
+    bio: [
+      `
+      Maryam Muktar is the Programme Manager at Gender Mobile
+  Initiative, where she leads strategic programs aimed at
+  combating gender-based violence and promoting gender
+  equity in Nigerian tertiary institutions. With a strong
+  background in advocacy, policy implementation, and
+  community engagement, she has played a key role in
+  developing safeguarding frameworks and student-led
+  initiatives to create safer learning environments. Passionate
+  about institutional accountability and social justice, Maryam
+  works to empower young advocates and drive systemic
+  change through policy reforms and capacity-building
+  programs.`,
+    ],
     linkedin: `http://linkedin.com/in/maryam-mukhtar-1b93b198`,
     email: `maryamali@gendermobile.org`,
     image: `/images/team/p_2.jpg`,
@@ -331,7 +334,7 @@ State.`,
   {
     name: `Victor Adeniji`,
     role: `Finance Officer (Abuja)`,
-    bio: ``,
+    bio: [``],
     linkedin: `http://linkedin.com/in/adeniji-victor-10222326b`,
     email: `victor@gendermobile.org`,
     image: `/images/team/p_16.jpg`,
@@ -371,7 +374,8 @@ State.`,
   {
     name: `Oluchi Evelyn Okenyi`,
     role: `Assistant Communications Officer`,
-    bio: `Oluchi Evelyn Okenyi has a strong passion for language and
+    bio: [
+      `Oluchi Evelyn Okenyi has a strong passion for language and
 eective storytelling. She thrives in the media space, with a
 particular interest in the dynamics of human interaction and
 communication. Beyond her professional role, she is a creative
@@ -381,6 +385,7 @@ work is reflected in her active participation in community
 development initiatives and volunteer projects. A dedicated
 gender rights advocate, She aligns her work with causes that
 promote equity and social impact.`,
+    ],
     linkedin: `http://linkedin.com/in/oluchi-okenyi`,
     email: `oluchi@gendermobile.org`,
     image: `/images/team/p_20.jpg`,
