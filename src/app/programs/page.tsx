@@ -53,7 +53,7 @@ export default function AllProgramsPage() {
                           {item?.name}
                         </div>
                       </div>
-                      <Image
+                      {/* <Image
                         src={`/images/programs/Image_${i + 1}.png`}
                         alt='Gallery Image'
                         fill
@@ -62,7 +62,7 @@ export default function AllProgramsPage() {
                           objectFit: `cover`,
                           objectPosition: `center`,
                         }}
-                      />
+                      /> */}
                     </a>
                   </div>
                 </div>
