@@ -7,8 +7,10 @@ import { HeadingTitle } from './Elements';
 
 export function VolunterModal({
   openButton,
+  openButtonStyle,
 }: {
   openButton?: React.ReactNode;
+  openButtonStyle?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = (e: boolean) => {
@@ -17,7 +19,10 @@ export function VolunterModal({
   return (
     <>
       {openButton ? (
-        <button onClick={() => handleToggle(true)}> {openButton}</button>
+        <button className={openButtonStyle} onClick={() => handleToggle(true)}>
+          {' '}
+          {openButton}
+        </button>
       ) : (
         <button
           // href='#'

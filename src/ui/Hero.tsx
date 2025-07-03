@@ -35,8 +35,10 @@ const Hero = () => {
       title: "Experienced Violence? Don't Keep Silent.",
       des: (
         <span>
-          We Influence Sexual and Gender Based Violence Policies and Transform
-          Social Norms that Sustain SGBV through a Co-Creation Process.
+          Your voice matters. If {`you've`} experienced violence, speaking up is
+          the first <br /> step towards healing and justice. Our compassionate
+          team is here to listen, <br /> support, and guide you through this
+          challenging time.
         </span>
       ),
       buttonText: 'Donate Now',
@@ -72,101 +74,92 @@ const Hero = () => {
       style: ``,
       link: `/make-donation`,
     },
-    {
-      id: 5,
-      title: 'Become a Volunteer',
-      des: (
-        <span>
-          What is missing is {`"U"`}.
-          <br />
-          We need you to create the society we envision.
-        </span>
-      ),
-      buttonText: 'Sign Up Now',
-      imgUrl: Slide5,
-      style: ``,
-      link: `/#volunteer`,
-    },
+    // {
+    //   id: 5,
+    //   title: 'Become a Volunteer',
+    //   des: (
+    //     <span>
+    //       What is missing is {`"U"`}.
+    //       <br />
+    //       We need you to create the society we envision.
+    //     </span>
+    //   ),
+    //   buttonText: 'Sign Up Now',
+    //   imgUrl: Slide5,
+    //   style: ``,
+    //   link: `/#volunteer`,
+    // },
   ];
 
-  // const handleSlideChange = (direction) => {
-  //   setAnimation('fade-out');
-  //   setTimeout(() => {
-  //     setActiveIndex((prevIndex) => {
-  //       if (direction === 'next')
-  //         return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
-  //       return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
-  //     });
-  //     setAnimation('fade-in');
-  //   }, 500);
-  // };
+  const handleSlideChange = (direction) => {
+    setAnimation('fade-out');
+    setTimeout(() => {
+      setActiveIndex((prevIndex) => {
+        if (direction === 'next')
+          return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+        return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
+      });
+      setAnimation('fade-in');
+    }, 500);
+  };
 
   return (
     <main className='overflow-hidden bg-white lg:px-4'>
       <div
-        className='bg-prima ry-700 mx-auto flex min-h-[50vh] flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
-        // role='hero-overlay'
+        className='mx-auto flex min-h-[30rem] flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
+        role='hero-overlay'
         style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/placeholder/header_1.jpg)',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${slides[activeIndex]?.imgUrl.src})`,
         }}
       >
         {/* Left Side */}
-        {/* <div className='lg:order-1 lg:h-[0%] lg:w-1/2'> */}
-        <div className='lg:order-1 lg:h-[0%]'>
+        <div className='lg:order-1'>
           <div className={`md:min-h-[407px] ${animation}`}>
             <h1 className='pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
-              {slides?.[activeIndex]?.title}
+              {/* {slides?.[activeIndex]?.title} */}
+              We Influence Sexual and Gender Based Violence Policies and
+              Transform Social Norms that Sustain SGBV through a Co-Creation
+              Process.
             </h1>
-            <p className='pb-10 text-[1.15rem] text-white'>
-              {slides?.[activeIndex]?.des}
-            </p>
-            <div className='relative'>
+            {/* <p className='pb-10 text-[1.15rem] text-white'>
+          {slides?.[activeIndex]?.des}
+        </p> */}
+            {/* Controls */}
+            <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
               <Link
                 href={`${slides?.[activeIndex]?.link}`}
-                className='btn-white-outline absolute top-0 hidden md:inline-block'
+                className='btn-white-outline inline-block md:hidden'
               >
                 {slides?.[activeIndex]?.buttonText}
               </Link>
-            </div>
-          </div>
-
-          {/* Controls */}
-          <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
-            <Link
-              href={`${slides?.[activeIndex]?.link}`}
-              className='btn-white-outline inline-block md:hidden'
-            >
-              {slides?.[activeIndex]?.buttonText}
-            </Link>
-            <div>
-              <button
-                className='mr-4 inline-block rounded-full border border-white px-2 py-2'
-                // onClick={() => handleSlideChange('prev')}
-              >
-                <HiOutlineArrowLeft />
-              </button>
-              <button
-                className='mr-2 inline-block rounded-full border border-white px-2 py-2'
-                // onClick={() => handleSlideChange('next')}
-              >
-                <HiOutlineArrowRight />
-              </button>
+              <div>
+                <button
+                  className='mr-4 inline-block rounded-full border border-white px-2 py-2'
+                  onClick={() => handleSlideChange('prev')}
+                >
+                  <HiOutlineArrowLeft />
+                </button>
+                <button
+                  className='mr-2 inline-block rounded-full border border-white px-2 py-2'
+                  onClick={() => handleSlideChange('next')}
+                >
+                  <HiOutlineArrowRight />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-
         {/* Right Side */}
         {/* <div
           className={`bottom-[20px] lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2 ${animation}`}
         >
           <Image
-            src={slides?.[activeIndex]?.imgUrl}
-            alt='Perplexed Lady'
-            className={clsx(
-              `scale-110 lg:scale-110 ${slides?.[activeIndex]?.style}`
-            )}
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+        src={slides?.[activeIndex]?.imgUrl}
+        alt='Perplexed Lady'
+        className={clsx(
+          `scale-110 lg:scale-110 ${slides?.[activeIndex]?.style}`
+        )}
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </div> */}
       </div>
