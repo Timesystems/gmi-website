@@ -8,22 +8,6 @@ import { DonationBanner } from '@/ui/Banners';
 
 import Image from 'next/image';
 
-// export const metadata: Metadata = {
-//   title: `Gender Equality and Combating Gender-Based Violence Programs `,
-//   description: `Learn how Gender Mobile Initiative is transforming systems, culture, and practices to achieve intersectional gender equality and eliminate sexual and gender-based violence through policy interventions, research, awareness, education, and technology adoption.`,
-//   keywords: [
-//     `gender equality`,
-//     `gender-based violence`,
-//     `women's empowerment`,
-//     `intersectional gender equality`,
-//     `systems change`,
-//     `policy interventions`,
-//     `research`,
-//     `awareness`,
-//     `education`,
-//     `technology adoption`,
-//   ],
-// };
 export default function AllProgramsPage() {
   return (
     <>
@@ -50,7 +34,7 @@ export default function AllProgramsPage() {
                         </div>
                       </div>
                       <Image
-                        src={`/images/programs/Image_${i + 1}.png`}
+                        src={`/images/program/p_${i + 1}.png`}
                         alt='Gallery Image'
                         fill
                         className='rounded-primary relative'
