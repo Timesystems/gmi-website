@@ -91,23 +91,23 @@ const Hero = () => {
     },
   ];
 
-  const handleSlideChange = (direction) => {
-    setAnimation('fade-out');
-    setTimeout(() => {
-      setActiveIndex((prevIndex) => {
-        if (direction === 'next')
-          return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
-        return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
-      });
-      setAnimation('fade-in');
-    }, 500);
-  };
+  // const handleSlideChange = (direction) => {
+  //   setAnimation('fade-out');
+  //   setTimeout(() => {
+  //     setActiveIndex((prevIndex) => {
+  //       if (direction === 'next')
+  //         return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+  //       return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
+  //     });
+  //     setAnimation('fade-in');
+  //   }, 500);
+  // };
 
   return (
     <main className='overflow-hidden bg-white lg:px-4'>
       <div
-        className='bg-prima ry-700 mx-auto flex flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
-        role='hero-overlay'
+        className='bg-prima ry-700 mx-auto flex min-h-[50vh] flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
+        // role='hero-overlay'
         style={{
           backgroundImage:
             'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/placeholder/header_1.jpg)',
@@ -144,13 +144,13 @@ const Hero = () => {
             <div>
               <button
                 className='mr-4 inline-block rounded-full border border-white px-2 py-2'
-                onClick={() => handleSlideChange('prev')}
+                // onClick={() => handleSlideChange('prev')}
               >
                 <HiOutlineArrowLeft />
               </button>
               <button
                 className='mr-2 inline-block rounded-full border border-white px-2 py-2'
-                onClick={() => handleSlideChange('next')}
+                // onClick={() => handleSlideChange('next')}
               >
                 <HiOutlineArrowRight />
               </button>
