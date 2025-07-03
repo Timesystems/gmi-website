@@ -5,6 +5,7 @@ import { Container, SpacedSection } from '@/ui/Layouts';
 import { BsTwitterX, BsYoutube, BsInstagram } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import NewsLetterForm from '@/ui/NewsLetterForm';
+import { VolunterModal } from './Modal';
 
 function Footer() {
   return (
@@ -66,7 +67,11 @@ function Footer() {
                 <a href='/contact-us'>Request Call</a>
               </li>
               <li>
-                <a href='/#volunteer'>Become a Volunteer</a>
+                {/* <a href='/#volunteer'></a> */}
+                <VolunterModal
+                  openButtonStyle='px-0 text-left'
+                  openButton={'Become a Volunteer'}
+                />
               </li>
               <li>
                 <Link href='/make-donation'>Make a Donation</Link>
