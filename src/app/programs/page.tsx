@@ -1,16 +1,12 @@
 'use client';
 import Header, { programsList } from '@/ui/Header';
-import type { Metadata } from 'next';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
-import { RiBankLine } from 'react-icons/ri';
-import { MdGroups, MdEditDocument, MdCalendarMonth } from 'react-icons/md';
-import { HiDocumentDuplicate, HiCash } from 'react-icons/hi';
+
 import { DonationBanner } from '@/ui/Banners';
-import TabElement from '@/ui/TabElement';
+
 import Image from 'next/image';
-import Link from 'next/link';
 
 // export const metadata: Metadata = {
 //   title: `Gender Equality and Combating Gender-Based Violence Programs `,
@@ -53,7 +49,7 @@ export default function AllProgramsPage() {
                           {item?.name}
                         </div>
                       </div>
-                      {/* <Image
+                      <Image
                         src={`/images/programs/Image_${i + 1}.png`}
                         alt='Gallery Image'
                         fill
@@ -62,7 +58,7 @@ export default function AllProgramsPage() {
                           objectFit: `cover`,
                           objectPosition: `center`,
                         }}
-                      /> */}
+                      />
                     </a>
                   </div>
                 </div>
