@@ -35,10 +35,8 @@ const Hero = () => {
       title: "Experienced Violence? Don't Keep Silent.",
       des: (
         <span>
-          Your voice matters. If {`you've`} experienced violence, speaking up is
-          the first <br /> step towards healing and justice. Our compassionate
-          team is here to listen, <br /> support, and guide you through this
-          challenging time.
+          We Influence Sexual and Gender Based Violence Policies and Transform
+          Social Norms that Sustain SGBV through a Co-Creation Process.
         </span>
       ),
       buttonText: 'Donate Now',
