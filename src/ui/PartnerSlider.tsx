@@ -11,11 +11,7 @@ export default function PartnerSlider() {
       <div className='mx-auto mt-20 grid w-full max-w-[75rem] grid-cols-2 flex-wrap justify-center gap-10 sm:flex'>
         {partners.map(({ name, image, width, height }) => {
           return (
-            <div
-              style={{ width: '150px' }}
-              key={name}
-              className='shrink-0 grayscale hover:grayscale-0'
-            >
+            <div style={{ width: '150px' }} key={name} className='shrink-0'>
               <Image
                 src={image}
                 alt={name}
