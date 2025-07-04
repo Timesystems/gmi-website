@@ -44,7 +44,8 @@ export default async function PressReleasePage({
     },
     {
       title: 'Calling for Transparency - BAB FAFUTA Sex-For-Marks Scandal S...',
-      link: 'https://drive.google.com/open?id=1zl52RmD6v8-5hncjnZtUqmiK50k73GYe&usp=drive_copy',
+
+      link: 'https://drive.google.com/open?id=1a2RYt4mazmTQgfVZIb0m170WmGNVXpve&usp=drive_copy',
     },
     {
       title: 'Applauding LASUSTECH Dismissal of Lecturers on SA Charges',
@@ -56,7 +57,7 @@ export default async function PressReleasePage({
     },
     {
       title: 'Condemning Speed Darlington',
-      link: 'https://drive.google.com/open?id=1a2RYt4mazmTQgfVZIb0m170WmGNVXpve&usp=drive_copy',
+      link: 'https://drive.google.com/open?id=1zl52RmD6v8-5hncjnZtUqmiK50k73GYe&usp=drive_copy',
     },
     {
       title: 'Commending Clifford University',
@@ -88,7 +89,8 @@ export default async function PressReleasePage({
                     title={_.title}
                     link={_.link}
                     linkText='Read More'
-                    image={'/images/bg/ocean-side-cleaning.jpg'}
+                    image={`/images/press/pr_${i + 1}.png`}
+                    grayscale={false}
                   />
                 </div>
               ))}

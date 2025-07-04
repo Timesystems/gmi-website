@@ -128,12 +128,14 @@ export function ResourceClip({
   link,
   image,
   youtube = false,
+  grayscale = true,
 }: {
   title: string;
   link: string;
   linkText: string;
   image?: string;
   youtube?: boolean;
+  grayscale?: boolean;
 }) {
   return (
     <div className='rounded-primary group relative size-full'>
@@ -142,7 +144,7 @@ export function ResourceClip({
           src={image}
           alt='Cleaning'
           fill
-          className='rounded-primary grayscale group-hover:grayscale-0'
+          className={`rounded-primary group-hover:grayscale-0 ${grayscale ? 'grayscale' : ''} `}
           style={{ objectFit: `cover`, objectPosition: `center` }}
         />
       ) : null}
