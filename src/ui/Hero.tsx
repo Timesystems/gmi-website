@@ -109,13 +109,13 @@ const Hero = () => {
         className='mx-auto flex min-h-[30rem] flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
         role='hero-overlay'
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${slides[activeIndex]?.imgUrl.src})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${slides[activeIndex]?.imgUrl.src})`,
         }}
       >
         {/* Left Side */}
         <div className='lg:order-1'>
           <div className={`md:min-h-[407px] ${animation}`}>
-            <h1 className='pb-4 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
+            <h1 className='pb-4 pt-14 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
               {/* {slides?.[activeIndex]?.title} */}
               We Influence Sexual and Gender Based Violence Policies and
               Transform Social Norms that Sustain SGBV through a Co-Creation
@@ -124,14 +124,22 @@ const Hero = () => {
             {/* <p className='pb-10 text-[1.15rem] text-white'>
           {slides?.[activeIndex]?.des}
         </p> */}
+
+            <Link
+              href={slides?.[activeIndex]?.buttonText}
+              className='btn-primary-outline mt-3 block w-fit border border-white text-white hover:bg-transparent'
+            >
+              Learn More
+            </Link>
+
             {/* Controls */}
             <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
-              <Link
+              {/* <Link
                 href={`${slides?.[activeIndex]?.link}`}
                 className='btn-white-outline inline-block md:hidden'
               >
                 {slides?.[activeIndex]?.buttonText}
-              </Link>
+              </Link> */}
               <div>
                 <button
                   className='mr-4 inline-block rounded-full border border-white px-2 py-2'

@@ -69,7 +69,11 @@ export default function AboutUsPage() {
 
       <SpacedSection bottom>
         <Container>
-          <AboutUs buttonText='Meet Our Team' buttonLink='/our-team' />
+          <AboutUs
+            buttonText='Meet Our Team'
+            buttonLink='/our-team'
+            bgImage='bg-[url("/images/bg/about.JPG")]'
+          />
         </Container>
       </SpacedSection>
 
