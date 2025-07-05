@@ -126,7 +126,7 @@ const Hero = () => {
         </p> */}
 
             <Link
-              href={slides?.[activeIndex]?.buttonText}
+              href={"/about"}
               className='btn-primary-outline mt-3 block w-fit border border-white text-white hover:bg-transparent'
             >
               Learn More
