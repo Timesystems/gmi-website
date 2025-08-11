@@ -7,6 +7,7 @@ import { DonationBanner } from '@/ui/Banners';
 import moment from 'moment';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { ResourceClip } from '@/ui/Elements';
 
 export default async function News({
   searchParams,
@@ -31,6 +32,21 @@ export default async function News({
     }));
   }
 
+  const news = [
+    {
+      id: 1,
+      title: 'The Brief (Q1 2025)',
+      link: 'https://drive.google.com/file/d/1vYGVP49PrwL3eR0ZH68Fd4E85V0xkiBh/view?usp=drive_link',
+      image: '/images/news/n_1.png',
+    },
+    {
+      id: 2,
+      title: 'The Brief (Q2 2025)',
+      link: 'https://drive.google.com/file/d/1hiJksy4MVOSuvDIImUB_uWz5LOOANs-7/view?usp=drive_link',
+      image: '/images/news/n_2.png',
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -42,16 +58,18 @@ export default async function News({
         <Container>
           <div className='mx-auto px-6 md:w-[90%] md:px-0 lg:w-[80%]'>
             <div className='grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-6'>
-              {blogs.map((_, index) => (
-                <BlogClip
-                  key={index}
-                  title={_.title}
-                  description={_.description}
-                  category={_.category}
-                  coverImage={_.coverImage}
-                  link={_.link}
-                  date={_.date}
-                />
+              {news?.map(({ title, link, image }, index) => (
+                <div
+                  key={`news-${index}`}
+                  className='relative h-[300px] w-full max-w-[36.875rem] md:h-[430px] md:w-full'
+                >
+                  <ResourceClip
+                    title={title}
+                    link={link}
+                    linkText='Read NewsLetter'
+                    image={image}
+                  />
+                </div>
               ))}
             </div>
           </div>
