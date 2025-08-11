@@ -1,19 +1,22 @@
 'use client';
-import clsx from 'clsx';
+
 import React, { useState } from 'react';
 import Slide1 from '@/assets/images/slide-1.png';
 import Slide2 from '@/assets/images/slide-2.png';
 import Slide3 from '@/assets/images/slide-3.png';
 import Slide4 from '@/assets/images/slide-4.png';
-import Slide5 from '@/assets/images/slide-5.png';
 import Link from 'next/link';
-import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
-import Image from 'next/image';
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animation, setAnimation] = useState('fade-in');
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      handleSlideChange('next');
+    }, 5000);
 
+    return () => clearInterval(intervalId);
+  }, []);
   const slides = [
     {
       id: 1,
@@ -43,7 +46,7 @@ const Hero = () => {
       ),
       buttonText: 'Donate Now',
       imgUrl: Slide2,
-      style: `lg:relative lg:right-[-110px]`,
+      style: `lg:relative lg:right-[-6.875rem]`,
       link: `/make-donation`,
     },
     {
@@ -90,23 +93,23 @@ const Hero = () => {
     //   link: `/#volunteer`,
     // },
   ];
-
+  // @ts-expect-errors type error
   const handleSlideChange = (direction) => {
-    setAnimation('fade-out');
+    // setAnimation('fade-out');
     setTimeout(() => {
       setActiveIndex((prevIndex) => {
         if (direction === 'next')
           return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
         return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
       });
-      setAnimation('fade-in');
+      // setAnimation('fade-in');
     }, 500);
   };
 
   return (
     <main className='overflow-hidden bg-white lg:px-4'>
       <div
-        className='mx-auto flex min-h-[30rem] flex-wrap overflow-hidden rounded-bl-[40px] rounded-br-[40px] bg-primary-700 bg-cover bg-center px-4 py-4 pt-[40px] text-white lg:container md:px-20 lg:px-10 lg:pt-[80px]'
+        className='mx-auto flex min-h-[30rem] flex-wrap overflow-hidden rounded-bl-[2.5rem] rounded-br-[2.5rem] bg-primary-700 bg-cover bg-center px-4 py-4 pt-[2.5rem] text-white lg:container md:px-20 lg:px-10 lg:pt-[5rem]'
         role='hero-overlay'
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${slides[activeIndex]?.imgUrl.src})`,
@@ -114,9 +117,8 @@ const Hero = () => {
       >
         {/* Left Side */}
         <div className='lg:order-1'>
-          <div className={`md:min-h-[407px] ${animation}`}>
-            <h1 className='pb-4 pt-14 text-[42px] font-semibold leading-[47px] lg:text-[68px] lg:leading-[75px]'>
-              {/* {slides?.[activeIndex]?.title} */}
+          <div className={`md:min-h-[26.875rem] ${animation}`}>
+            <h1 className='pb-0 pt-20 text-[2.625rem] font-semibold leading-[2.9375rem] lg:text-[3.5rem] lg:leading-[4.6875rem]'>
               We Influence Sexual and Gender Based Violence Policies and
               Transform Social Norms that Sustain SGBV through a Co-Creation
               Process.
@@ -125,12 +127,12 @@ const Hero = () => {
           {slides?.[activeIndex]?.des}
         </p> */}
 
-            <Link
-              href={"/about"}
+            {/* <Link
+              href={'/about'}
               className='btn-primary-outline mt-3 block w-fit border border-white text-white hover:bg-transparent'
             >
               Learn More
-            </Link>
+            </Link> */}
 
             {/* Controls */}
             <div className='flex items-center justify-between pt-2 md:block md:pt-16'>
@@ -141,7 +143,7 @@ const Hero = () => {
                 {slides?.[activeIndex]?.buttonText}
               </Link> */}
               <div>
-                <button
+                {/* <button
                   className='mr-4 inline-block rounded-full border border-white px-2 py-2'
                   onClick={() => handleSlideChange('prev')}
                 >
@@ -152,14 +154,20 @@ const Hero = () => {
                   onClick={() => handleSlideChange('next')}
                 >
                   <HiOutlineArrowRight />
-                </button>
+                </button> */}
+                <Link
+                  href={'/about'}
+                  className='btn-primary-outline mb-5 mt-5 block w-fit border border-white text-white hover:bg-transparent'
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
           </div>
         </div>
         {/* Right Side */}
         {/* <div
-          className={`bottom-[20px] lg:relative lg:right-[50px] lg:top-[-20px] lg:order-2 lg:h-[550px] lg:w-1/2 ${animation}`}
+          className={`bottom-[1.25rem] lg:relative lg:right-[3.125rem] lg:top-[-1.25rem] lg:order-2 lg:h-[34.375rem] lg:w-1/2 ${animation}`}
         >
           <Image
         src={slides?.[activeIndex]?.imgUrl}
