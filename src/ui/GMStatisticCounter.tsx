@@ -16,12 +16,6 @@ export default function GenderMobileStatisticCounterUp() {
       counterNo: 20,
     },
     {
-      id: 3,
-      title:
-        'Sub-Nationals - Collaborating across states to embed justice in governance and service delivery',
-      counterNo: 20,
-    },
-    {
       id: 4,
       title:
         'Communities - Rewriting the social scripts that enable silence, stigma, and sexual violence',
@@ -32,6 +26,12 @@ export default function GenderMobileStatisticCounterUp() {
       title:
         'Educational Institutions - Partnering to dismantle and prevent sexual harassment on campuses.',
       counterNo: 150,
+    },
+    {
+      id: 3,
+      title:
+        'Sub-Nationals - Collaborating across states to embed justice in governance and service delivery',
+      counterNo: 250,
     },
     {
       id: 6,

@@ -254,23 +254,23 @@ sexual and gender-based violence.`,
     email: `emmanuelolat@gendermobile.org`,
     image: `/images/team/p_10.jpg`,
   },
-  {
-    name: `Eugene Ighogoma`,
-    role: `Research and Policy Officer`,
-    bio: [
-      `Eugene Goma Igho is a results-driven and analytical
-professional with proven expertise in policy development,
-research design, and evidence-based advocacy. He possesses
-a strong background and deep understanding of
-socio-political dynamics, particularly in the areas of gender
-equality, education, human rights, and governance.`,
-      'Eugene has extensive experience conducting research and policy analysis, drafting policy briefs and position papers, and coordinating stakeholder consultations to influence strategic outcomes.',
-      'Eugene holds a Baccalaureate Degree in Philosophy from the Pontificia Universitas Urbaniana, Vatican City; a Bachelor of Science in Psychology from the University of Jos; and a Bachelor of Arts in Language and Communication Arts from Modibbo Adama University, Yola, Adamawa State. He also holds a Master’s degree in Educational Administration from the University of Nicosia, Cyprus',
-    ],
-    linkedin: `https://www.linkedin.com/in/eugene-igho/`,
-    email: `eugene.goma@gendermobile.org`,
-    image: `/images/team/p_11.jpg`,
-  },
+  //   {
+  //     name: `Eugene Ighogoma`,
+  //     role: `Research and Policy Officer`,
+  //     bio: [
+  //       `Eugene Goma Igho is a results-driven and analytical
+  // professional with proven expertise in policy development,
+  // research design, and evidence-based advocacy. He possesses
+  // a strong background and deep understanding of
+  // socio-political dynamics, particularly in the areas of gender
+  // equality, education, human rights, and governance.`,
+  //       'Eugene has extensive experience conducting research and policy analysis, drafting policy briefs and position papers, and coordinating stakeholder consultations to influence strategic outcomes.',
+  //       'Eugene holds a Baccalaureate Degree in Philosophy from the Pontificia Universitas Urbaniana, Vatican City; a Bachelor of Science in Psychology from the University of Jos; and a Bachelor of Arts in Language and Communication Arts from Modibbo Adama University, Yola, Adamawa State. He also holds a Master’s degree in Educational Administration from the University of Nicosia, Cyprus',
+  //     ],
+  //     linkedin: `https://www.linkedin.com/in/eugene-igho/`,
+  //     email: `eugene.goma@gendermobile.org`,
+  //     image: `/images/team/p_11.jpg`,
+  //   },
   {
     name: `Confidence Ezeala`,
     role: `Program Officer`,

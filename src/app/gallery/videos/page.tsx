@@ -1,11 +1,11 @@
 import Header from '@/ui/Header';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { Container, SpacedSection } from '@/ui/Layouts';
 import { PageIntro } from '@/ui/Blocks';
 import Footer from '@/ui/Footer';
 import { DonationBanner } from '@/ui/Banners';
-import { ResourceClip } from '@/ui/Elements';
+// import { ResourceClip } from '@/ui/Elements';
 import clsx from 'clsx';
 
 export default async function GalleryVideosPage({
@@ -17,41 +17,41 @@ export default async function GalleryVideosPage({
     `${process.env.API_URL}/gallery/videos?page=${searchParams['page'] || 1}`
   );
   const response = await res.json();
-  let ytList = [];
+  // let ytList = [];
 
-  if (Array.isArray(response.data) && response.data.length) {
-    ytList = response.data.map((video) => ({
-      title: video.title,
-      link: video.link,
-      image: video.thumbnail,
-      id: video.id,
-    }));
-  }
+  // if (Array.isArray(response.data) && response.data.length) {
+  //   ytList = response.data.map((video) => ({
+  //     title: video.title,
+  //     link: video.link,
+  //     image: video.thumbnail,
+  //     id: video.id,
+  //   }));
+  // }
 
   const youtList = [
     {
       id: 1,
       title: 'Video Title Here',
       link: '#',
-      image: '/images/blog/related-blog-2.png',
+      videoUrl: 'https://www.youtube.com/embed/T1EDj9RUvQo?si=971YXl_y5GvGZh65',
     },
     {
       id: 1,
       title: 'Video Title Here',
       link: '#',
-      image: '/images/blog/related-blog-2.png',
+      videoUrl: 'https://www.youtube.com/embed/5aGwxfrjL1Q?si=QAAlR2WD2YTfUpiw',
     },
     {
       id: 1,
       title: 'Video Title Here',
       link: '#',
-      image: '/images/blog/related-blog-2.png',
+      videoUrl: 'https://www.youtube.com/embed/cAUKZwr0e6c?si=PIICPgaDXGX3SvgB',
     },
     {
       id: 1,
       title: 'Video Title Here',
       link: '#',
-      image: '/images/blog/related-blog-2.png',
+      videoUrl: 'https://www.youtube.com/embed/cKquZucTb-Y?si=BkmOzu48ErYJcj_W',
     },
   ];
   return (
@@ -76,18 +76,30 @@ export default async function GalleryVideosPage({
             <div className='md:px-20'>
               <div className='md:grid-c ols-3 grid auto-rows-max grid-cols-1 gap-4 px-6 md:grid-cols-2 md:gap-8 md:px-0'>
                 {/* {ytList.map(({ title, link, image }, i) => ( */}
-                {youtList.map(({ title, link, image }, i) => (
+                {youtList.map(({ title, link, videoUrl }, i) => (
                   <div
                     key={`video-${i}`}
-                    className='relative h-[300px] w-full md:h-[430px] md:w-full'
+                    className='rounded-primary relative max-h-[300px] w-full overflow-hidden md:max-h-[430px] md:max-w-full'
                   >
-                    <ResourceClip
+                    {/* <ResourceClip
                       title={title}
                       link={link}
                       linkText='Watch on YouTube'
                       image={image}
                       youtube
-                    />
+                    /> */}
+
+                    <iframe
+                      width='1000'
+                      height='1000'
+                      src={videoUrl}
+                      title='YouTube video player'
+                      frameBorder='0'
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                      referrerPolicy='strict-origin-when-cross-origin'
+                      allowFullScreen
+                      className='max-h-full max-w-full'
+                    ></iframe>
                   </div>
                 ))}
               </div>
