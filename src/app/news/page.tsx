@@ -99,11 +99,11 @@ export default async function News({
           ) : null}
         </Container>
       </SpacedSection>
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />
