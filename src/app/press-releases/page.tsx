@@ -122,11 +122,11 @@ export default async function PressReleasePage({
           ) : null}
         </Container>
       </SpacedSection>
-      <SpacedSection bottom>
+      {/* <SpacedSection bottom>
         <Container>
           <DonationBanner />
         </Container>
-      </SpacedSection>
+      </SpacedSection> */}
 
       {/** Footer */}
       <Footer />
