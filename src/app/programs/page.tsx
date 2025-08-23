@@ -34,7 +34,7 @@ export default function AllProgramsPage() {
                         </div>
                       </div>
                       <Image
-                        src={`/images/prog/t_${i + 1}.png`}
+                        src={`/images/prog/newProgramPic_${i + 1}.${i + 1 === 6 ? 'jpg' : 'png'}`}
                         alt='Gallery Image'
                         fill
                         className='rounded-primary relative'
