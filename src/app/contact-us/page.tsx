@@ -8,7 +8,7 @@ import { DonationBanner } from '@/ui/Banners';
 import { HeadingTitle } from '@/ui/Elements';
 import { Input, Textarea, Select } from '@headlessui/react';
 import { reachUs } from '@/data/site-data';
-import { RequestACall, ReportACase, ContactForm } from '@/ui/Contact';
+// import { RequestACall, ReportACase, ContactForm } from '@/ui/Contact';
 
 export default function GalleryPage() {
   const [requestCall, setRequestCall] = useState(false);
@@ -26,21 +26,21 @@ export default function GalleryPage() {
     messageInputRef.current?.focus();
   };
 
-  const handleFunctions = (id: number) => {
-    switch (id) {
-      case 1:
-        handleRequestCall(true);
-        break;
-      case 2:
-        handleSendMessageClick();
-        break;
-      case 3:
-        handleReportCase(true);
-        break;
-      default:
-        break;
-    }
-  };
+  // const handleFunctions = (id: number) => {
+  //   switch (id) {
+  //     case 1:
+  //       handleRequestCall(true);
+  //       break;
+  //     case 2:
+  //       handleSendMessageClick();
+  //       break;
+  //     case 3:
+  //       handleReportCase(true);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <>
@@ -53,7 +53,7 @@ export default function GalleryPage() {
         <Container>
           <div className='mx-3 mt-4 flex flex-wrap items-start justify-center gap-y-6 text-black-500 md:flex-nowrap md:gap-x-10 md:gap-y-0 lg:gap-x-16'>
             {/** Help links */}
-            <div className='rounded-primary w-full border border-black-100 px-8 py-8 text-[1.1rem] md:w-[350px] lg:w-[420px]'>
+            {/* <div className='rounded-primary w-full border border-black-100 px-8 py-8 text-[1.1rem] md:w-[350px] lg:w-[420px]'>
               <h3 className='mb-3 text-xl font-semibold leading-[1.8rem] md:text-2xl md:leading-[2rem]'>
                 There are various means to reach us.
               </h3>
@@ -72,11 +72,11 @@ export default function GalleryPage() {
                   </button>
                 );
               })}
-            </div>
+            </div> */}
             {/** Help link ends */}
 
             {/** Contact Us form */}
-            <div className='rounded-primary w-full border border-black-100 px-8 py-8 md:w-[50%] md:px-10 md:py-10'>
+            {/* <div className='rounded-primary w-full border border-black-100 px-8 py-8 md:w-[50%] md:px-10 md:py-10'>
               <div>
                 <HeadingTitle className='before:content-["Contact_Us"]'>
                   Need Assistance? <br />
@@ -88,7 +88,7 @@ export default function GalleryPage() {
                 </p>
               </div>
               <ContactForm messageInputRef={messageInputRef} />
-            </div>
+            </div> */}
           </div>
         </Container>
       </SpacedSection>
@@ -100,16 +100,16 @@ export default function GalleryPage() {
       </SpacedSection> */}
 
       {/** Footer */}
-      <Footer />
+      {/* <Footer /> */}
       {/** Modals  */}
-      <RequestACall
+      {/* <RequestACall
         isOpen={requestCall}
         handleModalStatus={(e) => handleRequestCall(e)}
       />
       <ReportACase
         isOpen={reportCase}
         handleModalStatus={(e) => handleReportCase(e)}
-      />
+      /> */}
     </>
   );
 }
