@@ -82,10 +82,10 @@ export function RequestACall({
           >
             Request Call
           </button>
-          <a href={'tel:+2347010602957'} className=''>
+          <a href={'tel:+2349038806700'} className=''>
             <button className='btn-primary-outline'>
               {' '}
-              or call 07010602957
+              or call 09038806700
             </button>
           </a>
         </div>
